@@ -1,0 +1,22 @@
+@use "./base/buttons";
+@use "./base/variables";
+@use "./base/common";
+@use "./base/animations";
+
+@import "tailwindcss/index.css";
+
+html,
+body {}
+
+body {
+  container-type: inline-size;
+  container-name: dm-main;
+}
+
+* {
+  line-height: inherit;
+
+  a {
+    text-decoration: none;
+  }
+}

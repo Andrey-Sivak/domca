@@ -1,0 +1,25 @@
+<?php
+/**
+ * Template file for index.php
+ *
+ * This file is part of the domca theme.
+ *
+ * @package domca
+ */
+
+declare(strict_types=1);
+
+get_header();
+?>
+
+<main class="site-main">
+<?php
+while ( have_posts() ) :
+	the_post();
+	get_template_part( '/template-parts/post', 'card' );
+	endwhile;
+?>
+</main>
+
+<?php
+get_footer();

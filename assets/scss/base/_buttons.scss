@@ -1,0 +1,22 @@
+@use "../base/breakpoints" as *;
+
+.dm-button {
+	cursor: pointer;
+
+	&.dm-button-admin {
+
+		.admin_link-wrapper {
+			margin-bottom: 0;
+		}
+	}
+
+	&:not(.dm-button-admin) {
+		overflow: hidden;
+	}
+
+	@container dm-main (min-width: #{$bp-xl}) {}
+
+	&.dm-button-primary {}
+
+	&.dm-button-secondary {}
+}
