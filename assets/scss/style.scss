@@ -6,7 +6,9 @@
 @import "tailwindcss/index.css";
 
 html,
-body {}
+body {
+  font-family: var(--montserrat-font), sans-serif;
+}
 
 body {
   container-type: inline-size;

@@ -1,10 +1,14 @@
 :root {
+  --montserrat-font: 'Montserrat';
+
   --container-w: 1434px;
 
   /* Colors */
 }
 
 @theme {
+  --font-montserrat: var(--montserrat-font), sans-serif;
+
   --container-w: var(--container-w);
 
   /* Colors */
