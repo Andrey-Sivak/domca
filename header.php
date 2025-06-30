@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-$domca_body_class = '';
+$domca_body_class = 'bg-cream text-charcoal';
 ?>
 
 <!doctype html>
