@@ -4,6 +4,15 @@
   --container-w: 1434px;
 
   /* Colors */
+  --color-mauve: #967376;
+  --color-dusty-rose: #CBA2A2;
+  --color-charcoal: #393E41;
+  --color-warm-gray: #817676;
+  --color-blush: #FFE7E7;
+  --color-cream: #FFF6F6;
+
+  /* Gradients */
+  --gradient-cream: linear-gradient(69deg, var(--color-cream) 0%, var(--color-blush) 100%);
 }
 
 @theme {
@@ -12,4 +21,13 @@
   --container-w: var(--container-w);
 
   /* Colors */
+  --color-mauve: var(--color-mauve);
+  --color-dusty-rose: var(--color-dusty-rose);
+  --color-charcoal: var(--color-charcoal);
+  --color-warm-gray: var(--color-warm-gray);
+  --color-blush: var(--color-blush);
+  --color-cream: var(--color-cream);
+
+  /* Gradients */
+  --gradient-cream: var(--gradient-cream);
 }
