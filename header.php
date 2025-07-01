@@ -25,3 +25,4 @@ $domca_body_class = 'bg-cream text-charcoal';
 <body <?php body_class( $domca_body_class ); ?>>
 <?php wp_body_open(); ?>
 	<header id="ew-header" class=""></header>
+<div class="min-h-screen flex flex-col justify-between">

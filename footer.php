@@ -12,6 +12,8 @@ declare(strict_types=1);
 ?>
 <footer id="dm-footer" class="domca__footer"></footer>
 
+</div>
+
 <?php wp_footer(); ?>
 
 </body>
