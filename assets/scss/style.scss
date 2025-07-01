@@ -2,6 +2,7 @@
 @use "./base/variables";
 @use "./base/common";
 @use "./base/animations";
+@use "./components/header";
 @use "./components/language-switcher";
 
 @import "tailwindcss/index.css";
@@ -22,11 +23,4 @@ body {
   a {
     text-decoration: none;
   }
-}
-
-.dm-visually-hidden {
-  position: absolute;
-  z-index: -100;
-  clip: rect(0 0 0 0);
-  opacity: 0;
 }
