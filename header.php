@@ -8,7 +8,7 @@
  * @package domca
  */
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 $domca_body_class = 'bg-cream text-charcoal';
 ?>
