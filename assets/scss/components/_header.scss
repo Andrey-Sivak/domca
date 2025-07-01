@@ -2,6 +2,8 @@
 
 #dm-header {
 
+
+
   &.dm-out {
     transform: translateY(-130%);
   }
@@ -77,6 +79,15 @@
       display: block;
       max-width: 100%;
       height: auto;
+
+      .logo-logo,
+      .small-big-letter {
+        fill: var(--color-mauve);
+      }
+
+      .logo-big-letter {
+        fill: var(--color-charcoal);
+      }
     }
   }
 }
