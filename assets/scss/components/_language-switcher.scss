@@ -1,0 +1,108 @@
+@use "../base/breakpoints" as *;
+
+.dm-languages {
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 10px;
+	color: var(--color-charcoal);
+
+	@media (min-width: #{$bp-md}) {
+		justify-content: flex-start;
+	}
+
+	@media (min-width: #{$bp-lg}) {
+		display: block;
+	}
+
+	.wpml-flag {
+		height: auto;
+	}
+
+	@media (min-width: #{$bp-lg}) {
+
+		&.active {
+
+			.dm-languages-list-wrap {
+				max-height: 300px;
+			}
+
+			.dm-languages-list {
+				opacity: 1;
+			}
+
+			.dm-languages-active {
+				border-radius: 6px 6px 0 0;
+			}
+		}
+	}
+
+	&-active {
+		background-color: var(--color-cream);
+		border-radius: 6px;
+		padding: 4px 10px;
+		display: flex;
+		align-items: center;
+		column-gap: 6px;
+		font-weight: bold;
+		border: 1px solid var(--color-mauve);
+
+		@media (min-width: #{$bp-lg}) {
+			background-color: #fff;
+		}
+	}
+
+	&-list {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+
+		@media (min-width: #{$bp-lg}) {
+			display: block;
+			opacity: 0;
+		}
+
+		&-wrap {
+
+			@media (min-width: #{$bp-lg}) {
+				position: absolute;
+				overflow: hidden;
+				transition: all ease .3s;
+				max-height: 0;
+			}
+		}
+
+		a {
+			padding: 4px 10px;
+			display: flex;
+			align-items: center;
+			column-gap: 6px;
+			font-weight: bold;
+		}
+
+		li {
+			border-radius: 6px;
+			background-color: #fff;
+			border: 1px solid var(--color-mauve);
+
+			@media (min-width: #{$bp-lg}) {
+				border-radius: 0;
+				border-left: 1px solid var(--color-mauve);
+				border-right: 1px solid var(--color-mauve);
+				border-bottom: 0;
+				border-top: 0;
+
+				&:hover {
+					background-color: var(--color-cream);
+				}
+
+				&:last-child {
+					border-radius: 0 0 6px 6px;
+					border-bottom: 1px solid var(--color-mauve);
+				}
+			}
+		}
+	}
+}
