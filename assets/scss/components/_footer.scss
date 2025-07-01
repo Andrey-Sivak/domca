@@ -1,0 +1,131 @@
+@use "../base/breakpoints" as *;
+
+#dm-footer {
+
+  .dm-footer__logo {
+
+    figure {
+      width: 100%;
+      max-width: 140px;
+      margin: 0 auto 40px;
+
+      @media (min-width: #{$bp-md}) {
+        margin: 0;
+        max-width: 110px;
+      }
+
+      @media (min-width: #{$bp-xl}) {
+        max-width: 196px;
+      }
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+
+      .logo-logo,
+      .small-big-letter,
+      .logo-big-letter {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.menu-footer-menu-container,
+.menu-info-footer-menu-container {
+
+  li {
+
+    a {
+      position: relative;
+      display: block;
+      text-transform: uppercase;
+      width: fit-content;
+
+      &:before {
+        position: absolute;
+        content: '';
+        transition: all ease-in-out .3s;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        height: 1px;
+        background-color: currentColor;
+        max-width: 0;
+      }
+
+      @media (hover: hover) {
+
+        &:before {
+          max-width: 0;
+        }
+
+        &:hover {
+
+          &:before {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-footer-menu-container {
+
+  .dm-nav-menu-footer {
+    display: grid;
+    align-items: center;
+    row-gap: 10px;
+    justify-items: center;
+
+    @media (min-width: #{$bp-md}) {
+      justify-items: normal;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 40px;
+    }
+
+    @media (min-width: #{$bp-lg}) {
+      column-gap: 20px;
+      text-align: left;
+      display: flex;
+    }
+
+    @media (min-width: #{$bp-xl}) {
+      column-gap: 40px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+}
+
+.menu-info-footer-menu-container {
+  order: 2;
+
+  @media (min-width: #{$bp-md}) {
+    order: 1;
+  }
+
+  .dm-nav-menu-info {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    justify-content: center;
+
+    @media (min-width: #{$bp-md}) {
+      justify-content: flex-start;
+    }
+
+    a {
+      font-size: 12px;
+      line-height: 1.25;
+    }
+  }
+}

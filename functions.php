@@ -41,6 +41,7 @@ function domca_setup(): void {
 		array(
 			'header-menu' => esc_html__( 'Header Menu', 'dm' ),
 			'footer-menu' => esc_html__( 'Footer Menu', 'dm' ),
+			'info-menu'   => esc_html__( 'Info Menu', 'dm' ),
 		),
 	);
 
