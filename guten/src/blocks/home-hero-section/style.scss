@@ -3,7 +3,11 @@
 .wp-block-domca-home-hero-section {
   position: relative;
   margin-top: 0;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    margin-bottom: 70px;
+  }
 
   &,
   & * {
