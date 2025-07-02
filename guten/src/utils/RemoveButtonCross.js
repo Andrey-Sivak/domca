@@ -10,7 +10,7 @@ const RemoveButtonCross = ({ handleClick, color = '#000' }) => {
 		<div
 			onClick={handleClick}
 			title="Remove"
-			className="pm-remove-button-cross"
+			className="dm-remove-button-cross"
 		>
 			<svg fill={color} viewBox="0 0 95.939 95.939">
 				<g>
