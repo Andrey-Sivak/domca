@@ -58,6 +58,113 @@ function domca_setup(): void {
 			'script',
 		),
 	);
+
+
+	add_theme_support(
+		'editor-color-palette',
+		[
+			[
+				'name'  => 'Green',
+				'slug'  => 'green',
+				'color'	=> '#1B873B',
+			],
+			[
+				'name' => 'Black',
+				'slug' => 'black',
+				'color' => '#000000'
+			],
+			[
+				'name' => 'Cyan Bluish Gray',
+				'slug' => 'cyan-bluish-gray',
+				'color' => '#abb8c3'
+			],
+			[
+				'name' => 'White',
+				'slug' => 'white',
+				'color' => '#ffffff'
+			],
+			[
+				'name' => 'Pale Pink',
+				'slug' => 'pale-pink',
+				'color' => '#f78da7'
+			],
+			[
+				'name' => 'Vivid Red',
+				'slug' => 'vivid-red',
+				'color' => '#cf2e2e'
+			],
+			[
+				'name' => 'Luminous Vivid Orange',
+				'slug' => 'luminous-vivid-orange',
+				'color' => '#ff6900'
+			],
+			[
+				'name' => 'Luminous Vivid Amber',
+				'slug' => 'luminous-vivid-amber',
+				'color' => '#fcb900'
+			],
+			[
+				'name' => 'Light Green Cyan',
+				'slug' => 'light-green-cyan',
+				'color' => '#7bdcb5'
+			],
+			[
+				'name' => 'Vivid Green Cyan',
+				'slug' => 'vivid-green-cyan',
+				'color' => '#00d084'
+			],
+			[
+				'name' => 'Pale Cyan Blue',
+				'slug' => 'pale-cyan-blue',
+				'color' => '#8ed1fc'
+			],
+			[
+				'name' => 'Vivid Cyan Blue',
+				'slug' => 'vivid-cyan-blue',
+				'color' => '#0693e3'
+			],
+			[
+				'name' => 'Vivid Purple',
+				'slug' => 'vivid-purple',
+				'color' => '#9b51e0'
+			],
+			[
+				'name' => 'Dark Black',
+				'slug' => 'dark-black',
+				'color' => '#141416'
+			],
+			[
+				'name' => 'Mauve',
+				'slug' => 'mauve',
+				'color' => '#967376'
+			],
+			[
+				'name' => 'Dusty Rose',
+				'slug' => 'dusty-rose',
+				'color' => '#CBA2A2'
+			],
+			[
+				'name' => 'Charcoal',
+				'slug' => 'charcoal',
+				'color' => '#393E41'
+			],
+			[
+				'name' => 'Warm Gray',
+				'slug' => 'warm-gray',
+				'color' => '#817676'
+			],
+			[
+				'name' => 'Blush',
+				'slug' => 'blush',
+				'color' => '#FFE7E7'
+			],
+			[
+				'name' => 'Cream',
+				'slug' => 'cream',
+				'color' => '#FFF6F6'
+			],
+		]
+	);
 }
 add_action( 'after_setup_theme', 'domca_setup' );
 
