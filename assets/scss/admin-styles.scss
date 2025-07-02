@@ -1,3 +1,43 @@
 @use "./base/buttons";
 @use "./base/variables";
 @use "./base/common";
+@use "./base/typography";
+
+.is-root-container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  container-type: inline-size;
+  container-name: dm-main;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+.is-root-container,
+.is-root-container * {
+  box-sizing: border-box;
+
+  .components-button {
+    height: auto !important;
+  }
+}
+
+.image-button {
+  padding: 0;
+}
+
+.dm-remove-button-cross {
+  position: absolute;
+  z-index: 100;
+  left: auto;
+  right: 5px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+}
