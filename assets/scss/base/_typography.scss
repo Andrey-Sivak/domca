@@ -1,0 +1,37 @@
+@use 'breakpoints' as *;
+
+.dm-heading {
+
+  &.dm-heading-h1 {
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 48px;
+
+    @container dm-main (min-width: #{$bp-container}) {
+      font-size: 52px;
+    }
+  }
+
+  &.dm-heading-h2 {
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 42px;
+
+    @container dm-main (min-width: #{$bp-container}) {
+      font-size: 47px;
+    }
+  }
+
+  &.dm-heading-h3 {
+    line-height: 1.14;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 38px;
+
+    @container dm-main (min-width: #{$bp-container}) {
+      font-size: 42px;
+    }
+  }
+}
