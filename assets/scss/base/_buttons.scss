@@ -2,8 +2,37 @@
 
 .dm-button {
 	cursor: pointer;
+	display: block;
+	width: fit-content;
+	color: #fff;
+	white-space: nowrap!important;
+	line-height: 1.25;
+	text-align: center;
+	text-transform: uppercase;
+	transition: all ease-in-out .15s;
+	min-width: 20px!important;
+	font-size: 13px;
+	padding: 14px 20px;
+	border-radius: 12px;
 
-	&.dm-button-admin {
+	@container dm-main (min-width: #{$bp-lg}) {
+		border-radius: 20px;
+		font-size: 16px;
+		padding: 20px 20px;
+		min-width: 266px!important;
+	}
+
+	&.dm-admin-button {
+		min-width: 1px!important;
+		height: auto;
+		padding: 10px 20px;
+		text-transform: unset;
+		background-color: var(--color-mauve);
+
+		&:hover {
+			color: #fff;
+			background-color: var(--color-dusty-rose);
+		}
 
 		.admin_link-wrapper {
 			margin-bottom: 0;
@@ -14,9 +43,19 @@
 		overflow: hidden;
 	}
 
-	@container dm-main (min-width: #{$bp-xl}) {}
+	&.dm-button-primary {
+		background-color: var(--color-mauve);
 
-	&.dm-button-primary {}
+		&:hover {
+			background-color: var(--color-dusty-rose);
+		}
+	}
 
-	&.dm-button-secondary {}
+	&.dm-button-secondary {
+		background-color: var(--color-dusty-rose);
+
+		&:hover {
+			background-color: var(--color-mauve);
+		}
+	}
 }
