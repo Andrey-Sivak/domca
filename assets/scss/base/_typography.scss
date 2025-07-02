@@ -17,7 +17,19 @@
     line-height: 1.15;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 42px;
+    font-size: 5.52vw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 34px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 38px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 42px;
+    }
 
     @container dm-main (min-width: #{$bp-container}) {
       font-size: 47px;
@@ -28,10 +40,44 @@
     line-height: 1.14;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 38px;
+    font-size: 4.8vw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 30px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 34px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 38px;
+    }
 
     @container dm-main (min-width: #{$bp-container}) {
       font-size: 42px;
+    }
+  }
+
+  &.dm-heading-h4 {
+    font-weight: 600;
+    line-height: 1.25;
+    font-size: 4.5vw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 20px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-container}) {
+      font-size: 32px;
     }
   }
 }
