@@ -19,6 +19,7 @@
  */
 function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/test-block' );
+	register_block_type( __DIR__ . '/build/home-hero-section' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );

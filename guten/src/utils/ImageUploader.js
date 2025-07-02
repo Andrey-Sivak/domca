@@ -9,7 +9,7 @@ const ImageUploader = ({
 }) => {
 	const buttonClass = image
 		? 'image-button'
-		: 'button-secondary pm-admin-button';
+		: 'button-secondary dm-button dm-admin-button';
 
 	const Image = ({ src }) => (
 		<img
