@@ -1,47 +1,43 @@
+/* Montserrat Variable Font - Normal */
 @font-face {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
     font-display: swap;
-    font-weight: 400;
+    font-weight: 100 900;
     font-style: normal;
-    src: url('./Montserrat-Regular.woff2') format('woff2'),
-    url('./Montserrat-Regular.woff') format('woff'),
-    url('./Montserrat-Regular.ttf') format('truetype'),
-    url('./Montserrat-Regular.otf') format('opentype'),
-    url('./Montserrat-Regular.eot?#iefix') format('embedded-opentype');
+    src: url('./Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2-variations'),
+    url('./Montserrat/Montserrat-VariableFont_wght.woff') format('woff-variations'),
+    url('./Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
 }
 
+/* Montserrat Variable Font - Italic */
 @font-face {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
     font-display: swap;
-    font-weight: 500;
-    font-style: normal;
-    src: url('./Montserrat-Medium.woff2') format('woff2'),
-    url('./Montserrat-Medium.woff') format('woff'),
-    url('./Montserrat-Medium.ttf') format('truetype'),
-    url('./Montserrat-Medium.otf') format('opentype'),
-    url('./Montserrat-Medium.eot?#iefix') format('embedded-opentype');
+    font-weight: 100 900;
+    font-style: italic;
+    src: url('./Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('woff2-variations'),
+    url('./Montserrat/Montserrat-Italic-VariableFont_wght.woff') format('woff-variations'),
+    url('./Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
 }
 
+/* Albert Sans Variable Font - Normal */
 @font-face {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Albert Sans";
     font-display: swap;
-    font-weight: 600;
+    font-weight: 100 900;
     font-style: normal;
-    src: url('./Montserrat-SemiBold.woff2') format('woff2'),
-    url('./Montserrat-SemiBold.woff') format('woff'),
-    url('./Montserrat-SemiBold.ttf') format('truetype'),
-    url('./Montserrat-SemiBold.otf') format('opentype'),
-    url('./Montserrat-SemiBold.eot?#iefix') format('embedded-opentype');
+    src: url('./AlbertSans/AlbertSans-VariableFont_wght.woff2') format('woff2-variations'),
+    url('./AlbertSans/AlbertSans-VariableFont_wght.woff') format('woff-variations'),
+    url('./AlbertSans/AlbertSans-VariableFont_wght.ttf') format('truetype-variations');
 }
 
+/* Albert Sans Variable Font - Italic */
 @font-face {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Albert Sans";
     font-display: swap;
-    font-weight: 700;
-    font-style: normal;
-    src: url('./Montserrat-Bold.woff2') format('woff2'),
-    url('./Montserrat-Bold.woff') format('woff'),
-    url('./Montserrat-Bold.ttf') format('truetype'),
-    url('./Montserrat-Bold.otf') format('opentype'),
-    url('./Montserrat-Bold.eot?#iefix') format('embedded-opentype');
+    font-weight: 100 900;
+    font-style: italic;
+    src: url('./AlbertSans/AlbertSans-Italic-VariableFont_wght.woff2') format('woff2-variations'),
+    url('./AlbertSans/AlbertSans-Italic-VariableFont_wght.woff') format('woff-variations'),
+    url('./AlbertSans/AlbertSans-Italic-VariableFont_wght.ttf') format('truetype-variations');
 }

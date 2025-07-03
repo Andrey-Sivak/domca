@@ -1,7 +1,9 @@
 :root {
-  --montserrat-font: 'Montserrat';
-
   --container-w: 1434px;
+
+  /* Fonts */
+  --montserrat-font: 'Montserrat';
+  --albert-sans-font: 'Albert Sans';
 
   /* Colors */
   --color-black: #141416;
@@ -17,9 +19,11 @@
 }
 
 @theme {
-  --font-montserrat: var(--montserrat-font), sans-serif;
-
   --container-w: var(--container-w);
+
+  /* Fonts */
+  --font-montserrat: var(--montserrat-font), sans-serif;
+  --font-albert-sans: var(--albert-sans-font), sans-serif;
 
   /* Colors */
   --color-black: var(--color-black);
