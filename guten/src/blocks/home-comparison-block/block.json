@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/home-comparison-block",
+  "version": "0.1.0",
+  "title": "Comparison Block",
+  "category": "widgets",
+  "description": "A comparison block showing what something is versus what it's not, with customizable quote and content sections.",
+  "keywords": ["comparison", "vs", "what it is", "what it's not", "feature", "benefits"],
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "leftSideLabel": {
+      "type": "string",
+      "default": "it’s"
+    },
+    "leftSideContent": {
+      "type": "string",
+      "default": ""
+    },
+    "rightSideLabel": {
+      "type": "string",
+      "default": "it’s\nnot"
+    },
+    "rightSideContent": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

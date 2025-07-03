@@ -1,0 +1,229 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-home-comparison-block {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-md}) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__quote {
+    position: relative;
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 30px 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin: 0 auto 42px;
+      padding: 40px 30px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin: 0 auto 70px;
+      padding: 60px 50px;
+    }
+
+    &-decor {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      position: relative;
+      z-index: 20;
+      text-align: center;
+      color: var(--color-mauve);
+      font-style: italic;
+      line-height: 1.17;
+      font-weight: 600;
+      margin: 0;
+      font-size: 20px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 24px;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        font-size: 28px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 34px;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin: 0;
+    line-height: 1.17;
+    font-size: 4vw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__sides {
+    display: grid;
+    margin-top: 24vw;
+    gap: 24vw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-top: 12.21vw;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      gap: 30px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      margin-top: 180px;
+    }
+  }
+
+  &__side {
+    position: relative;
+    container-type: inline-size;
+    container-name: dm-comparison-side;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      max-width: unset;
+      margin: 0;
+    }
+
+    &-label {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 0;
+      width: 37.03cqw;
+      height: 37.03cqw;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      p {
+        position: relative;
+        z-index: 20;
+        margin: 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 7.4cqw;
+        line-height: 1.15;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      &-bg {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .path {
+          fill: var(--color-warm-gray);
+        }
+      }
+    }
+
+    &.left &-label-bg {
+      .circle {
+        fill: var(--color-dusty-rose);
+      }
+    }
+
+    &.right &-label-bg {
+      transform: scale(-1, -1);
+
+      .circle {
+        fill: var(--color-mauve);
+      }
+    }
+
+    &-content {
+      height: 100%;
+      position: relative;
+      padding-top: 28.77cqw;
+      padding-bottom: 40px;
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        padding-bottom: 70px;
+      }
+
+      p {
+        position: relative;
+        z-index: 20;
+        width: 85.75cqw;
+        margin: 0 auto;
+        font-size: 4.6cqw;
+        line-height: 1.2;
+
+        @container dm-main (min-width: #{$bp-md}) {
+          font-size: 4.273cqw;
+        }
+      }
+
+      &-bg {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .path {
+          fill: var(--color-warm-gray);
+        }
+
+        .shape {
+          fill: #fff;
+        }
+      }
+    }
+
+    &.right &-content-bg {
+      transform: scale(-1, 1);
+    }
+  }
+}
+
