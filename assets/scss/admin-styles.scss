@@ -5,6 +5,7 @@
 @use "./base/typography";
 
 .is-root-container {
+  font-family: var(--montserrat-font), sans-serif;
   max-width: 100%;
   overflow: hidden;
   position: relative;
