@@ -21,6 +21,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/test-block' );
 	register_block_type( __DIR__ . '/build/home-hero-section' );
 	register_block_type( __DIR__ . '/build/home-transformation-journey' );
+	register_block_type( __DIR__ . '/build/home-testimonial-lead-magnet' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );

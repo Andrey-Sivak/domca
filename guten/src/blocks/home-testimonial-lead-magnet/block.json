@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/home-testimonial-lead-magnet",
+  "version": "0.1.0",
+  "title": "Testimonial Lead Magnet",
+  "category": "widgets",
+  "description": "A testimonial quote bubble paired with a lead magnet offer card for email capture.",
+  "keywords": ["testimonial", "lead magnet", "quote", "opt-in", "free offer", "email capture"],
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "default": ""
+    },
+    "leadMagnetTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "leadMagnetSubtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "leadMagnetDescription": {
+      "type": "string",
+      "default": ""
+    },
+    "disclaimerText": {
+      "type": "string",
+      "default": ""
+    },
+    "button": {
+      "type": "object",
+      "default": {
+        "text": "",
+        "url": "",
+        "target": ""
+      }
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,205 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-home-testimonial-lead-magnet {
+  position: relative;
+  text-align: center;
+  padding-bottom: 30px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-bottom: 0;
+  }
+
+  &:before {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-mauve);
+    bottom: 0;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      bottom: 51px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    display: grid;
+    row-gap: 30px;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__quote {
+    container-type: inline-size;
+    container-name: quote-container;
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
+    order: 2;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      max-width: unset;
+      margin: 0;
+      width: 43%;
+      flex-basis: 43%;
+      order: 1;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      width: 54.53%;
+      flex-basis: 54.53%;
+    }
+
+    &-decor {
+      position: relative;
+      z-index: 10;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 20;
+    font-weight: 600;
+    line-height: 1.47;
+    font-style: italic;
+    left: 16.88%;
+    top: 26.52%;
+    max-width: 64.32%;
+    font-size: 4.347cqw;
+  }
+
+  &__lead-magnet {
+    container-type: inline-size;
+    container-name: lead-magner-container;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    position: relative;
+    padding: 40px 16px;
+    order: 1;
+    max-width: 450px;
+    margin: 0 auto;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      padding: 50px 30px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      padding: 70px 50px;
+      margin: 0;
+      max-width: 47%;
+      flex-basis: 47%;
+      order: 2;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      max-width: 40.44%;
+      flex-basis: 40.44%;
+    }
+
+    &-decor {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    &-title {
+      font-family: var(--albert-sans-font), sans-serif;
+      text-transform: uppercase;
+      margin-top: 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 1.14;
+      margin-bottom: 2cqh;
+      font-size: 7.5cqw;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        margin-bottom: 2.3cqh;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 8.75cqw;
+      }
+    }
+
+    &-subtitle {
+      color: var(--color-mauve);
+      font-weight: 600;
+      font-style: italic;
+      margin-top: 0;
+      line-height: 1.17;
+      font-size: 5.5cqw;
+      margin-bottom: 2.5cqh;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 5.862cqw;
+        margin-bottom: 3.456cqh;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 7.08cqw;
+      }
+    }
+
+    &-description {
+      margin-top: 0;
+      line-height: 1.21;
+      margin-bottom: 2.5cqh;
+      font-size: 5cqw;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        margin-bottom: 3.456cqh;
+        font-size: 4.827cqw;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 5.833cqw;
+      }
+    }
+
+    &-text {
+      margin-top: 0;
+      margin-bottom: 2.5cqh;
+      font-style: italic;
+      font-size: 4.6cqw;
+      line-height: 1.12;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 4.31cqw;
+        margin-bottom: 3.456cqh;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 5.208cqw;
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
