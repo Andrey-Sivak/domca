@@ -17,7 +17,7 @@ $domca_test_block_title = $attributes['title'] ?? '';
 
 $domca_test_block_wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => 'pm-wrap',
+		'class' => 'dm-wrap',
 	)
 );
 
@@ -25,7 +25,7 @@ $domca_test_block_base_class = 'wp-block-domca-test-block';
 ?>
 
 <section
-	<?php echo esc_attr( $domca_test_block_wrapper_attributes ); ?>
+	<?php echo $domca_test_block_wrapper_attributes; ?>
 >
 	<h1>test</h1>
 </section>

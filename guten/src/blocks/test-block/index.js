@@ -8,7 +8,7 @@ registerBlockType(metadata.name, {
 	...metadata,
 	icon: {
 		background: '#fff',
-		foreground: '#007EA7',
+		foreground: '#967376',
 		src: 'layout',
 	},
 	edit: Edit,
