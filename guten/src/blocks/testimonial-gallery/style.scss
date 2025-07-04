@@ -1,0 +1,121 @@
+@use 'swiper/css';
+@use 'swiper/css/pagination';
+@use 'swiper/css/effect-coverflow';
+
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-testimonial-gallery {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 70px;
+  margin: 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    text-align: center;
+    margin: 0;
+    line-height: 1.17;
+    font-size: 4.3vw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__gallery {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0 30px;
+    padding-bottom: 40px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin: 50px 0;
+      padding-bottom: 58px;
+    }
+
+    &,
+    & * {
+      user-select: none;
+    }
+  }
+
+  &__gallery-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/8.5;
+    max-width: 75vw;
+
+    @container dm-main (min-width: #{$bp-sm}) {
+      max-width: 200px;
+    }
+
+    @container dm-main (min-width: #{$bp-md}) {
+      max-width: 250px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      max-width: 330px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 25px;
+      transition: all linear .3s;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --swiper-pagination-bottom: 0;
+    --swiper-pagination-color: var(--color-mauve);
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      --swiper-pagination-bullet-horizontal-gap: 6px;
+      --swiper-pagination-bullet-width: 12px;
+      --swiper-pagination-bullet-height: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      --swiper-pagination-bullet-width: 14px;
+      --swiper-pagination-bullet-height: 14px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        --swiper-pagination-bullet-width: 18px;
+        --swiper-pagination-bullet-height: 18px;
+      }
+    }
+  }
+
+  &__button {
+    margin: 30px auto 0;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin: 50px auto 0;
+    }
+  }
+}
+

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/testimonial-gallery",
+  "version": "0.1.0",
+  "title": "Testimonial Gallery",
+  "category": "widgets",
+  "description": "A social proof section with headline, description, and carousel of testimonial images or screenshots.",
+  "keywords": ["testimonial", "social proof", "gallery", "carousel", "reviews", "community"],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "images": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "object",
+            "default": {
+              "id": null,
+              "url": ""
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "type": "object",
+      "default": {
+        "text": "",
+        "url": "",
+        "target": ""
+      }
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

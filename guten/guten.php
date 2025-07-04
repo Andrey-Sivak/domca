@@ -24,6 +24,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/home-testimonial-lead-magnet' );
 	register_block_type( __DIR__ . '/build/home-comparison-block' );
 	register_block_type( __DIR__ . '/build/home-cta-features' );
+	register_block_type( __DIR__ . '/build/testimonial-gallery' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );

@@ -1,0 +1,35 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-testimonial-gallery {
+  max-width: unset !important;
+
+  &__gallery {
+
+    &.dm-admin {
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+
+      .wp-block-domca-testimonial-gallery__gallery-item {
+        aspect-ratio: 4/5;
+
+        img {
+          aspect-ratio: 4/5;
+        }
+      }
+
+      .dm-remove-button-cross {
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        background-color: #fff;
+        border-radius: 2px;
+      }
+    }
+  }
+}
