@@ -29,10 +29,12 @@
 		padding: 10px 20px;
 		text-transform: unset;
 		background-color: var(--color-mauve);
+		justify-self: center;
+		align-self: center;
 
 		&:hover {
-			color: #fff;
-			background-color: var(--color-dusty-rose);
+			color: #fff!important;
+			background-color: var(--color-dusty-rose)!important;
 		}
 
 		.admin_link-wrapper {
