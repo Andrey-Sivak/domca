@@ -1,4 +1,5 @@
 @use "../base/breakpoints" as *;
+@use "sass:color";
 
 .dm-button {
 	cursor: pointer;
@@ -55,7 +56,7 @@
 		background-color: var(--color-dusty-rose);
 
 		&:hover {
-			background-color: var(--color-mauve);
+			background-color: color.adjust(#CBA2A2, $lightness: -5%);
 		}
 	}
 }
