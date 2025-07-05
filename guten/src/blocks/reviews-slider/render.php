@@ -21,11 +21,11 @@ $domca_reviews_slider_base_class = 'wp-block-domca-reviews-slider';
 	<?php echo $domca_reviews_slider_wrapper_attributes; ?>
 >
     <div class="<?php echo esc_attr( $domca_reviews_slider_base_class . '__wrap dm-container' ); ?>">
-        <h2 class="<?php echo esc_attr( $domca_reviews_slider_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+        <h2 class="<?php echo esc_attr( $domca_reviews_slider_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
 			<?php echo wp_kses_post( $domca_reviews_slider_title ); ?>
         </h2>
 		<?php if ( ! empty( $domca_reviews_slider_subtitle ) ) : ?>
-            <p class="<?php echo esc_attr( $domca_reviews_slider_base_class . '__subtitle' ); ?>">
+            <p class="<?php echo esc_attr( $domca_reviews_slider_base_class . '__subtitle dm-animate' ); ?>">
 				<?php echo wp_kses_post( $domca_reviews_slider_subtitle ); ?>
             </p>
 		<?php endif; ?>

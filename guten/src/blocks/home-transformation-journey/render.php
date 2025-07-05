@@ -23,12 +23,12 @@ $domca_home_transformation_journey_base_class = 'wp-block-domca-home-transformat
 	<?php echo $domca_home_transformation_journey_wrapper_attributes; ?>
 >
 	<div class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__wrap dm-container' ); ?>">
-		<h2 class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+		<h2 class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
 			<?php echo wp_kses_post( $domca_home_transformation_journey_title ); ?>
 		</h2>
 
 		<?php if ( $domca_home_transformation_journey_subtitle ) : ?>
-			<p class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__subtitle' ); ?>">
+			<p class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__subtitle dm-animate' ); ?>">
 				<?php echo wp_kses_post( $domca_home_transformation_journey_subtitle ); ?>
 			</p>
 		<?php endif; ?>
@@ -45,7 +45,7 @@ $domca_home_transformation_journey_base_class = 'wp-block-domca-home-transformat
 					$domca_home_transformation_journey_item_text  = $domca_home_transformation_journey_item['text'] ?? '';
 					$domca_home_transformation_journey_item_title = $domca_home_transformation_journey_item['title'] ?? '';
 					?>
-					<div class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__item' ); ?>">
+					<div class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__item dm-animate' ); ?>">
 						<?php if ( ! empty( $domca_home_transformation_journey_item_image ) ) : ?>
 							<figure
 									class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__item-image' ); ?>"
@@ -85,7 +85,7 @@ $domca_home_transformation_journey_base_class = 'wp-block-domca-home-transformat
 			<a
 					href="<?php echo esc_url( $domca_home_transformation_journey_button['url'] ); ?>"
 					target="<?php echo esc_attr( $domca_home_transformation_journey_button['target'] ); ?>"
-					class="<?php echo $domca_home_transformation_journey_base_class . '__button dm-button dm-button-primary'; ?>"
+					class="<?php echo $domca_home_transformation_journey_base_class . '__button dm-button dm-button-primary dm-animate'; ?>"
 					aria-label=""
 					title="<?php echo esc_attr( $domca_home_transformation_journey_button['text'] ); ?>"
 			>
@@ -95,7 +95,7 @@ $domca_home_transformation_journey_base_class = 'wp-block-domca-home-transformat
 
 		<?php if ( ! empty( $domca_home_transformation_journey_testimonial_quote ) ) : ?>
 			<blockquote
-					class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__testimonial-quote' ); ?>">
+					class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__testimonial-quote dm-animate' ); ?>">
 				<p><?php echo wp_kses_post( $domca_home_transformation_journey_testimonial_quote ); ?></p>
 				<svg
 						viewBox="0 0 1238 212"

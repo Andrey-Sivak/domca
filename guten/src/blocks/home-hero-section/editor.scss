@@ -7,4 +7,13 @@
       height: unset;
     }
   }
+
+  .wp-block-domca-home-hero-section__main-img,
+  .wp-block-domca-home-hero-section__text,
+  .wp-block-domca-home-hero-section__button,
+  .wp-block-domca-home-hero-section__title {
+    opacity: unset;
+    transform: unset;
+    animation: unset;
+  }
 }

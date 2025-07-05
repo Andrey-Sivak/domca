@@ -71,6 +71,27 @@
 		position: relative;
 		text-align: center;
 
+		@container dm-main (min-width: #{$bp-md}) {
+			&:nth-child(2),
+			&:nth-child(4) {
+				transition-delay: .2s;
+			}
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			&:nth-child(2) {
+				transition-delay: .2s;
+			}
+
+			&:nth-child(3) {
+				transition-delay: .4s;
+			}
+
+			&:nth-child(4) {
+				transition-delay: .6s;
+			}
+		}
+
 		&-image {
 			height: 60vw;
 

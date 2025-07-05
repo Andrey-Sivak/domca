@@ -20,12 +20,12 @@ $domca_testimonial_gallery_base_class = 'wp-block-domca-testimonial-gallery';
 	<div class="dm-wrap">
 		<div class="<?php echo esc_attr( $domca_testimonial_gallery_base_class . '__wrap dm-container' ); ?>">
 			<?php if ( $domca_testimonial_gallery_title ) : ?>
-				<h2 class="<?php echo esc_attr( $domca_testimonial_gallery_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+				<h2 class="<?php echo esc_attr( $domca_testimonial_gallery_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
 					<?php echo wp_kses_post( $domca_testimonial_gallery_title ); ?>
 				</h2>
 			<?php endif; ?>
 			<?php if ( $domca_testimonial_gallery_description ) : ?>
-				<div class="<?php echo esc_attr( $domca_testimonial_gallery_base_class . '__description' ); ?>">
+				<div class="<?php echo esc_attr( $domca_testimonial_gallery_base_class . '__description dm-animate' ); ?>">
 					<?php echo wp_kses_post( $domca_testimonial_gallery_description ); ?>
 				</div>
 			<?php endif; ?>
@@ -67,7 +67,7 @@ $domca_testimonial_gallery_base_class = 'wp-block-domca-testimonial-gallery';
 		<a
 				href="<?php echo esc_url( $domca_testimonial_gallery_button['url'] ); ?>"
 				target="<?php echo esc_attr( $domca_testimonial_gallery_button['target'] ); ?>"
-				class="<?php echo $domca_testimonial_gallery_base_class . '__button dm-button dm-button-primary'; ?>"
+				class="<?php echo $domca_testimonial_gallery_base_class . '__button dm-button dm-button-primary dm-animate'; ?>"
 				aria-label=""
 				title="<?php echo esc_attr( $domca_testimonial_gallery_button['text'] ); ?>"
 		>

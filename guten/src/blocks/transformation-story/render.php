@@ -22,12 +22,12 @@ $domca_transformation_story_base_class = 'wp-block-domca-transformation-story';
 >
     <div class="<?php echo esc_attr( $domca_transformation_story_base_class . '__wrap dm-container' ); ?>">
 		<?php if ( $domca_transformation_story_title ) : ?>
-            <h2 class="<?php echo esc_attr( $domca_transformation_story_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+            <h2 class="<?php echo esc_attr( $domca_transformation_story_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
 				<?php echo wp_kses_post( $domca_transformation_story_title ); ?>
             </h2>
 		<?php endif; ?>
 		<?php if ( $domca_transformation_story_subtitle ) : ?>
-            <div class="<?php echo esc_attr( $domca_transformation_story_base_class . '__subtitle' ); ?>">
+            <div class="<?php echo esc_attr( $domca_transformation_story_base_class . '__subtitle dm-animate' ); ?>">
 				<?php echo wp_kses_post( $domca_transformation_story_subtitle ); ?>
             </div>
 		<?php endif; ?>
@@ -36,7 +36,7 @@ $domca_transformation_story_base_class = 'wp-block-domca-transformation-story';
             <div class="<?php echo esc_attr( $domca_transformation_story_base_class . '__gallery' ); ?>">
 				<?php foreach ( $domca_transformation_story_images as $domca_transformation_story_image ) : ?>
 					<?php if ( ! empty( $domca_transformation_story_image['image']['id'] ) ) : ?>
-                        <figure class="<?php echo esc_attr( $domca_transformation_story_base_class . '__gallery-item' ); ?>">
+                        <figure class="<?php echo esc_attr( $domca_transformation_story_base_class . '__gallery-item dm-animate' ); ?>">
 							<?php
 							echo wp_get_attachment_image(
 								$domca_transformation_story_image['image']['id'],

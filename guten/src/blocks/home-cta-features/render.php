@@ -24,7 +24,7 @@ $domca_home_cta_features_base_class = 'wp-block-domca-home-cta-features';
 >
 	<div class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__wrap dm-container' ); ?>">
 		<?php if ( $domca_home_cta_features_image['id'] ) : ?>
-			<figure class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__image' ); ?>">
+			<figure class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__image dm-animate' ); ?>">
 
 				<svg class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__image-clip-path' ); ?>">
 					<clipPath id="home-cta-features-clip-path" clipPathUnits="objectBoundingBox">
@@ -55,18 +55,18 @@ $domca_home_cta_features_base_class = 'wp-block-domca-home-cta-features';
 
 		<div class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__content' ); ?>">
 			<?php if ( $domca_home_cta_features_title ) : ?>
-				<h2 class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+				<h2 class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
 					<?php echo wp_kses_post( $domca_home_cta_features_title ); ?>
 				</h2>
 			<?php endif; ?>
 
 			<?php
-			if ( ! empty( $domca_home_cta_features_button['id'] ) ) :
+			if ( ! empty( $domca_home_cta_features_button['url'] ) ) :
 				?>
 				<a
 						href="<?php echo esc_url( $domca_home_cta_features_button['url'] ); ?>"
 						target="<?php echo esc_attr( $domca_home_cta_features_button['target'] ); ?>"
-						class="<?php echo $domca_home_cta_features_base_class . '__button dm-button dm-button-secondary'; ?>"
+						class="<?php echo $domca_home_cta_features_base_class . '__button dm-button dm-button-secondary dm-animate'; ?>"
 						aria-label=""
 						title="<?php echo esc_attr( $domca_home_cta_features_button['text'] ); ?>"
 				>
@@ -85,12 +85,12 @@ $domca_home_cta_features_base_class = 'wp-block-domca-home-cta-features';
 			</svg>
 
 			<?php if ( $domca_home_cta_features_sub_heading ) : ?>
-				<p class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__sub-heading' ); ?>">
+				<p class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__sub-heading dm-animate' ); ?>">
 					<?php echo wp_kses_post( $domca_home_cta_features_sub_heading ); ?>
 				</p>
 			<?php endif; ?>
 			<?php if ( $domca_home_cta_features_features ) : ?>
-				<div class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__features' ); ?>">
+				<div class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__features dm-animate' ); ?>">
 					<?php foreach ( $domca_home_cta_features_features as $domca_home_cta_features_feature ) : ?>
 						<div class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__feature' ); ?>">
 							<svg

@@ -165,6 +165,12 @@
       }
     }
 
+    &.right {
+      @container dm-main (min-width: #{$bp-md}) {
+        transition-delay: .2s;
+      }
+    }
+
     &.left &-label-bg {
       .circle {
         fill: var(--color-dusty-rose);

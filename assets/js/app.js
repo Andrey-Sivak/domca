@@ -13,6 +13,10 @@
 		import('./Header.js').then(({ default: Header }) => new Header());
 	}
 
+	import('./Animations.js').then(
+		({ default: Animations }) => new Animations(),
+	);
+
 	if (elements.testimonialGallery) {
 		import('./TestimonialGallery.js').then(
 			({ default: TestimonialGallery }) => new TestimonialGallery(),

@@ -24,7 +24,7 @@ $domca_home_testimonial_lead_magnet_base_class = 'wp-block-domca-home-testimonia
 	<?php echo $domca_home_testimonial_lead_magnet_wrapper_attributes; ?>
 >
 	<div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__wrap dm-container' ); ?>">
-		<div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__quote' ); ?>">
+		<div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__quote dm-animate' ); ?>">
 
 			<svg
 					viewBox="0 0 782 720"
@@ -60,7 +60,7 @@ $domca_home_testimonial_lead_magnet_base_class = 'wp-block-domca-home-testimonia
 			<?php endif; ?>
 		</div>
 
-		<div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__lead-magnet' ); ?>">
+		<div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__lead-magnet dm-animate' ); ?>">
 			<svg
 					viewBox="0 0 593 664"
 					fill="none"

@@ -69,6 +69,9 @@
   }
 
   &__main-img {
+    opacity: 0;
+    transform: translateY(250px);
+    animation: scaleIn 1.2s forwards .1s;
     margin: 20px auto -10px;
     order: 2;
 
@@ -139,6 +142,9 @@
   }
 
   &__title {
+    transform: translateY(200px);
+    opacity: 0;
+    animation: floatUp 1s forwards;
     margin: 0;
     text-transform: uppercase;
     line-height: 1.15;
@@ -147,6 +153,7 @@
     font-size: 5.52vw;
 
     @container dm-main (min-width: #{$bp-md}) {
+      animation: floatUp 1.2s forwards;
       font-size: 36px;
     }
 
@@ -164,12 +171,16 @@
   }
 
   &__text {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: floatUp 1s forwards .2s;
     color: var(--color-black);
     margin: 0;
     line-height: 1.2;
     font-size: 3.5vw;
 
     @container dm-main (min-width: #{$bp-md}) {
+      animation: floatUp 1.2s forwards .2s;
       font-size: 24px;
     }
 
@@ -183,11 +194,42 @@
   }
 
   &__button {
+    transform: translateY(100px);
+    opacity: 0;
+    animation: floatUp 1s forwards .3s;
     margin: 0 auto;
 
     @container dm-main (min-width: #{$bp-md}) {
+      animation: floatUp 1.2s forwards .4s;
       margin: 0;
     }
   }
 }
 
+@keyframes floatUp {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

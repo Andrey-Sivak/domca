@@ -36,7 +36,7 @@ $domca_home_comparison_block_side_content_bg = '<svg viewBox="0 0 716 681" fill=
 >
 	<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__wrap dm-container' ); ?>">
 		<?php if ( $domca_home_comparison_block_quote ) : ?>
-			<blockquote class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__quote' ); ?>">
+			<blockquote class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__quote dm-animate' ); ?>">
 				<svg
 						viewBox="0 0 1238 212"
 						fill="none"
@@ -56,20 +56,20 @@ $domca_home_comparison_block_side_content_bg = '<svg viewBox="0 0 716 681" fill=
 		<?php endif; ?>
 
 		<?php if ( $domca_home_comparison_block_title ) : ?>
-			<h2 class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+			<h2 class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
 				<?php echo wp_kses_post( $domca_home_comparison_block_title ); ?>
 			</h2>
 		<?php endif; ?>
 
 		<?php if ( $domca_home_comparison_block_subtitle ) : ?>
-			<p class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__subtitle' ); ?>">
+			<p class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__subtitle dm-animate' ); ?>">
 				<?php echo wp_kses_post( $domca_home_comparison_block_subtitle ); ?>
 			</p>
 		<?php endif; ?>
 
 		<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__sides' ); ?>">
 			<?php if ( $domca_home_comparison_block_left_label || $domca_home_comparison_block_left_content ) : ?>
-				<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__side left' ); ?>">
+				<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__side left dm-animate' ); ?>">
 					<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__side-label' ); ?>">
 						<?php echo $domca_home_comparison_block_side_label_bg; ?>
 						<p>
@@ -86,7 +86,7 @@ $domca_home_comparison_block_side_content_bg = '<svg viewBox="0 0 716 681" fill=
 			<?php endif; ?>
 
 			<?php if ( $domca_home_comparison_block_right_label || $domca_home_comparison_block_right_content ) : ?>
-				<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__side right' ); ?>">
+				<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__side right dm-animate' ); ?>">
 					<div class="<?php echo esc_attr( $domca_home_comparison_block_base_class . '__side-label' ); ?>">
 						<?php echo $domca_home_comparison_block_side_label_bg; ?>
 						<p>

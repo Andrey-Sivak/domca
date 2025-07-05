@@ -50,6 +50,7 @@
     margin: 0 auto;
 
     @container dm-main (min-width: #{$bp-lg}) {
+      transition-delay: .2s!important;
       max-width: unset;
       margin: 0;
       width: 43%;

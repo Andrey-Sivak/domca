@@ -23,12 +23,12 @@ $domca_faq_about_section_base_class = 'wp-block-domca-faq-about-section';
 	<?php echo $domca_faq_about_section_wrapper_attributes; ?>
 >
     <div class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__wrap dm-container' ); ?>">
-        <h2 class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+        <h2 class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
 			<?php echo wp_kses_post( $domca_faq_about_section_title ); ?>
         </h2>
 
         <div class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__content' ); ?>">
-            <div class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__item dm-faq' ); ?>">
+            <div class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__item dm-faq dm-animate' ); ?>">
                 <svg
                         viewBox="0 0 671 445"
                         fill="none"
@@ -55,7 +55,7 @@ $domca_faq_about_section_base_class = 'wp-block-domca-faq-about-section';
                 </div>
             </div>
 
-            <div class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__item dm-about' ); ?>">
+            <div class="<?php echo esc_attr( $domca_faq_about_section_base_class . '__item dm-about dm-animate' ); ?>">
                 <svg
                         viewBox="0 0 671 445"
                         fill="none"
