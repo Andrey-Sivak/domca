@@ -1,0 +1,142 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-transformation-story {
+	position: relative;
+	background-color: var(--color-mauve);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #fff;
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-top: 0;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		margin: 0;
+		line-height: 1.17;
+		font-size: 4.3vw;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 24px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			font-size: 28px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 34px;
+		}
+	}
+
+	&__gallery {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		gap: 10px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			gap: 30px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			gap: 20px;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+			margin-top: 50px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			gap: 30px;
+		}
+
+		&-item {
+			position: relative;
+
+			&:first-child {
+				grid-column: 1 / span 4;
+				grid-row: 1 / span 5;
+
+				@container dm-main (min-width: #{$bp-lg}) {
+					grid-row: 1 / -1;
+				}
+			}
+
+			&:nth-child(2) {
+				grid-column: 5 / span 3;
+				grid-row: 1 / span 3;
+
+				@container dm-main (min-width: #{$bp-lg}) {
+
+				}
+			}
+
+			&:nth-child(3) {
+				grid-column: 5 / span 3;
+				grid-row: 4 / span 2;
+			}
+
+			&:nth-child(4) {
+				grid-column: 1 / span 4;
+				grid-row: 6 / span 2;
+
+				@container dm-main (min-width: #{$bp-lg}) {
+					grid-column: 8 / span 3;
+					grid-row: 1 / span 2;
+				}
+			}
+
+			&:nth-child(5) {
+				grid-column: 5 / span 3;
+				grid-row: 6 / span 2;
+
+				@container dm-main (min-width: #{$bp-lg}) {
+					grid-column: 11 / span 2;
+					grid-row: 1 / span 2;
+				}
+			}
+
+			&:nth-child(6) {
+				grid-column: 1 / -1;
+				grid-row: 8 / span 3;
+
+				@container dm-main (min-width: #{$bp-lg}) {
+					grid-column: 8 / span 5;
+					grid-row: 3 / span 3;
+				}
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				border-radius: 12px;
+
+				@container dm-main (min-width: #{$bp-md}) {
+					border-radius: 24px;
+				}
+
+				@container dm-main (min-width: #{$bp-xl}) {
+					border-radius: 35px;
+				}
+			}
+		}
+	}
+}
+
