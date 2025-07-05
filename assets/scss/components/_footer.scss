@@ -34,8 +34,8 @@
   }
 }
 
-.menu-footer-menu-container,
-.menu-info-footer-menu-container {
+.dm-footer-menu-container,
+.dm-footer-menu-info-container {
 
   li {
 
@@ -75,7 +75,7 @@
   }
 }
 
-.menu-footer-menu-container {
+.dm-footer-menu-container {
 
   .dm-nav-menu-footer {
     display: grid;
@@ -106,7 +106,7 @@
   }
 }
 
-.menu-info-footer-menu-container {
+.dm-footer-menu-info-container {
   order: 2;
 
   @media (min-width: #{$bp-md}) {

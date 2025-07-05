@@ -65,6 +65,7 @@ $domca_body_class = 'bg-cream text-charcoal';
 							'menu_id'        => 'dm-header-menu',
 							'menu_class'     => 'dm-nav-menu flex items-center',
 							'container'      => 'nav',
+							'container_class'      => 'dm-header-menu-container',
 						)
 					);
 				}

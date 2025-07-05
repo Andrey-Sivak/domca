@@ -33,6 +33,7 @@ declare( strict_types=1 );
 						'menu_id'        => 'dm-footer-menu',
 						'menu_class'     => 'dm-nav-menu-footer flex items-center',
 						'container'      => 'nav',
+						'container_class'      => 'dm-footer-menu-container',
 					)
 				);
 			}
@@ -51,6 +52,7 @@ declare( strict_types=1 );
 							'menu_id'        => 'dm-info-menu',
 							'menu_class'     => 'dm-nav-menu-info flex items-center',
 							'container'      => 'nav',
+							'container_class'      => 'dm-footer-menu-info-container',
 						)
 					);
 				}
