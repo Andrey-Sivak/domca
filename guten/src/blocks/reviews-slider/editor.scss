@@ -1,0 +1,26 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-reviews-slider {
+  max-width: unset !important;
+
+  &__list {
+
+    &.dm-admin {
+      display: grid;
+      place-items: center;
+      gap: 30px;
+
+      @container dm-main (min-width: #{$bp-sm}) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+}

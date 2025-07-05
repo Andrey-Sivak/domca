@@ -1,0 +1,196 @@
+@use 'swiper/css';
+@use 'swiper/css/pagination';
+
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-reviews-slider {
+  position: relative;
+  margin-bottom: 70px;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin: 0;
+    line-height: 1.17;
+    font-size: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__list {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-top: 50px;
+      padding-bottom: 58px;
+    }
+
+    &,
+    & * {
+      user-select: none;
+    }
+  }
+
+  &__list,
+  .swiper-wrapper {
+    container-type: inline-size;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    container-type: inline-size;
+    container-name: dm-reviews-slider-item;
+    display: flex;
+    min-height: 87.45cqw;
+
+    @container dm-main (min-width: #{$bp-sm}) {
+      min-height: 43.725cqw;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      min-height: 29.15cqw;
+    }
+
+    @media (hover: hover) {
+
+      &:hover &-author a {
+
+        &:before {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-decor {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      display: block;
+      height: 100%;
+      z-index: 10;
+    }
+
+    &-content {
+      display: flex;
+      position: relative;
+      z-index: 20;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 12cqw;
+      padding-bottom: 24cqw;
+      padding-right: 16cqw;
+      padding-left: 18.8cqw;
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        padding-top: 14cqw;
+      }
+    }
+
+    &-author {
+      color: var(--color-mauve);
+      font-size: 5.458cqw;
+      margin: 0;
+      text-align: right;
+      font-weight: 600;
+      line-height: 1.2;
+      padding-right: 14px;
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        padding-right: 0;
+      }
+
+      a {
+        color: inherit !important;
+        position: relative;
+        text-decoration: none!important;
+
+        &:before {
+          position: absolute;
+          content: '';
+          transition: all ease-in-out .3s;
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 100%;
+          height: 1px;
+          background-color: currentColor;
+        }
+
+        @media (hover: hover) {
+          &:before {
+            max-width: 0;
+          }
+        }
+
+        @media not (hover: hover) {
+          &:before {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    &-text {
+      margin-top: 0;
+      font-style: italic;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      font-size: 5cqw;
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        margin-bottom: 20px;
+        font-size: 4.36cqw;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --swiper-pagination-bottom: 0;
+    --swiper-pagination-color: var(--color-mauve);
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      --swiper-pagination-bullet-horizontal-gap: 6px;
+      --swiper-pagination-bullet-width: 12px;
+      --swiper-pagination-bullet-height: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      --swiper-pagination-bullet-width: 14px;
+      --swiper-pagination-bullet-height: 14px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        --swiper-pagination-bullet-width: 18px;
+        --swiper-pagination-bullet-height: 18px;
+      }
+    }
+  }
+}
+
