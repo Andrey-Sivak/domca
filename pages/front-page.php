@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<div class="relative z-20 overflow-x-hidden">
+<div class="relative z-20">
 	<?php the_content(); ?>
 </div>
 
