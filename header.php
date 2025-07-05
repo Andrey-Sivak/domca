@@ -24,7 +24,7 @@ $domca_body_class = 'bg-cream text-charcoal';
 </head>
 <body <?php body_class( $domca_body_class ); ?>>
 <?php wp_body_open(); ?>
-<div class="flex flex-col justify-between">
+<div class="flex flex-col justify-between dm-page-wrap">
 	<header
 			id="dm-header"
 			class="dm-wrap md:pt-7.5 pt-5 pb-4 transition-all duration-300 fixed left-0 top-0 z-50 w-full lg:h-auto h-full lg:max-h-none max-h-18 lg:overflow-visible overflow-hidden"
