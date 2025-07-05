@@ -57,7 +57,11 @@
     display: block;
     cursor: pointer;
     height: auto;
-    width: 8.3vw;
+    width: 10.5vw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      width: 8.3vw;
+    }
 
     @container dm-main (min-width: #{$bp-container}) {
       width: 122px;
