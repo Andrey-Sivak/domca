@@ -74,12 +74,13 @@
 
   &__main-img {
     opacity: 0;
-    transform: translateY(250px);
-    animation: scaleIn 1.2s forwards .1s;
+    transform: scale(0.5);
+    animation: scaleIn 1.2s forwards .25s;
     margin: 20px auto -10px;
     order: 2;
 
     @container dm-main (min-width: #{$bp-md}) {
+      animation: scaleIn 1.2s forwards .1s;
       margin: 0;
       position: absolute;
       z-index: 10;
