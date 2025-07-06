@@ -230,3 +230,41 @@ add_action(
 );
 
 require get_template_directory() . '/guten/guten.php';
+
+/**
+ * Get allowed HTML for SVG output
+ *
+ * @return array Allowed HTML tags and attributes for SVG
+ */
+function domca_get_svg_allowed_html() {
+	return array(
+		'svg'    => array(
+			'viewBox'             => true,
+			'viewbox'             => true,
+			'fill'                => true,
+			'class'               => true,
+			'preserveAspectRatio' => true,
+			'preserveaspectratio' => true,
+			'aria-hidden'         => true,
+			'width'               => true,
+			'height'              => true,
+			'xmlns'               => true,
+		),
+		'circle' => array(
+			'cx'           => true,
+			'cy'           => true,
+			'r'            => true,
+			'class'        => true,
+			'fill'         => true,
+			'stroke'       => true,
+			'stroke-width' => true,
+		),
+		'path'   => array(
+			'd'            => true,
+			'class'        => true,
+			'fill'         => true,
+			'stroke'       => true,
+			'stroke-width' => true,
+		),
+	);
+}
