@@ -1,10 +1,9 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
-import LinkEditor from '../../utils/LinkEditor.js';
 import ImageUploader from '../../utils/ImageUploader.js';
-import './editor.scss';
 import ToBottomArrow from './ToBottomArrow.js';
 import SectionSeparator from './SectionSeparator.js';
+import './editor.scss';
 
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
@@ -57,34 +56,18 @@ const Edit = (props) => {
 								placeholder="Input short description text..."
 							/>
 
-							<LinkEditor
-								url={button.url}
-								target={button.target}
-								onChange={(newValue) =>
+							<RichText
+								tagName="p"
+								className={`${baseClass}__button dm-button dm-button-primary`}
+								value={button}
+								onChange={(newButton) =>
 									setAttributes({
-										button: {
-											...newValue,
-											text: button.text,
-										},
+										button: newButton,
 									})
 								}
-							>
-								<RichText
-									tagName="span"
-									className={`${baseClass}__button dm-button dm-button-primary`}
-									value={button.text}
-									onChange={(newButtonText) =>
-										setAttributes({
-											button: {
-												...button,
-												text: newButtonText,
-											},
-										})
-									}
-									placeholder="Button text..."
-									allowedFormats={[]}
-								/>
-							</LinkEditor>
+								placeholder="Button text..."
+								allowedFormats={['core/link']}
+							/>
 						</div>
 					</div>
 				</div>

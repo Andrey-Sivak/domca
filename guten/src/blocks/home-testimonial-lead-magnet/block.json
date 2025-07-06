@@ -29,12 +29,8 @@
       "default": ""
     },
     "button": {
-      "type": "object",
-      "default": {
-        "text": "",
-        "url": "",
-        "target": ""
-      }
+      "type": "string",
+      "default": ""
     }
   },
   "supports": {

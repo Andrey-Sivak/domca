@@ -16,12 +16,8 @@
       "default": ""
     },
     "button": {
-      "type": "object",
-      "default": {
-        "text": "",
-        "url": "",
-        "target": ""
-      }
+      "type": "string",
+      "default": ""
     },
     "decorImage": {
       "type": "object",

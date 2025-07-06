@@ -7,7 +7,7 @@
 
 $domca_home_transformation_journey_testimonial_quote = $attributes['testimonialQuote'] ?? '';
 $domca_home_transformation_journey_subtitle          = $attributes['subtitle'] ?? '';
-$domca_home_transformation_journey_button            = $attributes['button'] ?? null;
+$domca_home_transformation_journey_button            = $attributes['button'] ?? '';
 $domca_home_transformation_journey_title             = $attributes['title'] ?? '';
 $domca_home_transformation_journey_items             = $attributes['items'] ?? array();
 
@@ -83,18 +83,10 @@ $domca_home_transformation_journey_base_class = 'wp-block-domca-home-transformat
 			</div>
 		<?php endif; ?>
 
-		<?php
-		if ( ! empty( $domca_home_transformation_journey_button ) ) :
-			?>
-			<a
-					href="<?php echo esc_url( $domca_home_transformation_journey_button['url'] ); ?>"
-					target="<?php echo esc_attr( $domca_home_transformation_journey_button['target'] ); ?>"
-					class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__button dm-button dm-button-primary dm-animate' ); ?>"
-					aria-label=""
-					title="<?php echo esc_attr( $domca_home_transformation_journey_button['text'] ); ?>"
-			>
-				<span><?php echo esc_html( $domca_home_transformation_journey_button['text'] ); ?></span>
-			</a>
+		<?php if ( ! empty( $domca_home_transformation_journey_button ) ) : ?>
+			<p class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__button dm-button dm-button-primary dm-animate' ); ?>">
+				<?php echo wp_kses_post( $domca_home_transformation_journey_button ); ?>
+			</p>
 		<?php endif; ?>
 
 		<?php if ( ! empty( $domca_home_transformation_journey_testimonial_quote ) ) : ?>

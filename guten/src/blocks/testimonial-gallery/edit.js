@@ -1,7 +1,6 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import ImageGallery from './ImageGallery.js';
-import LinkEditor from '../../utils/LinkEditor.js';
 import './editor.scss';
 
 const Edit = (props) => {
@@ -46,34 +45,18 @@ const Edit = (props) => {
 					baseClass={baseClass}
 				/>
 
-				<LinkEditor
-					url={button.url}
-					target={button.target}
-					onChange={(newValue) =>
+				<RichText
+					tagName="p"
+					className={`${baseClass}__button dm-button dm-button-primary`}
+					value={button}
+					onChange={(newButton) =>
 						setAttributes({
-							button: {
-								...newValue,
-								text: button.text,
-							},
+							button: newButton,
 						})
 					}
-				>
-					<RichText
-						tagName="span"
-						className={`${baseClass}__button dm-button dm-button-primary`}
-						value={button.text}
-						onChange={(newButtonText) =>
-							setAttributes({
-								button: {
-									...button,
-									text: newButtonText,
-								},
-							})
-						}
-						placeholder="Button text..."
-						allowedFormats={[]}
-					/>
-				</LinkEditor>
+					placeholder="Button text..."
+					allowedFormats={['core/link']}
+				/>
 			</div>
 		</Fragment>
 	);

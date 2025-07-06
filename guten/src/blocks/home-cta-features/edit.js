@@ -1,12 +1,11 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import './editor.scss';
 import { Fragment } from '@wordpress/element';
 import ImageUploader from '../../utils/ImageUploader.js';
-import LinkEditor from '../../utils/LinkEditor.js';
 import FeatureList from './FeatureList.js';
 import ImageClipPath from './ImageClipPath.js';
 import ImageBorderSvg from './ImageBorderSvg.js';
 import SeparatorSvg from './SeparatorSvg.js';
+import './editor.scss';
 
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
@@ -50,34 +49,18 @@ const Edit = (props) => {
 							}
 							placeholder="Input section title..."
 						/>
-						<LinkEditor
-							url={button.url}
-							target={button.target}
-							onChange={(newValue) =>
+						<RichText
+							tagName="p"
+							className={`${baseClass}__button dm-button dm-button-secondary`}
+							value={button}
+							onChange={(newButton) =>
 								setAttributes({
-									button: {
-										...newValue,
-										text: button.text,
-									},
+									button: newButton,
 								})
 							}
-						>
-							<RichText
-								tagName="span"
-								className={`${baseClass}__button dm-button dm-button-secondary`}
-								value={button.text}
-								onChange={(newButtonText) =>
-									setAttributes({
-										button: {
-											...button,
-											text: newButtonText,
-										},
-									})
-								}
-								placeholder="Button text..."
-								allowedFormats={[]}
-							/>
-						</LinkEditor>
+							placeholder="Button text..."
+							allowedFormats={['core/link']}
+						/>
 
 						<SeparatorSvg baseClass={baseClass} />
 

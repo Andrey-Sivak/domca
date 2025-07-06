@@ -7,7 +7,7 @@
 
 $domca_home_hero_section_title       = $attributes['title'] ?? '';
 $domca_home_hero_section_text        = $attributes['text'] ?? '';
-$domca_home_hero_section_button      = $attributes['button'] ?? null;
+$domca_home_hero_section_button      = $attributes['button'] ?? '';
 $domca_home_hero_section_decor_image = $attributes['decorImage'] ?? null;
 
 $domca_home_hero_section_base_class = 'wp-block-domca-home-hero-section';
@@ -67,18 +67,10 @@ $domca_home_hero_section_wrapper_attributes = get_block_wrapper_attributes();
 					</p>
 				<?php endif; ?>
 
-				<?php
-				if ( ! empty( $domca_home_hero_section_button ) ) :
-					?>
-					<a
-							href="<?php echo esc_url( $domca_home_hero_section_button['url'] ); ?>"
-							target="<?php echo esc_attr( $domca_home_hero_section_button['target'] ); ?>"
-							class="<?php echo esc_attr( $domca_home_hero_section_base_class . '__button dm-button dm-button-primary' ); ?>"
-							aria-label=""
-							title="<?php echo esc_attr( $domca_home_hero_section_button['text'] ); ?>"
-					>
-						<span><?php echo esc_html( $domca_home_hero_section_button['text'] ); ?></span>
-					</a>
+				<?php if ( ! empty( $domca_home_hero_section_button ) ) : ?>
+					<p class="<?php echo esc_attr( $domca_home_hero_section_base_class . '__button dm-button dm-button-primary' ); ?>">
+						<?php echo wp_kses_post( $domca_home_hero_section_button ); ?>
+					</p>
 				<?php endif; ?>
 			</div>
 		</div>

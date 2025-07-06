@@ -7,7 +7,7 @@
 
 $domca_home_cta_features_title       = $attributes['title'] ?? '';
 $domca_home_cta_features_image       = $attributes['image'] ?? null;
-$domca_home_cta_features_button      = $attributes['button'] ?? null;
+$domca_home_cta_features_button      = $attributes['button'] ?? '';
 $domca_home_cta_features_sub_heading = $attributes['subHeading'] ?? '';
 $domca_home_cta_features_features    = $attributes['features'] ?? array();
 
@@ -66,18 +66,10 @@ $domca_home_cta_features_base_class = 'wp-block-domca-home-cta-features';
 				</h2>
 			<?php endif; ?>
 
-			<?php
-			if ( ! empty( $domca_home_cta_features_button['url'] ) ) :
-				?>
-				<a
-						href="<?php echo esc_url( $domca_home_cta_features_button['url'] ); ?>"
-						target="<?php echo esc_attr( $domca_home_cta_features_button['target'] ); ?>"
-						class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__button dm-button dm-button-secondary dm-animate' ); ?>"
-						aria-label=""
-						title="<?php echo esc_attr( $domca_home_cta_features_button['text'] ); ?>"
-				>
-					<span><?php echo esc_html( $domca_home_cta_features_button['text'] ); ?></span>
-				</a>
+			<?php if ( ! empty( $domca_home_cta_features_button ) ) : ?>
+				<p class="<?php echo esc_attr( $domca_home_cta_features_base_class . '__button dm-button dm-button-secondary dm-animate' ); ?>">
+					<?php echo wp_kses_post( $domca_home_cta_features_button ); ?>
+				</p>
 			<?php endif; ?>
 
 			<svg

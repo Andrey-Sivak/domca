@@ -10,7 +10,7 @@ $domca_home_testimonial_lead_magnet_title       = $attributes['leadMagnetTitle']
 $domca_home_testimonial_lead_magnet_subtitle    = $attributes['leadMagnetSubtitle'] ?? '';
 $domca_home_testimonial_lead_magnet_description = $attributes['leadMagnetDescription'] ?? '';
 $domca_home_testimonial_lead_magnet_text        = $attributes['disclaimerText'] ?? '';
-$domca_home_testimonial_lead_magnet_button      = $attributes['button'] ?? null;
+$domca_home_testimonial_lead_magnet_button      = $attributes['button'] ?? '';
 
 $domca_home_testimonial_lead_magnet_wrapper_attributes = get_block_wrapper_attributes(
 	array(
@@ -133,18 +133,10 @@ $domca_home_testimonial_lead_magnet_base_class = 'wp-block-domca-home-testimonia
 						<?php echo wp_kses_post( $domca_home_testimonial_lead_magnet_text ); ?>
 					</p>
 				<?php endif; ?>
-				<?php
-				if ( ! empty( $domca_home_testimonial_lead_magnet_button ) ) :
-					?>
-					<a
-							href="<?php echo esc_url( $domca_home_testimonial_lead_magnet_button['url'] ); ?>"
-							target="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_button['target'] ); ?>"
-							class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__button dm-button dm-button-primary' ); ?>"
-							aria-label=""
-							title="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_button['text'] ); ?>"
-					>
-						<span><?php echo esc_html( $domca_home_testimonial_lead_magnet_button['text'] ); ?></span>
-					</a>
+				<?php if ( ! empty( $domca_home_testimonial_lead_magnet_button ) ) : ?>
+					<p class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__button dm-button dm-button-primary' ); ?>">
+						<?php echo wp_kses_post( $domca_home_testimonial_lead_magnet_button ); ?>
+					</p>
 				<?php endif; ?>
 			</div>
 		</div>
