@@ -1,5 +1,6 @@
 <?php
 /**
+ *  Template for rendering the home transformation journey block.
  *
  * @package domca
  */
@@ -20,7 +21,10 @@ $domca_home_transformation_journey_base_class = 'wp-block-domca-home-transformat
 ?>
 
 <section
-	<?php echo $domca_home_transformation_journey_wrapper_attributes; ?>
+	<?php
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $domca_home_transformation_journey_wrapper_attributes;
+	?>
 >
 	<div class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__wrap dm-container' ); ?>">
 		<h2 class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__title dm-heading dm-heading-h2 dm-animate' ); ?>">
@@ -85,7 +89,7 @@ $domca_home_transformation_journey_base_class = 'wp-block-domca-home-transformat
 			<a
 					href="<?php echo esc_url( $domca_home_transformation_journey_button['url'] ); ?>"
 					target="<?php echo esc_attr( $domca_home_transformation_journey_button['target'] ); ?>"
-					class="<?php echo $domca_home_transformation_journey_base_class . '__button dm-button dm-button-primary dm-animate'; ?>"
+					class="<?php echo esc_attr( $domca_home_transformation_journey_base_class . '__button dm-button dm-button-primary dm-animate' ); ?>"
 					aria-label=""
 					title="<?php echo esc_attr( $domca_home_transformation_journey_button['text'] ); ?>"
 			>

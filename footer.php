@@ -95,7 +95,7 @@ declare( strict_types=1 );
 			</div>
 
 			<div class="uppercase text-[10px] leading-[1.2] md:order-1 md:mt-0 mt-10 md:text-left text-center">
-				&copy;&nbsp;<?php echo esc_html( date( 'Y' ) ); ?>
+				&copy;&nbsp;<?php echo esc_html( gmdate( 'Y' ) ); ?>
 				&nbsp;<?php echo esc_html__( 'Domča. All Rights Reserved.', 'dm' ); ?>
 			</div>
 		</div>

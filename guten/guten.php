@@ -32,6 +32,7 @@ function domca_custom_gutenberg_block_init(): void {
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
 
+// phpcs:ignore Squiz.PHP.CommentedOutCode.Found
 // function domca_enqueue_regenerator_runtime()
 // {
 // wp_enqueue_script(
@@ -43,4 +44,5 @@ add_action( 'init', 'domca_custom_gutenberg_block_init' );
 // );
 // }
 
+// phpcs:ignore Squiz.PHP.CommentedOutCode.Found
 // add_action('wp_enqueue_scripts', 'domca_enqueue_regenerator_runtime');

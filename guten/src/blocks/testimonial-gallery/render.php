@@ -1,5 +1,6 @@
 <?php
 /**
+ *  Template for rendering the testimonial gallery block.
  *
  * @package domca
  */
@@ -15,7 +16,10 @@ $domca_testimonial_gallery_base_class = 'wp-block-domca-testimonial-gallery';
 ?>
 
 <section
-	<?php echo $domca_testimonial_gallery_wrapper_attributes; ?>
+	<?php
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $domca_testimonial_gallery_wrapper_attributes;
+	?>
 >
 	<div class="dm-wrap">
 		<div class="<?php echo esc_attr( $domca_testimonial_gallery_base_class . '__wrap dm-container' ); ?>">
@@ -67,7 +71,7 @@ $domca_testimonial_gallery_base_class = 'wp-block-domca-testimonial-gallery';
 		<a
 				href="<?php echo esc_url( $domca_testimonial_gallery_button['url'] ); ?>"
 				target="<?php echo esc_attr( $domca_testimonial_gallery_button['target'] ); ?>"
-				class="<?php echo $domca_testimonial_gallery_base_class . '__button dm-button dm-button-primary dm-animate'; ?>"
+				class="<?php echo esc_attr( $domca_testimonial_gallery_base_class . '__button dm-button dm-button-primary dm-animate' ); ?>"
 				aria-label=""
 				title="<?php echo esc_attr( $domca_testimonial_gallery_button['text'] ); ?>"
 		>

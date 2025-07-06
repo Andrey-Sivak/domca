@@ -25,7 +25,10 @@ $domca_test_block_base_class = 'wp-block-domca-test-block';
 ?>
 
 <section
-	<?php echo $domca_test_block_wrapper_attributes; ?>
+	<?php
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $domca_test_block_wrapper_attributes;
+	?>
 >
 	<h1>test</h1>
 </section>

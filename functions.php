@@ -201,6 +201,7 @@ function domca_scripts(): void {
 	$manifest_path = get_template_directory() . '/dist/js/manifest.json';
 
 	if ( file_exists( $manifest_path ) ) {
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$manifest = json_decode( file_get_contents( $manifest_path ), true );
 
 		if ( is_array( $manifest ) && ! empty( $manifest ) ) {

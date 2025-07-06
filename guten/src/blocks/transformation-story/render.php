@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template for rendering the transformation story block.
  *
  * @package domca
  */
@@ -18,7 +19,10 @@ $domca_transformation_story_base_class = 'wp-block-domca-transformation-story';
 ?>
 
 <section
-	<?php echo $domca_transformation_story_wrapper_attributes; ?>
+	<?php
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $domca_transformation_story_wrapper_attributes;
+	?>
 >
 	<div class="<?php echo esc_attr( $domca_transformation_story_base_class . '__wrap dm-container' ); ?>">
 		<?php if ( $domca_transformation_story_title ) : ?>

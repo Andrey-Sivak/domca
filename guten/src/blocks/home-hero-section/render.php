@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template for rendering the home hero section block.
  *
  * @package domca
  */
@@ -15,7 +16,10 @@ $domca_home_hero_section_wrapper_attributes = get_block_wrapper_attributes();
 ?>
 
 <section
-	<?php echo $domca_home_hero_section_wrapper_attributes; ?>
+	<?php
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $domca_home_hero_section_wrapper_attributes;
+	?>
 >
 	<svg
 			viewBox="0 0 1920 12"
@@ -69,7 +73,7 @@ $domca_home_hero_section_wrapper_attributes = get_block_wrapper_attributes();
 					<a
 							href="<?php echo esc_url( $domca_home_hero_section_button['url'] ); ?>"
 							target="<?php echo esc_attr( $domca_home_hero_section_button['target'] ); ?>"
-							class="<?php echo $domca_home_hero_section_base_class . '__button dm-button dm-button-primary'; ?>"
+							class="<?php echo esc_attr( $domca_home_hero_section_base_class . '__button dm-button dm-button-primary' ); ?>"
 							aria-label=""
 							title="<?php echo esc_attr( $domca_home_hero_section_button['text'] ); ?>"
 					>
