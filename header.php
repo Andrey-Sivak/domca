@@ -61,11 +61,11 @@ $domca_body_class = 'bg-cream text-charcoal';
 				if ( has_nav_menu( 'header-menu' ) ) {
 					wp_nav_menu(
 						array(
-							'theme_location' => 'header-menu',
-							'menu_id'        => 'dm-header-menu',
-							'menu_class'     => 'dm-nav-menu flex items-center',
-							'container'      => 'nav',
-							'container_class'      => 'dm-header-menu-container',
+							'theme_location'  => 'header-menu',
+							'menu_id'         => 'dm-header-menu',
+							'menu_class'      => 'dm-nav-menu flex items-center',
+							'container'       => 'nav',
+							'container_class' => 'dm-header-menu-container',
 						)
 					);
 				}
