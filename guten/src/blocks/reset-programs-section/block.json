@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/reset-programs-section",
+  "version": "0.1.0",
+  "title": "Reset Programs Section",
+  "category": "widgets",
+  "description": "A two-column section showcasing Reset with Domca programs with detailed feature lists.",
+  "keywords": ["reset", "programs", "features", "pricing"],
+  "attributes": {
+    "leftProgramTitle": {
+      "type": "string",
+      "default": "RESET WITH DOMCA – \nBEGINNERS GROUP"
+    },
+    "leftProgramFeatures": {
+      "type": "array",
+      "default": [
+        "Automatically included in your Full Support package.",
+        "Private Facebook group for new members.",
+        "A space for your first steps, early doubts, new habits and rhythm.",
+        "Access: Free with your program.",
+        "You'll receive your invitation after payment.",
+        "Access is approved based on your order email."
+      ]
+    },
+    "rightProgramTitle": {
+      "type": "string",
+      "default": "RESET WITH DOMCA – \nADVANCED CIRCLE"
+    },
+    "rightProgramFeatures": {
+      "type": "array",
+      "default": [
+        "For those who have completed the full RESET journey.",
+        "A space for deeper support, new goals and long-term growth.",
+        "More open sharing, long-term motivation and safe venting.",
+        "Domca is occasionally active (answering, sharing, cheering you on).",
+        "One-time entry fee: 8 EUR / ~9 USD."
+      ]
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

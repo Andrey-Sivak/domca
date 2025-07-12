@@ -9,7 +9,7 @@ $domca_home_hero_section_title       = $attributes['title'] ?? '';
 $domca_home_hero_section_text        = $attributes['text'] ?? '';
 $domca_home_hero_section_button      = $attributes['button'] ?? '';
 $domca_home_hero_section_decor_image = $attributes['decorImage'] ?? null;
-$domca_home_hero_section_use_button = $attributes['useButton'] ?? true;
+$domca_home_hero_section_use_button  = $attributes['useButton'] ?? true;
 
 $domca_home_hero_section_base_class = 'wp-block-domca-home-hero-section';
 

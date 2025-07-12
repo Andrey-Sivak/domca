@@ -28,6 +28,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/reviews-slider' );
 	register_block_type( __DIR__ . '/build/transformation-story' );
 	register_block_type( __DIR__ . '/build/faq-about-section' );
+	register_block_type( __DIR__ . '/build/reset-programs-section' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
