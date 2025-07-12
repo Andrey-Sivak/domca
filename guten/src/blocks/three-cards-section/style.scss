@@ -1,0 +1,130 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-three-cards-section {
+	overflow: hidden;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	text-align: center;
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		margin-top: 50px;
+		margin-bottom: 70px;
+	}
+
+	&__pretitle {
+		margin-top: 0;
+		margin-bottom: 20px;
+		max-width: 90%;
+		font-size: 18px;
+		line-height: 1.12;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			max-width: unset;
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			margin-bottom: 50px;
+			font-size: 22px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 25px;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		line-height: 1.17;
+		font-size: 20px;
+		font-weight: 600;
+		font-style: italic;
+		margin-bottom: 28px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 24px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			margin-bottom: 40px;
+			font-size: 28px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 34px;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		gap: 18px;
+		grid-auto-rows: 79vw;
+		margin: 0 auto;
+
+		@container dm-main (min-width: #{$bp-sm}) {
+			max-width: 466px;
+			grid-auto-rows: 400px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			max-width: unset;
+			margin: 0;
+			grid-auto-rows: 27.125vw;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@container dm-main (min-width: #{$bp-container}) {
+			grid-auto-rows: 400px;
+		}
+	}
+
+	&__card {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		container-type: inline-size;
+		color: #fff;
+
+		&-decor {
+			position: absolute;
+			z-index: 10;
+			width: 105%;
+			height: auto;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&-text {
+			position: relative;
+			z-index: 20;
+			margin: 0;
+			font-size: 6.437cqw;
+			line-height: 1.2;
+		}
+	}
+
+	&__bottom-text {
+		margin-top: 30px;
+		max-width: 90%;
+		font-size: 18px;
+		line-height: 1.12;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			max-width: unset;
+			font-size: 20px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			margin-top: 50px;
+			font-size: 22px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 25px;
+		}
+	}
+}
