@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "domca/home-hero-section",
   "version": "0.1.0",
-  "title": "Home Hero Section",
+  "title": "Hero Section",
   "category": "widgets",
   "description": "A prominent hero section featuring a title, text, and button.",
   "attributes": {
