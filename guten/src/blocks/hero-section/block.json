@@ -25,6 +25,10 @@
         "id": null,
         "url": ""
       }
+    },
+    "useButton": {
+      "type": "boolean",
+      "default": true
     }
   },
   "supports": {

@@ -209,6 +209,41 @@
       margin: 0;
     }
   }
+
+  &.dm-safe-circle-club {
+
+    .wp-block-domca-home-hero-section__main-img {
+      left: auto;
+      right: 14px;
+      top: 55px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        display: none;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        display: block;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        top: auto;
+        bottom: -50px;
+      }
+
+      img {
+        width: 40vw;
+        transform: rotate(15deg);
+
+        @container dm-main (min-width: #{$bp-md}) {
+          transform: unset;
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          width: 530px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes floatUp {

@@ -1,5 +1,10 @@
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	InspectorControls,
+	RichText,
+} from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
+import { PanelBody, CheckboxControl } from '@wordpress/components';
 import ImageUploader from '../../utils/ImageUploader.js';
 import ToBottomArrow from './ToBottomArrow.js';
 import SectionSeparator from './SectionSeparator.js';
@@ -7,7 +12,7 @@ import './editor.scss';
 
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
-	const { title, text, button, decorImage } = attributes;
+	const { title, text, button, decorImage, useButton } = attributes;
 
 	const baseClass = 'wp-block-domca-home-hero-section';
 
@@ -15,8 +20,22 @@ const Edit = (props) => {
 		className: baseClass,
 	});
 
+	const onChangeUseButton = (newValue) => {
+		setAttributes({ useButton: newValue });
+	};
+
 	return (
 		<Fragment>
+			<InspectorControls>
+				<PanelBody title="Block Settings" initialOpen={true}>
+					<CheckboxControl
+						label="Use CTA Button"
+						help=""
+						checked={useButton}
+						onChange={onChangeUseButton}
+					/>
+				</PanelBody>
+			</InspectorControls>
 			<div {...blockProps}>
 				<SectionSeparator baseClass={baseClass} />
 				<ToBottomArrow baseClass={baseClass} />
@@ -56,18 +75,20 @@ const Edit = (props) => {
 								placeholder="Input short description text..."
 							/>
 
-							<RichText
-								tagName="p"
-								className={`${baseClass}__button dm-button dm-button-primary`}
-								value={button}
-								onChange={(newButton) =>
-									setAttributes({
-										button: newButton,
-									})
-								}
-								placeholder="Button text..."
-								allowedFormats={['core/link']}
-							/>
+							{useButton && (
+								<RichText
+									tagName="p"
+									className={`${baseClass}__button dm-button dm-button-primary`}
+									value={button}
+									onChange={(newButton) =>
+										setAttributes({
+											button: newButton,
+										})
+									}
+									placeholder="Button text..."
+									allowedFormats={['core/link']}
+								/>
+							)}
 						</div>
 					</div>
 				</div>
