@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/countdown-to-change",
+  "version": "0.1.0",
+  "title": "Countdown to Change Block",
+  "category": "widgets",
+  "description": "A section with main content, date/countdown cards, and call-to-action buttons. Perfect for program launches and announcements.",
+  "keywords": [
+    "time",
+    "cta",
+    "countdown",
+    "launch",
+    "announcement"
+  ],
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "ctaText": {
+      "type": "string",
+      "default": ""
+    },
+    "button1": {
+      "type": "string",
+      "default": ""
+    },
+    "button2": {
+      "type": "string",
+      "default": ""
+    },
+    "dateStart": {
+      "type": "string",
+      "default": ""
+    },
+    "weBegin": {
+      "type": "string",
+      "default": "We begin:"
+    },
+    "daysToGo": {
+      "type": "string",
+      "default": "days to go"
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
