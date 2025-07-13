@@ -60,8 +60,9 @@
 	&__cards {
 		display: grid;
 		gap: 18px;
-		grid-auto-rows: 79vw;
 		margin: 0 auto;
+		grid-auto-rows: 214px;
+		max-width: 250px;
 
 		@container dm-main (min-width: #{$bp-sm}) {
 			max-width: 466px;
