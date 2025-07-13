@@ -57,54 +57,54 @@ $domca_countdown_to_change_decor_bg = '<svg
 	echo $domca_countdown_to_change_wrapper_attributes;
 	?>
 >
-    <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__wrap dm-container">
-        <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__content-left">
-            <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__text">
+	<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__wrap dm-container">
+		<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__content-left">
+			<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__text">
 				<?php echo wp_kses_post( $domca_countdown_to_change_text ); ?>
-            </p>
-            <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__cta-text">
+			</p>
+			<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__cta-text">
 				<?php echo wp_kses_post( $domca_countdown_to_change_cta_text ); ?>
-            </p>
-            <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__buttons">
-                <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__button dm-button dm-button-secondary">
+			</p>
+			<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__buttons">
+				<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__button dm-button dm-button-secondary">
 					<?php echo wp_kses_post( $domca_countdown_to_change_button1 ); ?>
-                </p>
-                <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__button dm-button dm-button-primary">
+				</p>
+				<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__button dm-button dm-button-primary">
 					<?php echo wp_kses_post( $domca_countdown_to_change_button2 ); ?>
-                </p>
-            </div>
-        </div>
+				</p>
+			</div>
+		</div>
 
-        <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__content-right">
-            <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin">
+		<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__content-right">
+			<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin">
 				<?php echo wp_kses( $domca_countdown_to_change_decor_bg, domca_get_svg_allowed_html() ); ?>
-                <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin-content">
+				<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin-content">
 					<?php get_template_part( '/vector-images/icon-calendar' ); ?>
-                    <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin-text">
-                        <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin-text-title">
+					<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin-text">
+						<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__we-begin-text-title">
 							<?php echo wp_kses_post( $domca_countdown_to_change_we_begin ); ?>
-                        </p>
-                        <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__date">
+						</p>
+						<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__date">
 							<?php echo esc_html( $formatted_date ); ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
+						</p>
+					</div>
+				</div>
+			</div>
 
-            <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go">
+			<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go">
 				<?php echo wp_kses( $domca_countdown_to_change_decor_bg, domca_get_svg_allowed_html() ); ?>
-                <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go-content">
+				<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go-content">
 					<?php get_template_part( '/vector-images/icon-clock' ); ?>
-                    <div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go-text">
-                        <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-number">
+					<div class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go-text">
+						<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-number">
 							<?php echo esc_html( $days_remaining ); ?>
-                        </p>
-                        <p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go-text-title">
+						</p>
+						<p class="<?php echo esc_attr( $domca_countdown_to_change_base_class ); ?>__days-to-go-text-title">
 							<?php echo wp_kses_post( $domca_countdown_to_change_days_to_go ); ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
