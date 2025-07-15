@@ -128,4 +128,32 @@
 			font-size: 25px;
 		}
 	}
+
+	&.dm-support-zone {
+
+		.wp-block-domca-three-cards-section__card-text {
+			font-family: var(--font-albert-sans), sans-serif;
+			text-transform: uppercase;
+			line-height: 1.14;
+			font-weight: 600;
+			letter-spacing: 1px;
+			font-size: 4.8vw;
+
+			@container dm-main (min-width: #{$bp-md}) {
+				font-size: 30px;
+			}
+
+			@container dm-main (min-width: #{$bp-lg}) {
+				font-size: 34px;
+			}
+
+			@container dm-main (min-width: #{$bp-xl}) {
+				font-size: 38px;
+			}
+
+			@container dm-main (min-width: #{$bp-container}) {
+				font-size: 42px;
+			}
+		}
+	}
 }
