@@ -1,0 +1,217 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-two-phases-system {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  &__wrap {
+    position: relative;
+    padding: 40px 16px;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      padding: 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      padding: 65px 70px 70px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 20;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__intro-text {
+    margin: 0;
+    text-align: center;
+    line-height: 1.17;
+    font-size: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__phases {
+    display: grid;
+    gap: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      gap: 2.5%;
+      grid-template-columns: 1fr 10% 1fr;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      gap: 4%;
+      grid-template-columns: 1fr 15.5% 1fr;
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__phase {
+    position: relative;
+    container-type: inline-size;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      display: block;
+    }
+
+    &.right &-decor {
+      transform: scale(-1, 1);
+      margin-left: auto;
+    }
+
+    &.right &-title {
+      left: auto;
+      right: 20px;
+    }
+
+    &.right &-icon {
+      left: 0;
+    }
+
+    &.left &-title {
+      left: 20px;
+    }
+
+    &.left &-icon {
+      left: auto;
+      right: 0;
+    }
+
+    &-decor {
+      display: none;
+      height: auto;
+      z-index: 10;
+      position: relative;
+      width: 84.4%;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        display: block;
+      }
+    }
+
+    &-title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.17;
+      font-style: italic;
+      font-weight: 600;
+      width: 100%;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 6.88cqw;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 68.2%;
+        position: absolute;
+        z-index: 20;
+      }
+    }
+
+    &-icon {
+      width: 29.55%;
+      display: block;
+      height: auto;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-60%);
+      }
+    }
+  }
+
+  &__divider {
+
+    @container dm-main (min-width: #{$bp-md}) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-icon {
+      display: block;
+      height: auto;
+      width: 70px;
+      transform: rotate(90deg);
+
+      @container dm-main (min-width: #{$bp-md}) {
+        transform: unset;
+        width: 132px;
+      }
+    }
+  }
+
+  &__bonus {
+
+    &-text,
+    &-title {
+      line-height: 1.17;
+      font-size: 18px;
+      text-align: center;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 24px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 34px;
+      }
+    }
+
+    &-text {
+      margin-top: 0;
+      margin-bottom: 10px;
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-title {
+      margin: 0;
+    }
+  }
+}
+

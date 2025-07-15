@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/two-phases-system",
+  "version": "0.1.0",
+  "title": "Two Phases System",
+  "category": "widgets",
+  "description": "A block to display a two-phase system with icons, phases, and bonus content",
+  "keywords": [
+    "system",
+    "phases",
+    "program",
+    "bonus",
+    "wellness",
+    "journey"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "introText": {
+      "type": "string",
+      "default": "This edition includes two full phases:"
+    },
+    "phase1Title": {
+      "type": "string",
+      "default": "From Chaos to Balance"
+    },
+    "phase2Title": {
+      "type": "string",
+      "default": "From Balance to Stability"
+    },
+    "bonusText": {
+      "type": "string",
+      "default": "You also get a bonus gift:"
+    },
+    "bonusTitle": {
+      "type": "string",
+      "default": "The Solo Path – With the Key"
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

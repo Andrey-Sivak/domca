@@ -33,6 +33,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/countdown-to-change' );
 	register_block_type( __DIR__ . '/build/seasonal-resets-section' );
 	register_block_type( __DIR__ . '/build/anti-detox-statement' );
+	register_block_type( __DIR__ . '/build/two-phases-system' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
