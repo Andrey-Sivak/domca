@@ -41,31 +41,31 @@ $domca_anti_detox_statement_decor = '<svg
 	echo $domca_anti_detox_statement_wrapper_attributes;
 	?>
 >
-    <div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__wrap dm-container' ); ?>">
+	<div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__wrap dm-container' ); ?>">
 		<?php if ( ! empty( $domca_anti_detox_statement_title ) ) : ?>
-            <h2 class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+			<h2 class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__title dm-heading dm-heading-h2' ); ?>">
 				<?php echo wp_kses_post( $domca_anti_detox_statement_title ); ?>
-            </h2>
+			</h2>
 		<?php endif; ?>
 
-        <div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__content' ); ?>">
+		<div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__content' ); ?>">
 			<?php if ( ! empty( $domca_anti_detox_statement_left_statement ) ) : ?>
-                <div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__item left' ); ?>">
+				<div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__item left' ); ?>">
 					<?php echo wp_kses( $domca_anti_detox_statement_decor, domca_get_svg_allowed_html() ); ?>
-                    <p class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__statement' ); ?>">
+					<p class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__statement' ); ?>">
 						<?php echo wp_kses_post( $domca_anti_detox_statement_left_statement ); ?>
-                    </p>
-                </div>
+					</p>
+				</div>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $domca_anti_detox_statement_right_statement ) ) : ?>
-                <div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__item right' ); ?>">
+				<div class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__item right' ); ?>">
 					<?php echo wp_kses( $domca_anti_detox_statement_decor, domca_get_svg_allowed_html() ); ?>
-                    <p class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__statement' ); ?>">
+					<p class="<?php echo esc_attr( $domca_anti_detox_statement_base_class . '__statement' ); ?>">
 						<?php echo wp_kses_post( $domca_anti_detox_statement_right_statement ); ?>
-                    </p>
-                </div>
+					</p>
+				</div>
 			<?php endif; ?>
-        </div>
-    </div>
+		</div>
+	</div>
 </section>
