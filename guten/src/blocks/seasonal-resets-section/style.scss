@@ -1,0 +1,152 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-seasonal-resets-section {
+	position: relative;
+	color: #fff;
+	background-color: var(--color-mauve);
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	&__wrap {
+		position: relative;
+		z-index: 20;
+	}
+
+	&__clip {
+		position: absolute;
+		z-index: 10;
+		display: block;
+		height: auto;
+		left: auto;
+		right: 24px;
+		top: -21px;
+		width: 34px;
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			top: -46px;
+			width: 73px;
+		}
+
+		@container dm-main (min-width: #{$bp-container}) {
+			right: 142px;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		text-align: center;
+		max-width: 90%;
+		margin: 0 auto 30px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin: 0 auto 40px;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 40px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__subtitle,
+	&__intro-text,
+	&__closing-text {
+		text-align: center;
+		line-height: 1.17;
+		font-size: 3.7cqw;
+
+		@container dm-main (min-width: #{$bp-sm}) {
+			font-size: 20px;
+		}
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 24px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			font-size: 28px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 34px;
+		}
+	}
+
+	&__intro-text {
+		margin-top: 0;
+		margin-bottom: 30px;
+		font-weight: 600;
+		font-style: italic;
+		line-height: 1.17;
+		font-size: 20px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin-bottom: 40px;
+			font-size: 24px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			font-size: 28px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 34px;
+		}
+	}
+
+	&__items {
+		display: grid;
+		gap: 30px;
+		align-items: center;
+		text-align: center;
+		margin: 0 auto;
+		max-width: 450px;
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			max-width: none;
+			margin: 0;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		&-content {
+			position: relative;
+			z-index: 20;
+		}
+
+		&-text,
+		&-title {
+			line-height: 1.17;
+			font-size: 34px;
+		}
+
+		&-title {
+			margin-top: 0;
+			margin-bottom: 20px;
+			font-weight: 600;
+			font-style: italic;
+		}
+
+		&-text {
+			margin: 0;
+		}
+	}
+
+	&__closing-text {
+		margin-top: 50px;
+		margin-bottom: 0;
+	}
+}
