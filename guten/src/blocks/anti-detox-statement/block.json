@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/anti-detox-statement",
+  "version": "0.1.0",
+  "title": "Anti-Detox Statement",
+  "category": "widgets",
+  "description": "A block to display anti-detox messaging with customizable text and styling",
+  "keywords": [
+    "statement",
+    "detox",
+    "disclaimer",
+    "health",
+    "wellness"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "THIS IS NOT A DETOX."
+    },
+    "leftStatement": {
+      "type": "string",
+      "default": "Not a 30-day challenge.\nNot a cleanse."
+    },
+    "rightStatement": {
+      "type": "string",
+      "default": "Not a 30-day challenge.\nNot a cleanse."
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
