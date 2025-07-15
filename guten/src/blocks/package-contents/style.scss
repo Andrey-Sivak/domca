@@ -1,0 +1,148 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-package-contents {
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-dusty-rose);
+  color: #fff;
+  padding-top: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-top: 70px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__features {
+    display: grid;
+    container-type: inline-size;
+    gap: 40px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      gap: 0;
+      grid-auto-rows: 172px;
+    }
+  }
+
+  &__feature {
+    position: relative;
+    width: 100%;
+    padding-left: 14cqw;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      padding-left: 0;
+      max-width: 38.57%;
+      padding-top: 20px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      padding-top: 28px;
+    }
+
+    &:nth-child(even) &-title {
+
+      @container dm-main (min-width: #{$bp-md}) {
+        text-align: right;
+      }
+    }
+
+    &:nth-child(odd) {
+
+      @container dm-main (min-width: #{$bp-md}) {
+        margin-left: auto;
+      }
+    }
+
+    &:nth-child(odd) &-arrow {
+      left: 0;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        left: auto;
+        right: 103.5%;
+      }
+    }
+
+    &:nth-child(even) &-arrow {
+      left: 0;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        transform: scale(-1, 1);
+        left: 103.5%;
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+      display: block;
+      height: auto;
+      width: 12.5cqw;
+      top: 0;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        width: 12.05cqw;
+      }
+    }
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-weight: 600;
+      line-height: 1.17;
+      font-size: 18px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 20px;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        font-size: 22px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 25px;
+      }
+    }
+
+    &-detail {
+      position: relative;
+
+      p {
+        padding-left: 18px;
+        margin: 0;
+        font-style: italic;
+        font-size: 18px;
+
+        @container dm-main (min-width: #{$bp-md}) {
+          padding-left: 20px;
+          font-size: 20px;
+        }
+
+        &:before {
+          content: '•';
+          font-size: inherit;
+          color: currentColor;
+          line-height: inherit;
+          position: absolute;
+          left: 8px;
+          top: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}
+

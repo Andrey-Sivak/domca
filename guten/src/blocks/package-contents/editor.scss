@@ -1,0 +1,13 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-package-contents {
+  max-width: unset !important;
+  padding-bottom: 80px!important;
+
+  .wp-block-domca-package-contents__features {
+
+    @container dm-main (min-width: #{$bp-md}) {
+      grid-auto-rows: 215px;
+    }
+  }
+}
