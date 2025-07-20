@@ -35,6 +35,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/anti-detox-statement' );
 	register_block_type( __DIR__ . '/build/two-phases-system' );
 	register_block_type( __DIR__ . '/build/package-contents' );
+	register_block_type( __DIR__ . '/build/community-support' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );

@@ -1,0 +1,152 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-community-support {
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    margin-top: 70px;
+    margin-bottom: 80px;
+  }
+
+  &__wrap {
+    max-width: 1706px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin: 0;
+    text-align: center;
+    line-height: 1.17;
+    font-size: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-top: 40px;
+      grid-template-columns: 320px 1fr;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      grid-template-columns: 450px 1fr;
+      margin-top: 50px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      gap: 60px;
+    }
+
+    @container dm-main (min-width: #{$bp-container}) {
+      grid-template-columns: 564px minmax(0, 946px);
+    }
+
+    &_img {
+      margin: 0 auto;
+      max-width: 350px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        margin: 0;
+        max-width: none;
+      }
+    }
+
+    p {
+      &:not(.dm-button) {
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 1.21;
+        text-align: center;
+
+        @container dm-main (min-width: #{$bp-md}) {
+          text-align: left;
+          font-size: 20px;
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  &__intro-text,
+  &__motivation-text {
+    margin-bottom: 30px;
+  }
+
+  &__honest-title {
+    margin-bottom: 16px;
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  &__items {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    &-text {
+      padding-top: 26px;
+      text-align: left!important;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        padding-top: 20px;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+
+  &__closing-text {
+    margin-bottom: 30px;
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin: 0;
+    }
+  }
+}
+
