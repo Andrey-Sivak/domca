@@ -3,6 +3,7 @@ import './editor.scss';
 import { Fragment } from '@wordpress/element';
 import ImageUploader from '../../utils/ImageUploader.js';
 import ItemsList from './ItemsList.js';
+import SectionSeparator from '../hero-section/SectionSeparator.js';
 
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
@@ -27,6 +28,7 @@ const Edit = (props) => {
 	return (
 		<Fragment>
 			<div {...blockProps}>
+				<SectionSeparator baseClass={baseClass} />
 				<div className={`${baseClass}__wrap`}>
 					<RichText
 						tagName="p"
