@@ -55,6 +55,15 @@
 				background-color: color.adjust(#CBA2A2, $lightness: -5%);
 			}
 		}
+
+		&.dm-button-white a {
+			background-color: #fff;
+			color: var(--color-charcoal);
+
+			&:hover {
+				background-color: var(--color-blush);
+			}
+		}
 	}
 
 	&.dm-admin-button {
@@ -93,6 +102,15 @@
 
 		&:hover {
 			background-color: color.adjust(#CBA2A2, $lightness: -5%);
+		}
+	}
+
+	&.dm-button-white {
+		background-color: #fff;
+		color: var(--color-charcoal);
+
+		&:hover {
+			background-color: var(--color-blush);
 		}
 	}
 }
