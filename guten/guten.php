@@ -39,6 +39,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/new-year-reset' );
 	register_block_type( __DIR__ . '/build/choose-path-pricing' );
 	register_block_type( __DIR__ . '/build/why-timing-matters' );
+	register_block_type( __DIR__ . '/build/dont-have-to-be-ready' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
