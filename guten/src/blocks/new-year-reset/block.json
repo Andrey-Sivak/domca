@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/new-year-reset",
+  "version": "0.1.0",
+  "title": "New Year Reset Promo",
+  "category": "widgets",
+  "description": "A promotional section for New Year Reset program with connected benefits display.",
+  "keywords": [
+    "wellness",
+    "reset",
+    "promo",
+    "benefits"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "quote": {
+      "type": "string",
+      "default": ""
+    },
+    "benefitsTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "benefit1": {
+      "type": "string",
+      "default": ""
+    },
+    "benefit2": {
+      "type": "string",
+      "default": ""
+    },
+    "benefit3": {
+      "type": "string",
+      "default": ""
+    },
+    "ctaText": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
