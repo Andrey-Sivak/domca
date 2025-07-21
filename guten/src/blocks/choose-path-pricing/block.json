@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/choose-path-pricing",
+  "version": "0.1.0",
+  "title": "Choose Your Path Pricing",
+  "category": "widgets",
+  "description": "A two-column pricing section with full program and ebook-only options.",
+  "keywords": [
+    "pricing",
+    "options",
+    "products",
+    "cards",
+    "cta"
+  ],
+  "attributes": {
+    "leftColumnTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "rightColumnTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "fullProgramTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "fullProgramPrice": {
+      "type": "string",
+      "default": ""
+    },
+    "fullProgramFeatures": {
+      "type": "string",
+      "default": ""
+    },
+    "fullProgramButton": {
+      "type": "string",
+      "default": ""
+    },
+    "ebookTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "ebookPrice": {
+      "type": "string",
+      "default": ""
+    },
+    "ebookFeatures": {
+      "type": "string",
+      "default": ""
+    },
+    "ebookButton": {
+      "type": "string",
+      "default": ""
+    },
+    "mainButton": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
