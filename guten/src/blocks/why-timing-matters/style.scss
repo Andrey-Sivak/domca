@@ -1,0 +1,114 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-why-timing-matters {
+	position: relative;
+	background-color: var(--color-mauve);
+	color: #fff;
+	padding-top: 70px;
+	padding-bottom: 40px;
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	@container dm-main (min-width: #{$bp-container}) {
+		padding-top: 36px;
+		padding-bottom: 25px;
+	}
+
+	&__wrap {
+		position: relative;
+		z-index: 20;
+		display: grid;
+		gap: 30px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			align-items: center;
+			grid-template-columns: 1.2fr 1fr;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			grid-template-columns: 1.9fr 1fr;
+		}
+
+		@container dm-main (min-width: #{$bp-container}) {
+			gap: 60px;
+			grid-template-columns: 832px 1fr;
+		}
+	}
+
+	&__clip {
+		position: absolute;
+		z-index: 10;
+		display: block;
+		height: auto;
+		left: 24px;
+		top: -21px;
+		width: 34px;
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			top: -46px;
+			width: 73px;
+		}
+
+		@container dm-main (min-width: #{$bp-container}) {
+			left: 142px;
+		}
+	}
+
+	&__content {}
+
+	&__title {
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 30px;
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__intro-text,
+	&__timing-points,
+	&__text {
+		margin-top: 0;
+		line-height: 1.17;
+		font-size: 20px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 24px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			font-size: 28px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 34px;
+		}
+	}
+
+	&__intro-text,
+	&__timing-points {
+		margin-bottom: 34px;
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 0;
+	}
+
+	&__image {
+		max-width: 350px;
+		margin: 0 auto;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin: 0;
+			max-width: none;
+		}
+	}
+}
