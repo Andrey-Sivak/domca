@@ -48,7 +48,7 @@
       "margin": false
     },
     "color": {
-      "background": false,
+      "background": true,
       "gradients": false,
       "text": false
     }
