@@ -70,6 +70,7 @@
 	&__item {
 		position: relative;
 		text-align: center;
+		container-type: inline-size;
 
 		@container dm-main (min-width: #{$bp-md}) {
 			&:nth-child(2),
@@ -93,18 +94,10 @@
 		}
 
 		&-image {
-			height: 60vw;
-
-			@container dm-main (min-width: #{$bp-md}) {
-				height: 30vw;
-			}
+			height: clamp(50cqw, 100cqw, 336px);
 
 			@container dm-main (min-width: #{$bp-lg}) {
-				height: 21.3vw;
-			}
-
-			@container dm-main (min-width: #{$bp-container}) {
-				height: 314px;
+				height: 100cqw;
 			}
 
 			img {
