@@ -13,11 +13,7 @@ $domca_seasonal_resets_section_closing_text = $attributes['closingText'] ?? '';
 
 $domca_seasonal_resets_section_base_class = 'wp-block-domca-seasonal-resets-section';
 
-$domca_seasonal_resets_section_wrapper_attributes = get_block_wrapper_attributes(
-	array(
-		'class' => 'dm-wrap',
-	)
-);
+$domca_seasonal_resets_section_wrapper_attributes = get_block_wrapper_attributes();
 ?>
 
 <section
@@ -64,24 +60,27 @@ $domca_seasonal_resets_section_wrapper_attributes = get_block_wrapper_attributes
 		<?php endif; ?>
 
 		<?php if ( ! empty( $domca_seasonal_resets_section_steps ) ) : ?>
-			<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__items' ); ?>">
-				<?php foreach ( $domca_seasonal_resets_section_steps as $step ) : ?>
-					<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item' ); ?>">
-						<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item-content' ); ?>">
-							<?php if ( ! empty( $step['title'] ) ) : ?>
-								<p class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item-title' ); ?>">
-									<?php echo wp_kses_post( $step['title'] ); ?>
-								</p>
-							<?php endif; ?>
+			<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__items-wrap' ); ?>">
+				<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__items' ); ?>">
+					<?php get_template_part( '/vector-images/resets-section-items-bg' ); ?>
+					<?php foreach ( $domca_seasonal_resets_section_steps as $step ) : ?>
+						<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item' ); ?>">
+							<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item-content' ); ?>">
+								<?php if ( ! empty( $step['title'] ) ) : ?>
+									<p class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item-title' ); ?>">
+										<?php echo wp_kses_post( $step['title'] ); ?>
+									</p>
+								<?php endif; ?>
 
-							<?php if ( ! empty( $step['text'] ) ) : ?>
-								<p class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item-text' ); ?>">
-									<?php echo wp_kses_post( $step['text'] ); ?>
-								</p>
-							<?php endif; ?>
+								<?php if ( ! empty( $step['text'] ) ) : ?>
+									<p class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item-text' ); ?>">
+										<?php echo wp_kses_post( $step['text'] ); ?>
+									</p>
+								<?php endif; ?>
+							</div>
 						</div>
-					</div>
-				<?php endforeach; ?>
+					<?php endforeach; ?>
+				</div>
 			</div>
 		<?php endif; ?>
 
