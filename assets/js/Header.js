@@ -6,8 +6,9 @@ class Header {
 		if (!this.headerEl) return;
 
 		this.boundScrollHandler = this.scrollHandler.bind(this);
+		this.boundMenuClickHandler = this.handleMenuClick.bind(this);
 
-		this.menu = this.headerEl.querySelector('#primary-menu');
+		this.menu = this.headerEl.querySelector('#dm-header-menu');
 
 		this.mobBurgerBtn = document.querySelector('.mob-burger-btn');
 		this.boundDisplayMobMenuHandler = this.displayMobMenu.bind(this);
@@ -33,6 +34,39 @@ class Header {
 					new LanguageSwitcher(this.languageSwitcher),
 			);
 		}
+
+		console.log(this.menu);
+
+		if (this.menu) {
+			this.menu.addEventListener('click', this.boundMenuClickHandler);
+		}
+	}
+
+	isTouchDevice() {
+		return window.matchMedia('(hover: none)').matches;
+	}
+
+	handleMenuClick(event) {
+		const link = event.target.closest('a');
+
+		if (!link) return;
+
+		if (link.getAttribute('href') === '#') {
+			event.preventDefault();
+		}
+
+		if (this.isTouchDevice()) {
+			const menuItem = link.closest('li.menu-item-has-children');
+
+			if (menuItem) {
+				event.preventDefault();
+				this.toggleSubmenu(menuItem);
+			}
+		}
+	}
+
+	toggleSubmenu(menuItem) {
+		menuItem.classList.toggle('dm-active');
 	}
 
 	isHeaderHide(scrolled) {

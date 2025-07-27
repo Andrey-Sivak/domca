@@ -2,8 +2,6 @@
 
 #dm-header {
 
-
-
   &.dm-out {
     transform: translateY(-130%);
   }
@@ -122,15 +120,119 @@
       column-gap: 40px;
     }
 
+    & > li > a {
+      text-transform: uppercase;
+    }
+
     li {
+
+      &.menu-item-has-children {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '';
+          width: 120%;
+          top: 0;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: transparent;
+        }
+
+        & > .sub-menu {
+          overflow: hidden;
+          transition: all ease-in-out .3s;
+          display: grid;
+          padding: 0 0 2px;
+          opacity: 0;
+          box-shadow: none;
+          height: auto;
+          max-height: 0;
+          gap: 4px;
+
+          @media (min-width: #{$bp-lg}) {
+            gap: 8px;
+            padding: 0;
+            border-radius: 6px;
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          li {
+            padding: 4px 0 4px;
+
+            @media (min-width: #{$bp-lg}) {
+              padding: 4px 0 4px 16px;
+            }
+
+            @media (min-width: #{$bp-lg}) {
+              padding: 0;
+            }
+
+            &:first-child {
+              padding-top: 12px;
+
+              @media (min-width: #{$bp-lg}) {
+                padding: 0;
+              }
+            }
+          }
+
+          @media (min-width: #{$bp-lg}) {
+
+            &:before {
+              position: absolute;
+              content: '';
+              height: 100%;
+              background: var(--gradient-cream);
+              width: 100vw;
+              left: 50%;
+              transform: translateX(-50%);
+              top: 0;
+              z-index: -1;
+            }
+          }
+        }
+
+        @media (hover: hover) {
+
+          &:hover > .sub-menu {
+            opacity: 1;
+            max-height: 200px;
+
+            @media (min-width: #{$bp-lg}) {
+              padding: 18px 18px;
+              box-shadow: 0 6px 12px 3px rgba(0, 0, 0, .08);
+            }
+          }
+        }
+
+        @media not (hover: hover) {
+
+          &.dm-active > a {
+            &:before {
+              max-width: 100%;
+            }
+          }
+
+          &.dm-active > .sub-menu {
+            opacity: 1;
+            max-height: 200px;
+          }
+        }
+      }
 
       a {
         font-size: 16px;
         line-height: 1.25;
         position: relative;
         display: block;
-        text-transform: uppercase;
         width: fit-content;
+        white-space: nowrap;
+        margin: 0 auto;
 
         &:before {
           position: absolute;
