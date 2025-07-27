@@ -269,3 +269,26 @@ function domca_get_svg_allowed_html() {
 		),
 	);
 }
+
+/**
+ * Get display language code for WPML language switcher.
+ *
+ * This function allows customization of language codes displayed in the language switcher.
+ * It maps original WPML language codes to custom display codes when needed.
+ *
+ * @param string $language_code Original language code from WPML.
+ * @return string Language code for display purposes.
+ */
+function domca_get_display_language_code( $language_code ) {
+	$custom_language_codes = array(
+		'cs' => 'cz',
+	);
+
+	$lower_code = strtolower( $language_code );
+
+	if ( isset( $custom_language_codes[ $lower_code ] ) ) {
+		return $custom_language_codes[ $lower_code ];
+	}
+
+	return $language_code;
+}

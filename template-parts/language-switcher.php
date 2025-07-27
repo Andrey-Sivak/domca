@@ -26,7 +26,8 @@ if ( ! empty( $domca_languages ) ) :
 				<?php
 				if ( $domca_lang['active'] ) {
 					if ( ! empty( $domca_lang['country_flag_url'] ) ) {
-						echo '<span class="wpml-lang-code" lang="' . esc_attr( $domca_lang['language_code'] ) . '">' . esc_html( strtoupper( $domca_lang['language_code'] ) ) . '</span>';
+						$display_code = domca_get_display_language_code( $domca_lang['language_code'] );
+						echo '<span class="wpml-lang-code" lang="' . esc_attr( $domca_lang['language_code'] ) . '">' . esc_html( strtoupper( $display_code ) ) . '</span>';
 						echo '<img src="' . esc_url( $domca_lang['country_flag_url'] ) . '" width="18" height="12" loading="lazy" alt="' . esc_attr( $domca_lang['translated_name'] ) . '" class="wpml-flag">';
 					}
 				}
@@ -39,6 +40,7 @@ if ( ! empty( $domca_languages ) ) :
 				foreach ( $domca_languages as $domca_lang ) :
 					if ( ! $domca_lang['active'] ) :
 						if ( ! empty( $domca_lang['country_flag_url'] ) ) :
+							$display_code = domca_get_display_language_code( $domca_lang['language_code'] );
 							?>
 							<li>
 								<a
@@ -46,7 +48,7 @@ if ( ! empty( $domca_languages ) ) :
 										title="<?php echo esc_attr( $domca_lang['translated_name'] ); ?>"
 										lang="<?php echo esc_attr( $domca_lang['language_code'] ); ?>"
 								>
-									<span><?php echo esc_html( strtoupper( $domca_lang['language_code'] ) ); ?></span>
+									<span><?php echo esc_html( strtoupper( $display_code ) ); ?></span>
 									<img
 											src="<?php echo esc_url( $domca_lang['country_flag_url'] ); ?>"
 											alt="<?php echo esc_attr( $domca_lang['translated_name'] ); ?>"
