@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/where-i-started",
+  "version": "0.1.0",
+  "title": "Where I Started Story",
+  "category": "widgets",
+  "description": "A personal story section with narrative text, emphasized keywords, and character illustration.",
+  "keywords": [
+    "story",
+    "personal",
+    "narrative",
+    "testimonial",
+    "journey"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "headText": {
+      "type": "string",
+      "default": ""
+    },
+    "image": {
+      "type": "object",
+      "default": {
+        "id": null,
+        "url": ""
+      }
+    },
+    "textPartOne": {
+      "type": "string",
+      "default": ""
+    },
+    "textPartTwo": {
+      "type": "string",
+      "default": ""
+    },
+    "bottomText": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
