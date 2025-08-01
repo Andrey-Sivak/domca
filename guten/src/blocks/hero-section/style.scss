@@ -274,6 +274,41 @@
       }
     }
   }
+
+  &.dm-about-me {
+
+    .wp-block-domca-home-hero-section__inner {
+      padding-top: 12.5vh;
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        padding-top: 164px;
+      }
+    }
+
+    .wp-block-domca-home-hero-section__content {
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        max-width: 75.75%;
+      }
+    }
+
+    .wp-block-domca-home-hero-section__text {
+      line-height: 1.12;
+      font-size: 18px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 20px;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        font-size: 22px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 25px;
+      }
+    }
+  }
 }
 
 @keyframes floatUp {
