@@ -35,8 +35,6 @@ class Header {
 			);
 		}
 
-		console.log(this.menu);
-
 		if (this.menu) {
 			this.menu.addEventListener('click', this.boundMenuClickHandler);
 		}
