@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/whats-pulled-me-forward",
+  "version": "0.1.0",
+  "title": "What's Pulled Me Forward",
+  "category": "widgets",
+  "description": "A motivational journey section with numbered progression points and circular icons.",
+  "keywords": [
+    "journey",
+    "progression",
+    "motivation",
+    "timeline",
+    "forward"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "item1": {
+      "type": "string",
+      "default": "Women."
+    },
+    "item2": {
+      "type": "string",
+      "default": "Connection."
+    },
+    "item3": {
+      "type": "string",
+      "default": "A community that gets you."
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

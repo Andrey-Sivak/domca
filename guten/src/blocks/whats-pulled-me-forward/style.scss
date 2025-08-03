@@ -1,0 +1,152 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-whats-pulled-me-forward {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	@container dm-main (min-width: #{$bp-md}) {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 30px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin-bottom: 40px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		gap: 16px;
+		grid-template-columns: 1fr 120px;
+
+		@container dm-main (min-width: #{$bp-sm}) {
+			align-items: center;
+			grid-template-columns: 1fr 160px;
+		}
+
+		@container dm-main (min-width: #{$bp-md}) {
+			gap: 30px;
+			grid-template-columns: 1.1fr .9fr;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			gap: 50px;
+			grid-template-columns: 1fr 580px;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		text-align: right;
+		line-height: 1.12;
+		font-size: 18px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 20px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			font-size: 22px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 25px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 30px 0;
+		gap: 27px;
+
+		@container dm-main (min-width: #{$bp-sm}) {
+			justify-content: flex-start;
+			padding: 0;
+			display: grid;
+		}
+	}
+
+	&__item {
+		display: grid;
+		gap: 16px;
+
+		@container dm-main (min-width: #{$bp-sm}) {
+			gap: 20px;
+		}
+
+		@container dm-main (min-width: #{$bp-md}) {
+			align-items: center;
+			display: flex;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			gap: 30px;
+		}
+
+		&-icon {
+			flex-shrink: 0;
+			flex-grow: 0;
+			width: 100%;
+
+			@container dm-main (min-width: #{$bp-sm}) {
+				width: 130px;
+			}
+
+			@container dm-main (min-width: #{$bp-md}) {
+				width: 170px;
+			}
+
+			@container dm-main (min-width: #{$bp-xl}) {
+				width: auto;
+			}
+
+			svg {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		&-text {
+			margin: 0;
+			color: var(--color-mauve);
+			font-style: italic;
+			font-weight: 600;
+			line-height: 1.17;
+			font-size: 20px;
+			text-align: center;
+
+			@container dm-main (min-width: #{$bp-md}) {
+				text-align: left;
+				font-size: 24px;
+			}
+
+			@container dm-main (min-width: #{$bp-lg}) {
+				font-size: 28px;
+			}
+
+			@container dm-main (min-width: #{$bp-xl}) {
+				font-size: 34px;
+			}
+		}
+	}
+}
+

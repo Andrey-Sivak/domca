@@ -43,6 +43,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/is-this-for-you' );
 	register_block_type( __DIR__ . '/build/where-i-started' );
 	register_block_type( __DIR__ . '/build/professional-background' );
+	register_block_type( __DIR__ . '/build/whats-pulled-me-forward' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
