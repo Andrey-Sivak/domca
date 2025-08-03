@@ -44,6 +44,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/where-i-started' );
 	register_block_type( __DIR__ . '/build/professional-background' );
 	register_block_type( __DIR__ . '/build/whats-pulled-me-forward' );
+	register_block_type( __DIR__ . '/build/personal-story' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
