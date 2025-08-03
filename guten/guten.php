@@ -49,6 +49,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/program-intro' );
 	register_block_type( __DIR__ . '/build/what-i-do-today' );
 	register_block_type( __DIR__ . '/build/personal-facts' );
+	register_block_type( __DIR__ . '/build/join-us' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
