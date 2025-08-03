@@ -4,16 +4,16 @@
 	position: relative;
 	text-align: center;
 	margin-top: 40px;
-	margin-bottom: 40px;
+	padding-bottom: 40px;
 
 	@container dm-main (min-width: #{$bp-md}) {
 		margin-top: 50px;
-		margin-bottom: 50px;
+		padding-bottom: 50px;
 	}
 
 	@container dm-main (min-width: #{$bp-lg}) {
 		margin-top: 70px;
-		margin-bottom: 70px;
+		padding-bottom: 70px;
 	}
 
 	&__title {

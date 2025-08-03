@@ -13,7 +13,7 @@ $domca_what_i_do_today_base_class = 'wp-block-domca-what-i-do-today';
 
 $domca_what_i_do_today_wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => $domca_what_i_do_today_base_class . ' dm-wrap',
+		'class' => 'dm-wrap',
 	)
 );
 

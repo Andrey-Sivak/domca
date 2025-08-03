@@ -1,3 +1,5 @@
+import BgBlockWrapper from './BgBlockWrapper.js';
+
 (function () {
 	const elements = {
 		header: document.querySelector('#dm-header'),
@@ -7,6 +9,9 @@
 		reviewsSlider: document.querySelector(
 			'.wp-block-domca-reviews-slider__list',
 		),
+		blocksToWrap:
+			document.querySelector('.wp-block-domca-program-intro') &&
+			document.querySelector('.wp-block-domca-what-i-do-today'),
 	};
 
 	if (elements.header) {
@@ -26,6 +31,12 @@
 	if (elements.reviewsSlider) {
 		import('./ReviewsSlider.js').then(
 			({ default: ReviewsSlider }) => new ReviewsSlider(),
+		);
+	}
+
+	if (elements.blocksToWrap) {
+		import('./BgBlockWrapper.js').then(
+			({ default: BgBlockWrapper }) => new BgBlockWrapper(),
 		);
 	}
 })();

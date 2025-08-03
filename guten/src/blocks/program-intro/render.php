@@ -14,7 +14,7 @@ $domca_program_intro_base_class = 'wp-block-domca-program-intro';
 
 $domca_program_intro_wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => $domca_program_intro_base_class . ' dm-wrap',
+		'class' => 'dm-wrap',
 	)
 );
 
@@ -67,4 +67,10 @@ $domca_program_intro_wrapper_attributes = get_block_wrapper_attributes(
 			<?php endif; ?>
 		</div>
 	</div>
+	<!--  For assets/js/BgBlockWrapper.js.  -->
+	<style>
+		.<?php echo esc_attr( $domca_program_intro_base_class ); ?> {
+			background-image: url('<?php echo get_template_directory_uri() . '/images/bg-logo-pattern.svg'; ?>');
+		}
+	</style>
 </section>
