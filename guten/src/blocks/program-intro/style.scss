@@ -1,0 +1,72 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-program-intro {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+
+	@container dm-main (min-width: #{$bp-md}) {
+		text-align: left;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	&__wrap {
+
+		@container dm-main (min-width: #{$bp-md}) {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: 30px;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		display: none;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			display: block;
+		}
+
+		&-mob {
+			display: block;
+			max-width: clamp(85%, 85%, 450px);
+			margin: 0 auto 30px;
+
+			@container dm-main (min-width: #{$bp-md}) {
+				display: none;
+			}
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		margin: 0;
+		line-height: 1.12;
+		font-size: 18px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 20px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			font-size: 22px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 25px;
+		}
+	}
+}
+
