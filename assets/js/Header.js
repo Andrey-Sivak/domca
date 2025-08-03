@@ -44,21 +44,21 @@ class Header {
 		return window.matchMedia('(hover: none)').matches;
 	}
 
-	handleMenuClick(event) {
-		const link = event.target.closest('a');
+	handleMenuClick(e) {
+		const link = e.target.closest('a');
 
 		if (!link) return;
 
 		if (link.getAttribute('href') === '#') {
-			event.preventDefault();
-		}
+			e.preventDefault();
 
-		if (this.isTouchDevice()) {
-			const menuItem = link.closest('li.menu-item-has-children');
+			if (this.isTouchDevice()) {
+				const menuItem = link.closest('li.menu-item-has-children');
 
-			if (menuItem) {
-				event.preventDefault();
-				this.toggleSubmenu(menuItem);
+				if (menuItem) {
+					e.preventDefault();
+					this.toggleSubmenu(menuItem);
+				}
 			}
 		}
 	}

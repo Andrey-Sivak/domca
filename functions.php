@@ -14,7 +14,7 @@ declare(strict_types=1);
  * The domca functions and definitions
  */
 
-define( 'DOMCA_VERSION', '1.0.126' );
+define( 'DOMCA_VERSION', '1.0.128' );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
