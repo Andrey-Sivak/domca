@@ -1,0 +1,144 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-personal-facts {
+	position: relative;
+	background-color: var(--color-mauve);
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 40px;
+
+	@container dm-main (min-width: #{$bp-md}) {
+		padding-bottom: 50px;
+	}
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		padding-bottom: 70px;
+	}
+
+	&__clip {
+		position: absolute;
+		z-index: 10;
+		display: block;
+		height: auto;
+		left: auto;
+		right: 24px;
+		top: -21px;
+		width: 34px;
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			top: -46px;
+			width: 73px;
+		}
+
+		@container dm-main (min-width: #{$bp-container}) {
+			right: 142px;
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		z-index: 20;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 30px;
+		color: #fff;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin-bottom: 40px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__items {
+		container-type: inline-size;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		column-gap: 14px;
+		row-gap: 20px;
+		flex-wrap: wrap;
+		max-width: 350px;
+		margin: 0 auto;
+
+		@container dm-main (min-width: #{$bp-sm}) {
+			margin: 0;
+			max-width: none;
+			row-gap: 30px;
+		}
+
+		@container dm-main (min-width: #{$bp-md}) {
+			column-gap: 20px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			column-gap: 30px;
+			row-gap: 50px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		container-type: inline-size;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 100%;
+		min-height: 200px;
+		padding: 30px 0;
+
+		@container dm-main (min-width: #{$bp-sm}) {
+			padding: 0;
+			height: 33cqw;
+			flex: 0 0 calc((100% - 14px * 3) / 2);
+		}
+
+		@container dm-main (min-width: #{$bp-md}) {
+			height: 22cqw;
+			flex: 0 0 calc((100% - 20px * 3) / 3);
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			height: 19.52cqw;
+			flex: 0 0 calc((100% - 20px * 3) / 4);
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			flex: 0 0 calc((100% - 30px * 3) / 4);
+		}
+
+		&-decor {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 10;
+		}
+
+		&-text {
+			position: relative;
+			z-index: 20;
+			max-width: 85%;
+			margin: 0 auto;
+			font-weight: 600;
+			line-height: 1.2;
+			font-size: 5.6cqw;
+
+			@container dm-main (min-width: #{$bp-sm}) {
+				font-size: 6.2cqw;
+			}
+
+			@container dm-main (min-width: #{$bp-lg}) {
+				font-size: 7.44cqw;
+			}
+		}
+	}
+}
+

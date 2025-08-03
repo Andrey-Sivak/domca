@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/personal-facts",
+  "version": "0.1.0",
+  "title": "Personal Facts Grid",
+  "category": "widgets",
+  "description": "A grid of personal facts or about me cards with customizable title and background.",
+  "keywords": [
+    "facts",
+    "about",
+    "personal",
+    "grid",
+    "cards",
+    "bio"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "facts": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
