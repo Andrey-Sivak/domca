@@ -1,0 +1,102 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-personal-journey {
+	position: relative;
+	background-color: var(--color-dusty-rose);
+	color: #fff;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+
+	@container dm-main (min-width: #{$bp-md}) {
+		padding-bottom: 50px;
+		padding-top: 50px;
+	}
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 30px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__text,
+	&__subtitle {
+		margin: 0;
+		line-height: 1.17;
+		font-size: 20px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 24px;
+		}
+
+		@container dm-main (min-width: #{$bp-lg}) {
+			font-size: 28px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 34px;
+		}
+	}
+
+	&__items {
+		display: grid;
+		container-type: inline-size;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		margin: 30px 0;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			margin: 50px 0;
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			gap: 30px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		container-type: inline-size;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40cqw;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			height: 21.75cqw;
+		}
+
+		&-title {
+			margin: 0;
+			position: relative;
+			z-index: 20;
+			color: var(--color-mauve);
+			font-size: 10.1cqw;
+			font-weight: 600;
+			font-style: italic;
+			line-height: 1.17;
+			max-width: 85%;
+		}
+	}
+
+	&__decor {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 10;
+	}
+}
+

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/personal-journey",
+  "version": "0.1.0",
+  "title": "Personal Journey",
+  "category": "widgets",
+  "description": "A background section with floating bubble cards to showcase personal experiences and journey milestones.",
+  "keywords": [
+    "journey",
+    "experience",
+    "bubbles",
+    "personal",
+    "testimonial",
+    "background"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "item1": {
+      "type": "string",
+      "default": ""
+    },
+    "item2": {
+      "type": "string",
+      "default": ""
+    },
+    "item3": {
+      "type": "string",
+      "default": ""
+    },
+    "item4": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
