@@ -1,0 +1,23 @@
+.dm-scroll-top-btn {
+  border-radius: 100%;
+  background: #fff;
+  transition: all ease .3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+
+  svg {
+    display: block;
+    height: auto;
+    width: 50%;
+  }
+}

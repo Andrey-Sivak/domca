@@ -14,6 +14,7 @@ import FAQPage from './FAQPage.js';
 			document.querySelector('.wp-block-domca-program-intro') &&
 			document.querySelector('.wp-block-domca-what-i-do-today'),
 		faqPage: document.querySelector('.dm-faq-page'),
+		toTopBtn: document.querySelector('.dm-scroll-top-btn'),
 	};
 
 	if (elements.header) {
@@ -44,5 +45,9 @@ import FAQPage from './FAQPage.js';
 
 	if (elements.faqPage) {
 		import('./FAQPage.js').then(({ default: FAQPage }) => new FAQPage());
+	}
+
+	if (elements.toTopBtn) {
+		import('./ToTopBtn.js').then(({ default: ToTopBtn }) => new ToTopBtn());
 	}
 })();
