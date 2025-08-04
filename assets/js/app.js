@@ -1,4 +1,5 @@
 import BgBlockWrapper from './BgBlockWrapper.js';
+import FAQPage from './FAQPage.js';
 
 (function () {
 	const elements = {
@@ -12,6 +13,7 @@ import BgBlockWrapper from './BgBlockWrapper.js';
 		blocksToWrap:
 			document.querySelector('.wp-block-domca-program-intro') &&
 			document.querySelector('.wp-block-domca-what-i-do-today'),
+		faqPage: document.querySelector('.dm-faq-page'),
 	};
 
 	if (elements.header) {
@@ -38,5 +40,9 @@ import BgBlockWrapper from './BgBlockWrapper.js';
 		import('./BgBlockWrapper.js').then(
 			({ default: BgBlockWrapper }) => new BgBlockWrapper(),
 		);
+	}
+
+	if (elements.faqPage) {
+		import('./FAQPage.js').then(({ default: FAQPage }) => new FAQPage());
 	}
 })();
