@@ -1,0 +1,40 @@
+.wp-block-domca-faq {
+  max-width: unset !important;
+
+  .dm-button {
+    align-self: start;
+  }
+
+  .dm-admin-section-title {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .dm-admin-section-subtitle {
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .dm-admin-section-note {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .components-panel__body-toggle {
+    text-overflow: ellipsis;
+    line-clamp: 1;
+  }
+
+  .dm-admin-rich-text-wrap {
+    padding: 6px 8px;
+    border: 1px solid #949494;
+    border-radius: 2px;
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+  }
+}

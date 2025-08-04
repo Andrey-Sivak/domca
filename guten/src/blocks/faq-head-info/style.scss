@@ -2,12 +2,13 @@
 
 .wp-block-domca-faq-head-info {
   position: relative;
+  z-index: 10;
   background-color: #fff;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 50px;
 
   @container dm-main (min-width: #{$bp-lg}) {
-    padding-top: 70px;
+    padding-top: 140px;
     padding-bottom: 80px;
   }
 

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/faq",
+  "version": "0.1.0",
+  "title": "FAQ",
+  "category": "widgets",
+  "description": "FAQ Block",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "items": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "default": {},
+        "items": {
+          "id": {
+            "type": "number",
+            "default": null
+          },
+          "title": {
+            "type": "string",
+            "default": ""
+          },
+          "text": {
+            "type": "string",
+            "default": ""
+          },
+          "questions": {
+            "type": "object",
+            "default": {},
+            "items": {
+              "id": {
+                "type": "number",
+                "default": null
+              },
+              "question": {
+                "type": "string",
+                "default": ""
+              },
+              "answer": {
+                "type": "string",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

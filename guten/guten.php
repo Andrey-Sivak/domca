@@ -52,6 +52,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/join-us' );
 	register_block_type( __DIR__ . '/build/faq-disclaimer' );
 	register_block_type( __DIR__ . '/build/faq-head-info' );
+	register_block_type( __DIR__ . '/build/faq' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
