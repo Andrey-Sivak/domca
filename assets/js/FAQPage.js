@@ -24,7 +24,10 @@ class FAQPage {
 			const tempTextarea = document.createElement('textarea');
 			tempTextarea.innerHTML = rawValue;
 			let correctedJSON = tempTextarea.value;
-			correctedJSON = correctedJSON.replace(/[\u201C\u201D]/g, '"');
+			correctedJSON = correctedJSON.replace(
+				/[\u201C\u201D\u201E\u201F]/g,
+				'"',
+			);
 			this.faqData = JSON.parse(correctedJSON);
 		} catch (error) {
 			console.error(
