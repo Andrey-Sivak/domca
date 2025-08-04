@@ -266,6 +266,9 @@ function domca_get_svg_allowed_html() {
 			'fill'         => true,
 			'stroke'       => true,
 			'stroke-width' => true,
+			'fill-rule'    => true,
+			'clip-path'    => true,
+			'clip-rule'    => true,
 		),
 	);
 }
