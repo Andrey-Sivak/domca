@@ -1,0 +1,82 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-faq-disclaimer {
+	position: relative;
+	color: #fff;
+	background-color: var(--color-dusty-rose);
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@container dm-main (min-width: #{$bp-md}) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	@container dm-main (min-width: #{$bp-lg}) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	&__wrap {
+		display: grid;
+		align-items: center;
+		gap: 30px;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			gap: 50px;
+			grid-template-columns: 1fr 237px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		gap: 18px;
+		order: 2;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			gap: 30px;
+			order: 1;
+			text-align: right;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin: 0;
+		font-weight: 600;
+		font-style: italic;
+		font-size: 18px;
+		line-height: 1.21;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			font-size: 20px;
+		}
+
+		@container dm-main (min-width: #{$bp-xl}) {
+			font-size: 28px;
+		}
+	}
+
+	&__image {
+		order: 1;
+		max-width: 110px;
+		margin: 0 auto;
+
+		@container dm-main (min-width: #{$bp-md}) {
+			max-width: none;
+			margin: 0;
+			order: 2;
+		}
+
+		svg {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
