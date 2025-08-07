@@ -200,6 +200,8 @@
   &__item {
     position: relative;
     padding-bottom: 20px;
+    border: 2px solid var(--color-mauve);
+    border-radius: 10px;
 
     @container dm-main (min-width: #{$bp-xl}) {
       padding-bottom: 44px;
@@ -246,6 +248,7 @@
 
   &__question {
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -293,6 +296,7 @@
     }
 
     svg {
+      flex-shrink: 0;
       transition: all 0.3s ease-in-out;
       display: block;
       height: auto;
@@ -303,19 +307,9 @@
       }
 
       @container dm-main (min-width: #{$bp-lg}) {
-        width: auto;
+        width: 28px;
       }
     }
-  }
-
-  &__decor {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 10;
   }
 }
 
