@@ -61,8 +61,9 @@ $domca_seasonal_resets_section_wrapper_attributes = get_block_wrapper_attributes
 
 		<?php if ( ! empty( $domca_seasonal_resets_section_steps ) ) : ?>
 			<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__items-wrap' ); ?>">
-				<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__items' ); ?>">
+				<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__items-inner' ); ?>">
 					<?php get_template_part( '/vector-images/resets-section-items-bg' ); ?>
+				<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__items' ); ?>">
 					<?php foreach ( $domca_seasonal_resets_section_steps as $step ) : ?>
 						<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item' ); ?>">
 							<div class="<?php echo esc_attr( $domca_seasonal_resets_section_base_class . '__item-content' ); ?>">
@@ -81,6 +82,7 @@ $domca_seasonal_resets_section_wrapper_attributes = get_block_wrapper_attributes
 						</div>
 					<?php endforeach; ?>
 				</div>
+			</div>
 			</div>
 		<?php endif; ?>
 
