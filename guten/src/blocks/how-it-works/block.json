@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/how-it-works",
+  "version": "0.1.0",
+  "title": "How It Works",
+  "category": "widgets",
+  "description": "A step-by-step process section with icons, descriptions, and call-to-action button.",
+  "keywords": [
+    "process",
+    "steps",
+    "how-it-works",
+    "workflow",
+    "icons",
+    "guide"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "steps": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "default": ""
+          },
+          "image": {
+            "type": "object",
+            "default": {
+              "id": null,
+              "url": ""
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

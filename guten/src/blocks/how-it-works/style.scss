@@ -1,0 +1,143 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-how-it-works {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @container dm-main (min-width: #{$bp-xl}) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__separator {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    display: block;
+    left: 0;
+    transform: translateY(50%);
+
+    path {
+      fill: var(--color-warm-gray);
+    }
+  }
+
+  &__separator + &__separator {
+    transform: translateY(-50%);
+    bottom: auto;
+    top: 0;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 20;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__steps {
+    display: grid;
+    gap: 16px;
+    margin: 30px auto;
+    max-width: 300px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 650px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      max-width: none;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 40px 0;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      gap: 30px;
+      margin: 50px 0;
+    }
+  }
+
+  &__step {
+    position: relative;
+    container-type: inline-size;
+
+    &-image {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      z-index: 20;
+      width: 44.64%;
+      height: 44.64cqw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-img {
+        position: relative;
+        z-index: 20;
+        max-width: 57.33%;
+      }
+
+      &-decor {
+        position: absolute;
+        display: block;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &-text {
+      position: relative;
+      z-index: 10;
+      margin-top: 26.78cqw;
+      min-height: 68.45cqw;
+      padding: 27.8cqw 6.54cqw 8.92cqw;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      &-text {
+        position: relative;
+        z-index: 20;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1.1;
+        font-size: 5.95cqw;
+        margin: 0;
+      }
+
+      &-decor {
+        position: absolute;
+        display: block;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+
