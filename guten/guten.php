@@ -57,6 +57,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/holiday-support' );
 	register_block_type( __DIR__ . '/build/how-it-works' );
 	register_block_type( __DIR__ . '/build/why-it-works' );
+	register_block_type( __DIR__ . '/build/email-support-pack' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );

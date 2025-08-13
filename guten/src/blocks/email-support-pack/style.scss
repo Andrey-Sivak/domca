@@ -1,0 +1,162 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-email-support-pack {
+  background-color: #FAD8D8;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @container dm-main (min-width: #{$bp-xl}) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__separator {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    display: block;
+    left: 0;
+    transform: translateY(50%);
+
+    path {
+      fill: var(--color-warm-gray);
+    }
+  }
+
+  &__separator + &__separator {
+    transform: translateY(-50%);
+    bottom: auto;
+    top: 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-bottom: 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.17;
+    font-size: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__items {
+    container-type: inline-size;
+    display: grid;
+    gap: 16px;
+    margin: 30px auto 30px;
+    max-width: 280px;
+
+    @container dm-main (min-width: #{$bp-sm}) {
+      gap: 20px;
+      max-width: 650px;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 30px auto 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      max-width: none;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin: 40px auto 50px;
+    }
+  }
+
+  &__item {
+    container-type: inline-size;
+    height: 100cqw;
+    position: relative;
+
+    @container dm-main (min-width: #{$bp-sm}) {
+      height: 50.34cqw;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      height: 25.17cqw;
+    }
+
+    &-text {
+      font-weight: 600;
+      font-style: italic;
+      font-size: 8.3cqw;
+      line-height: 1.17;
+      text-align: center;
+
+      &-wrap {
+        margin: 0 auto;
+        position: relative;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 65cqw;
+        height: 100%;
+        padding-top: 32cqw;
+      }
+    }
+
+    &-decor {
+      position: absolute;
+      display: block;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    &-decor-fill {
+      fill: #E0BEBE;
+    }
+
+    &:nth-child(2) &-decor-fill {
+      fill: var(--color-dusty-rose);
+    }
+
+    &:nth-last-child(2) &-decor-fill {
+      fill: var(--color-mauve);
+    }
+
+    &:last-child &-decor-fill {
+      fill: var(--color-warm-gray);
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
