@@ -1,0 +1,98 @@
+<?php
+/**
+ * Template for rendering the "Why It Works" block.
+ *
+ * @package domca
+ */
+
+$domca_why_it_works_title            = $attributes['title'] ?? '';
+$domca_why_it_works_subtitle         = $attributes['subtitle'] ?? '';
+$domca_why_it_works_reasons          = $attributes['reasons'] ?? array();
+$domca_why_it_works_conclusion_title = $attributes['conclusionTitle'] ?? '';
+$domca_why_it_works_conclusion_text  = $attributes['conclusionText'] ?? '';
+
+$domca_why_it_works_base_class = 'wp-block-domca-why-it-works';
+
+$domca_why_it_works_wrapper_attributes = get_block_wrapper_attributes(
+	array(
+		'class' => 'dm-wrap',
+	)
+);
+
+// Item background SVG from ItemBgSvg.js
+$domca_why_it_works_item_bg_svg = '<svg
+		preserveAspectRatio="none"
+		aria-hidden="true"
+		viewBox="0 0 466 166"
+		fill="none"
+		class="' . esc_attr( $domca_why_it_works_base_class . '__reason-decor' ) . '"
+	>
+		<path
+			d="M3 46C3 23.9086 20.9086 6 43 6H421C443.091 6 461 23.9086 461 46V120C461 142.091 443.091 160 421 160H43C20.9086 160 3 142.091 3 120V46Z"
+			fill="white"
+		/>
+		<path
+			d="M351.517 163.721C326.016 162.923 305.942 166.45 274.86 165.952C243.779 165.453 239.124 163.582 203.527 164.003C167.933 164.424 132.319 163.145 116.469 163.913C100.621 164.682 98.9481 162.358 76.4418 162.874C63.2492 163.176 53.1029 163.197 43 163.011C35.3531 162.862 27.6827 160.71 20.5233 155.877C13.3021 151.442 1.00113 137.946 1.4533 120C1.6887 96.8049 1.68008 71.0694 1.14127 58.3038C0.971411 54.2793 0.886579 50.1513 0.863684 46C0.262366 25.5301 18.0224 10.1225 29.9836 7.32634C34.5739 5.91724 38.3762 5.65598 41.2282 5.69487C42.4378 5.71736 43.0007 5.88135 43 6.02704C43 6.02714 43 6.02724 43 6.02733C42.998 6.21571 42.1398 6.37685 40.6206 6.48723C33.355 6.90454 21.7944 10.5559 13.8739 20.8193C6.4658 31.014 5.37738 37.9666 4.96149 46C4.85272 53.5904 4.70747 62.4821 5.00919 78.1412C5.31339 93.9287 5.7617 106.728 6.06072 120C6.4057 133.29 13.7845 148.597 31.9159 155.203C35.7711 156.512 39.5145 157.027 43 157.026C72.5969 157.012 85.2119 154.476 134.293 156.221C189.602 158.188 195.423 154.558 250.541 154.075C305.659 153.593 375.234 155.596 408.46 155.43C412.479 155.409 416.664 155.386 421 155.36C437.431 155.964 456.428 140.774 456.099 120C456.091 104.075 456.147 87.4095 456.32 70.4217C456.4 62.562 456.433 54.3948 456.436 46C457.056 28.0181 440.384 10.2235 421 10.8082C397.452 10.9089 373.65 10.928 351.015 10.5558C299.023 9.701 225.517 8.62133 191.558 7.89786C157.6 7.17441 149.323 7.01123 116.637 7.45328C97.8491 7.70739 71.9665 7.46787 50.1041 6.53336C39.1015 6.06305 41.5947 5.40821 52.6692 5.09489C68.8636 4.63673 82.1575 4.94281 90.5018 4.12443C107.175 2.48886 114.262 1.86143 135.311 2.81339C156.359 3.76524 166.277 1.60201 178.547 1.85099C190.818 2.10009 190.616 3.37605 253.005 2.39298C315.395 1.40987 349.597 1.15902 373.224 0.923011C384.57 0.809675 401.844 1.00613 421 1.19673C444.587 0.449906 466.462 23.4403 465.597 46C465.599 46.2858 465.602 46.571 465.605 46.8557C465.797 65.2864 465.812 92.8297 465.849 120C466.55 147.347 439.791 166.329 421 165.108C416.365 165.158 412.202 165.219 408.636 165.293C377.082 165.947 377.017 164.519 351.517 163.721Z"
+			fill="#817676"
+		/>
+	</svg>';
+?>
+
+<section
+		<?php
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $domca_why_it_works_wrapper_attributes;
+		?>
+>
+	<div class="<?php echo esc_attr( $domca_why_it_works_base_class . '__wrap dm-container' ); ?>">
+		<?php if ( ! empty( $domca_why_it_works_title ) ) : ?>
+			<h2 class="<?php echo esc_attr( $domca_why_it_works_base_class . '__title dm-heading dm-heading-h2' ); ?>">
+				<?php echo wp_kses_post( $domca_why_it_works_title ); ?>
+			</h2>
+		<?php endif; ?>
+
+		<?php if ( ! empty( $domca_why_it_works_subtitle ) ) : ?>
+			<p class="<?php echo esc_attr( $domca_why_it_works_base_class . '__subtitle' ); ?>">
+				<?php echo wp_kses_post( $domca_why_it_works_subtitle ); ?>
+			</p>
+		<?php endif; ?>
+
+		<?php if ( ! empty( $domca_why_it_works_reasons ) && is_array( $domca_why_it_works_reasons ) ) : ?>
+			<div class="<?php echo esc_attr( $domca_why_it_works_base_class . '__reasons' ); ?>">
+				<?php foreach ( $domca_why_it_works_reasons as $domca_reason ) : ?>
+					<?php
+					$domca_reason_title = $domca_reason['title'] ?? '';
+					$domca_reason_text  = $domca_reason['text'] ?? '';
+					?>
+					<div class="<?php echo esc_attr( $domca_why_it_works_base_class . '__reason' ); ?>">
+						<?php echo wp_kses( $domca_why_it_works_item_bg_svg, domca_get_svg_allowed_html() ); ?>
+
+						<?php if ( ! empty( $domca_reason_title ) ) : ?>
+							<p class="<?php echo esc_attr( $domca_why_it_works_base_class . '__reason-title' ); ?>">
+								<?php echo wp_kses_post( $domca_reason_title ); ?>
+							</p>
+						<?php endif; ?>
+
+						<?php if ( ! empty( $domca_reason_text ) ) : ?>
+							<p class="<?php echo esc_attr( $domca_why_it_works_base_class . '__reason-text-text' ); ?>">
+								<?php echo wp_kses_post( $domca_reason_text ); ?>
+							</p>
+						<?php endif; ?>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
+
+		<?php if ( ! empty( $domca_why_it_works_conclusion_title ) ) : ?>
+			<p class="<?php echo esc_attr( $domca_why_it_works_base_class . '__conclusion-title' ); ?>">
+				<?php echo wp_kses_post( $domca_why_it_works_conclusion_title ); ?>
+			</p>
+		<?php endif; ?>
+
+		<?php if ( ! empty( $domca_why_it_works_conclusion_text ) ) : ?>
+			<p class="<?php echo esc_attr( $domca_why_it_works_base_class . '__conclusion-text' ); ?>">
+				<?php echo wp_kses_post( $domca_why_it_works_conclusion_text ); ?>
+			</p>
+		<?php endif; ?>
+	</div>
+</section>
