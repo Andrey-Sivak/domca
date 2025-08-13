@@ -10,6 +10,9 @@ import FAQPage from './FAQPage.js';
 		reviewsSlider: document.querySelector(
 			'.wp-block-domca-reviews-slider__list',
 		),
+		topicSlider: document.querySelector(
+			'.wp-block-domca-topics-carousel__slides',
+		),
 		blocksToWrap:
 			document.querySelector('.wp-block-domca-program-intro') &&
 			document.querySelector('.wp-block-domca-what-i-do-today'),
@@ -34,6 +37,12 @@ import FAQPage from './FAQPage.js';
 	if (elements.reviewsSlider) {
 		import('./ReviewsSlider.js').then(
 			({ default: ReviewsSlider }) => new ReviewsSlider(),
+		);
+	}
+
+	if (elements.topicSlider) {
+		import('./TopicSlider.js').then(
+			({ default: TopicSlider }) => new TopicSlider(),
 		);
 	}
 

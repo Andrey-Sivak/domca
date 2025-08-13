@@ -1,0 +1,15 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-topics-carousel {
+  max-width: unset !important;
+
+  .wp-block-domca-topics-carousel__slides {
+    padding-bottom: 0;
+    display: grid;
+    gap: 30px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

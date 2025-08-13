@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/topics-carousel",
+  "version": "0.1.0",
+  "title": "Topics Carousel",
+  "category": "widgets",
+  "description": "A carousel showcasing real-life topics with slider navigation and dot indicators",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "slides": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "default": ""
+          },
+          "text": {
+            "type": "string",
+            "default": ""
+          }
+        }
+      }
+    },
+    "button": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
