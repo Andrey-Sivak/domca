@@ -295,3 +295,47 @@ function domca_get_display_language_code( $language_code ) {
 
 	return $language_code;
 }
+
+/**
+ * Get current language code using WPML with a get_locale() fallback.
+ */
+function domca_get_current_lang(): string {
+	static $cached = null;
+
+	if ( null !== $cached ) {
+		return $cached;
+	}
+
+	$lang = apply_filters( 'wpml_current_language', null );
+	if ( null === $lang ) {
+		$locale = get_locale();
+		$lang   = is_string( $locale ) ? substr( $locale, 0, 2 ) : '';
+	}
+
+	$cached = $lang ?: 'en';
+	return $cached;
+}
+
+/**
+ * Decide which logo template part to use for a given language.
+ */
+function domca_get_logo_template_slug( ?string $lang = null ): string {
+	$lang = $lang ?? domca_get_current_lang();
+
+	$slug = ( 'en' === $lang ) ? '/vector-images/logo' : '/vector-images/logo-cz-sk';
+
+	/**
+	 * Filter: allow overriding the logo template by language.
+	 *
+	 * @param string      $slug
+	 * @param string|null $lang
+	 */
+	return apply_filters( 'domca/logo_template_slug', $slug, $lang );
+}
+
+/**
+ * Render logo SVG based on current (or passed) language.
+ */
+function domca_render_logo( ?string $lang = null ): void {
+	get_template_part( domca_get_logo_template_slug( $lang ) );
+}

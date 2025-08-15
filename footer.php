@@ -21,7 +21,7 @@ declare( strict_types=1 );
 					itemprop="url"
 			>
 				<figure itemscope itemtype="https://schema.org/ImageObject">
-					<?php get_template_part( '/vector-images/logo' ); ?>
+					<?php domca_render_logo(); ?>
 				</figure>
 			</a>
 
