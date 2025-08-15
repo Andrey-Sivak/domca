@@ -4,7 +4,7 @@
   position: relative;
   z-index: 10;
   background-color: #fff;
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 50px;
 
   @container dm-main (min-width: #{$bp-lg}) {
@@ -31,9 +31,10 @@
   &__wrap {
     display: grid;
     align-items: center;
-    gap: 30px;
+    gap: 16px;
 
     @container dm-main (min-width: #{$bp-md}) {
+      gap: 30px;
       grid-template-columns: 280px 1fr;
     }
 
@@ -48,10 +49,12 @@
   }
 
   &__image {
-    display: none;
+    max-width: 150px;
+    margin: 0 auto;
 
     @container dm-main (min-width: #{$bp-md}) {
-      display: block;
+      margin: 0;
+      max-width: none;
     }
 
     svg {
