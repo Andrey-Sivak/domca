@@ -1,43 +1,12 @@
 class FAQPage {
 	constructor() {
-		this.dataContainer = document.querySelector(
-			'#wp-block-domca-faq__data',
-		);
 		this.faqContainer = document.querySelector('.wp-block-domca-faq');
+		if (!this.faqContainer) return;
 
-		this.sectionTemplate = document.querySelector('#faq-section-template');
-		this.itemTemplate = document.querySelector(
-			'#faq-question-item-template',
+		this.prebuilt = this.faqContainer.querySelector(
+			'#wp-block-domca-faq__prebuilt',
 		);
-
-		if (
-			!this.dataContainer ||
-			!this.faqContainer ||
-			!this.sectionTemplate ||
-			!this.itemTemplate
-		) {
-			return;
-		}
-
-		try {
-			let rawValue = this.dataContainer.value;
-			const tempTextarea = document.createElement('textarea');
-			tempTextarea.innerHTML = rawValue;
-			let correctedJSON = tempTextarea.value;
-			correctedJSON = correctedJSON.replace(
-				/[\u201C\u201D\u201E\u201F]/g,
-				'"',
-			);
-			this.faqData = JSON.parse(correctedJSON);
-		} catch (error) {
-			console.error(
-				'Error parsing FAQ data:',
-				error,
-				this.dataContainer.value,
-			);
-			this.faqData = [];
-			return;
-		}
+		if (!this.prebuilt) return;
 
 		this.insertionPoint = document.querySelector(
 			'.wp-block-domca-faq-head-info',
@@ -47,10 +16,6 @@ class FAQPage {
 	}
 
 	init() {
-		if (!this.faqData || this.faqData.length === 0) {
-			return;
-		}
-
 		this.faqContainer.addEventListener('click', (event) => {
 			const clickedItem = event.target.closest(
 				'.wp-block-domca-faq__item',
@@ -63,85 +28,55 @@ class FAQPage {
 
 	handleItemClick(item) {
 		const itemId = item.dataset.id;
-		if (!itemId) {
-			return;
-		}
+		if (!itemId) return;
 
-		const selectedItemData = this.faqData.find(
-			(data) => data.id.toString() === itemId,
-		);
+		const newSection = this.createOrUpdateSectionFromPrebuilt(itemId);
+		if (!newSection) return;
 
-		if (selectedItemData) {
-			this.createOrUpdateSection(selectedItemData);
-
-			const newSection = document.querySelector('.domca-faq__section');
-
-			if (newSection) {
-				newSection.scrollIntoView({
-					behavior: 'smooth',
-					block: 'start',
-				});
-			}
-		}
+		requestAnimationFrame(() => {
+			newSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		});
 	}
 
-	createOrUpdateSection(data) {
+	createOrUpdateSectionFromPrebuilt(sectionId) {
 		const existingSection = document.querySelector('.domca-faq__section');
-		if (existingSection) {
-			existingSection.remove();
-		}
+		if (existingSection) existingSection.remove();
 
-		const sectionFragment = this.sectionTemplate.content.cloneNode(true);
-
-		const titleElement = sectionFragment.querySelector(
-			'.domca-faq__section__title',
-		);
-		const itemsContainer = sectionFragment.querySelector(
-			'.domca-faq__section__items',
+		const templateSection = this.prebuilt.querySelector(
+			`.domca-faq__section-tpl[data-id="${sectionId}"]`,
 		);
 
-		titleElement.textContent = data.title;
+		if (!templateSection) return null;
 
-		if (data.questions && data.questions.length > 0) {
-			data.questions.forEach((q, idx) => {
-				const itemFragment = this.itemTemplate.content.cloneNode(true);
+		const clone = templateSection.cloneNode(true);
 
-				const questionEl = itemFragment.querySelector(
-					'.domca-faq__section__question',
-				);
-
-				const questionText = questionEl.querySelector(
-					'.domca-faq__section__question_text',
-				);
-				const answerEl = itemFragment.querySelector(
-					'.domca-faq__section__answer_text',
-				);
-
-				if (questionEl) {
-					questionText.innerHTML = `${idx + 1}. ${q.question}`;
-					questionEl.addEventListener(
-						'click',
-						this.handleQuestionClick,
-					);
-				}
-				if (answerEl) {
-					answerEl.innerHTML = q.answer;
-				}
-
-				itemsContainer.appendChild(itemFragment);
-			});
-		}
+		clone.classList.remove('domca-faq__section-tpl');
+		clone.classList.add('domca-faq__section');
+		clone.classList.add('dm-wrap');
 
 		if (this.insertionPoint) {
-			this.insertionPoint.after(sectionFragment);
+			this.insertionPoint.after(clone);
 		} else {
-			this.faqContainer.appendChild(sectionFragment);
+			this.faqContainer.appendChild(clone);
 		}
+
+		this.attachQuestionToggles(clone);
+
+		return clone;
+	}
+
+	attachQuestionToggles(sectionRoot) {
+		const questions = sectionRoot.querySelectorAll(
+			'.domca-faq__section__question',
+		);
+		questions.forEach((q) => {
+			q.addEventListener('click', this.handleQuestionClick);
+		});
 	}
 
 	handleQuestionClick(event) {
-		const item = event.currentTarget.parentElement;
-		item.classList.toggle('dm-active');
+		const item = event.currentTarget.closest('.domca-faq__section__item');
+		if (item) item.classList.toggle('dm-active');
 	}
 }
 
