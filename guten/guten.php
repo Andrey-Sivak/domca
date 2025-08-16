@@ -60,6 +60,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/email-support-pack' );
 	register_block_type( __DIR__ . '/build/topics-carousel' );
 	register_block_type( __DIR__ . '/build/support-styles' );
+	register_block_type( __DIR__ . '/build/products-filter' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
