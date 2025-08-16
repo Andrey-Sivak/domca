@@ -41,7 +41,7 @@ $domca_body_class = 'bg-cream text-charcoal';
 					itemprop="url"
 			>
 				<figure itemscope itemtype="https://schema.org/ImageObject">
-                    <?php domca_render_logo(); ?>
+					<?php domca_render_logo(); ?>
 				</figure>
 			</a>
 
