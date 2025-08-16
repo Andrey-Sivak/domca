@@ -18,6 +18,9 @@ import FAQPage from './FAQPage.js';
 			document.querySelector('.wp-block-domca-what-i-do-today'),
 		faqPage: document.querySelector('.dm-faq-page'),
 		toTopBtn: document.querySelector('.dm-scroll-top-btn'),
+		productFilter: document.querySelector(
+			'.wp-block-domca-products-filter',
+		),
 	};
 
 	if (elements.header) {
@@ -58,5 +61,12 @@ import FAQPage from './FAQPage.js';
 
 	if (elements.toTopBtn) {
 		import('./ToTopBtn.js').then(({ default: ToTopBtn }) => new ToTopBtn());
+	}
+
+	if (elements.productFilter) {
+		import('./ProductFilter.js').then(
+			({ default: ProductFilter }) =>
+				new ProductFilter(elements.productFilter),
+		);
 	}
 })();
