@@ -14,7 +14,7 @@ declare(strict_types=1);
  * The domca functions and definitions
  */
 
-define( 'DOMCA_VERSION', '1.0.131' );
+define( 'DOMCA_VERSION', '1.0.134' );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -339,3 +339,5 @@ function domca_get_logo_template_slug( ?string $lang = null ): string {
 function domca_render_logo( ?string $lang = null ): void {
 	get_template_part( domca_get_logo_template_slug( $lang ) );
 }
+
+require_once get_template_directory() . '/inc/product-cpt.php';
