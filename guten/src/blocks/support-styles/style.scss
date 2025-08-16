@@ -1,0 +1,223 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-support-styles {
+  background-color: #EEC0C0;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @container dm-main (min-width: #{$bp-xl}) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__separator {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    display: block;
+    left: 0;
+    transform: translateY(50%);
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__separator + &__separator {
+    transform: translateY(-50%);
+    bottom: auto;
+    top: 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-bottom: 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    max-width: 400px;
+    margin: 0 auto 30px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      max-width: none;
+      margin: 0 0 40px;
+      grid-auto-rows: minmax(300px, auto);
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      column-gap: 50px;
+      row-gap: 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      grid-auto-rows: minmax(392px, auto);
+      column-gap: 74px;
+      row-gap: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 40px 30px;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      padding: 50px 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      padding: 60px 50px;
+    }
+
+    &-content {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      height: 100%;
+    }
+
+    &-title {
+      color: var(--color-mauve);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.17;
+      font-size: 20px;
+      margin: 0;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 24px;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        font-size: 28px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 34px;
+      }
+    }
+
+    &-list {
+      display: grid;
+      margin-top: 20px;
+      gap: 0;
+      padding-left: 20px;
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        padding-left: 40px;
+      }
+
+      &-item {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+          background-color: var(--color-charcoal);
+          transform: translateY(-50%);
+          top: 12px;
+          left: -12px;
+
+          @container dm-main (min-width: #{$bp-lg}) {
+            left: -20px;
+            top: 16px;
+          }
+        }
+      }
+    }
+
+    &-text {
+      position: relative;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.21;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 20px;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        font-size: 24px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 28px;
+      }
+    }
+
+    &-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &-icon {
+        display: block;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+
+      &-text {
+        margin: 0;
+        line-height: 1.12;
+        font-size: 16px;
+
+        @container dm-main (min-width: #{$bp-md}) {
+          font-size: 18px;
+        }
+
+        @container dm-main (min-width: #{$bp-lg}) {
+          font-size: 20px;
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          font-size: 25px;
+        }
+      }
+    }
+
+    &-decor {
+      position: absolute;
+      display: block;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+
