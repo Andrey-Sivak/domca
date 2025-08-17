@@ -84,6 +84,7 @@
   &__filter {
 
     &-btn {
+      position: relative;
       transition: all 0.2s ease;
       background-color: #fff;
       color: var(--color-charcoal);
@@ -121,6 +122,31 @@
       &.is-active {
         background-color: var(--color-mauve);
         color: #fff;
+      }
+
+      &:before {
+        content: attr(data-hint);
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -110%);
+        border-radius: 6px;
+        background-color: var(--color-dusty-rose);
+        font-size: 14px;
+        line-height: 1.15;
+        padding: 6px 10px;
+        display: block;
+        transition: opacity 0.15s ease;
+        pointer-events: none;
+        z-index: 10;
+        opacity: 0;
+        max-width: 0;
+      }
+
+      &[data-hint]:before {
+        max-width: 200px;
+        opacity: 1;
       }
     }
   }

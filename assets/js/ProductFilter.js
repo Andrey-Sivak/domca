@@ -42,6 +42,8 @@ class ProductFilter {
 		window.Domca = window.Domca || {};
 		window.Domca.ProductFilter = ProductFilter;
 
+		this._ensureLiveRegion();
+
 		this._bindEvents();
 		this.applyFilter();
 	}
@@ -58,9 +60,10 @@ class ProductFilter {
 
 				const isActive = this.activeTopics.has(slug);
 
-				// Не даем отключить последний активный topic
 				if (isActive && this.activeTopics.size === 1) {
-					// опционально: визуальный фидбек / анимация
+					const msg = options.topic_hint;
+					this._showHint(btn, msg);
+					this._announce(msg);
 					return;
 				}
 
@@ -110,8 +113,44 @@ class ProductFilter {
 		}
 	}
 
+	_ensureLiveRegion() {
+		if (this.liveRegion) return;
+		const lr = document.createElement('div');
+		lr.setAttribute('aria-live', 'polite');
+		lr.setAttribute('role', 'status');
+		lr.style.position = 'absolute';
+		lr.style.width = '1px';
+		lr.style.height = '1px';
+		lr.style.margin = '-1px';
+		lr.style.border = '0';
+		lr.style.padding = '0';
+		lr.style.clip = 'rect(0 0 0 0)';
+		lr.style.overflow = 'hidden';
+		this.root.appendChild(lr);
+		this.liveRegion = lr;
+	}
+
+	_announce(message) {
+		if (!this.liveRegion) return;
+		this.liveRegion.textContent = '';
+		setTimeout(() => {
+			this.liveRegion.textContent = message;
+		}, 0);
+	}
+
+	_showHint(btn, message) {
+		btn.dataset.hint = message;
+		btn.classList.add('has-hint');
+
+		clearTimeout(btn.__hintTimer);
+		btn.__hintTimer = setTimeout(() => {
+			btn.classList.remove('has-hint');
+			delete btn.dataset.hint;
+		}, 1500);
+	}
+
 	applyFilter() {
-		const topics = this.activeTopics;
+		const topics = this.activeTopics; // Set
 		const tones = this.activeTones; // Set
 
 		for (const card of this.cards) {
