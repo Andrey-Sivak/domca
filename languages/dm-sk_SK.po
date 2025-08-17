@@ -1,5 +1,3 @@
-# Copyright (C) 2025 Andrey-Sivak
-# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: domca 1.0.0\n"
@@ -11,6 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-06-14T17:03:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: dm\n"
 
@@ -38,6 +37,1467 @@ msgstr "https://github.com/Andrey-Sivak"
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
+#: footer.php:20
+#: header.php:40
+msgid "Go to homepage"
+msgstr "Prejsť na domovskú stránku"
+
+#: footer.php:99
+msgid "Domča. All Rights Reserved."
+msgstr "Domča. Všetky práva vyhradené."
+
 #: functions.php:42
-msgid "Primary"
+msgid "Header Menu"
+msgstr "Ponuka v hlavičke"
+
+#: functions.php:43
+msgid "Footer Menu"
+msgstr "Ponuka v pätičke"
+
+#: functions.php:44
+msgid "Info Menu"
+msgstr "Informačné menu"
+
+#: functions.php:188
+msgid "At least one topic must remain active."
+msgstr "Aspoň jedna téma musí zostať aktívna."
+
+#: functions.php:189
+msgid "No products found. Try another filters"
+msgstr "Nenašli sa žiadne produkty. Skúste iné filtre"
+
+#: guten/build/products-filter/render.php:244
+#: guten/src/blocks/products-filter/render.php:244
+msgid "Topic:"
+msgstr "Téma:"
+
+#: guten/build/products-filter/render.php:261
+#: guten/src/blocks/products-filter/render.php:261
+msgid "Tone:"
+msgstr "Tón:"
+
+#: guten/build/products-filter/render.php:275
+#: guten/src/blocks/products-filter/render.php:275
+#: inc/product-cpt.php:227
+msgid "Length:"
+msgstr "Dĺžka:"
+
+#: guten/build/products-filter/render.php:286
+#: guten/src/blocks/products-filter/render.php:286
+#: inc/product-cpt.php:232
+msgid "Price:"
+msgstr "Cena:"
+
+#: guten/build/products-filter/render.php:298
+#: guten/src/blocks/products-filter/render.php:298
+msgid "Open"
+msgstr "Otvoriť"
+
+#: guten/build/products-filter/render.php:311
+#: guten/src/blocks/products-filter/render.php:311
+msgid "No products found."
+msgstr "Nenašli sa žiadne produkty."
+
+#: header.php:52
+msgid "Show/hide mobile menu"
+msgstr "Zobraziť/skryť mobilné menu"
+
+#: header.php:53
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/product-cpt.php:20
+msgid "Products"
+msgstr ""
+
+#: inc/product-cpt.php:21
+msgid "Product"
+msgstr ""
+
+#: inc/product-cpt.php:22
+msgid "Add New"
+msgstr ""
+
+#: inc/product-cpt.php:23
+msgid "Add New Product"
+msgstr ""
+
+#: inc/product-cpt.php:24
+msgid "Edit Product"
+msgstr ""
+
+#: inc/product-cpt.php:25
+msgid "New Product"
+msgstr ""
+
+#: inc/product-cpt.php:26
+msgid "All Products"
+msgstr ""
+
+#: inc/product-cpt.php:27
+msgid "View Product"
+msgstr ""
+
+#: inc/product-cpt.php:28
+msgid "Search Products"
+msgstr ""
+
+#: inc/product-cpt.php:29
+msgid "No products found"
+msgstr ""
+
+#: inc/product-cpt.php:30
+msgid "No products found in Trash"
+msgstr ""
+
+#: inc/product-cpt.php:50
+msgid "Topics"
+msgstr ""
+
+#: inc/product-cpt.php:51
+msgid "Topic"
+msgstr ""
+
+#: inc/product-cpt.php:69
+msgid "Tones"
+msgstr ""
+
+#: inc/product-cpt.php:70
+msgid "Tone"
+msgstr ""
+
+#: inc/product-cpt.php:105
+msgid "Product link (URL)"
+msgstr ""
+
+#: inc/product-cpt.php:118
+msgid "Product price"
+msgstr ""
+
+#: inc/product-cpt.php:131
+msgid "Product description"
+msgstr ""
+
+#: inc/product-cpt.php:144
+msgid "Product length"
+msgstr ""
+
+#: inc/product-cpt.php:193
+msgid "Product Details"
+msgstr ""
+
+#: inc/product-cpt.php:202
+msgid "Product Description"
+msgstr ""
+
+#: inc/product-cpt.php:223
+msgid "Link (URL):"
+msgstr ""
+
+#: inc/product-cpt.php:224
+msgid "https://example.com/product"
+msgstr ""
+
+#: inc/product-cpt.php:228
+msgid "e.g. 10 days"
+msgstr ""
+
+#: inc/product-cpt.php:233
+msgid "e.g. €9.60 / $10.50"
+msgstr ""
+
+#: inc/product-cpt.php:234
+msgid "Any plain text is allowed (stored as-is without numeric validation)."
+msgstr ""
+
+#: inc/product-cpt.php:251
+msgid "Description:"
+msgstr ""
+
+#: inc/product-cpt.php:252
+msgid "Enter product description…"
+msgstr ""
+
+#: inc/product-cpt.php:254
+msgid "Plain text is stored; line breaks are preserved."
+msgstr ""
+
+#. Template Name of the theme
+msgid "About Me"
+msgstr ""
+
+#. Template Name of the theme
+msgid "FAQ Page"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Front Page"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Safe Circle Club"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Support Zone"
+msgstr ""
+
+#: template-parts/language-switcher.php:22
+msgid "Language switcher"
+msgstr ""
+
+#: guten/build/anti-detox-statement/block.json
+#: guten/src/blocks/anti-detox-statement/block.json
+msgctxt "block title"
+msgid "Anti-Detox Statement"
+msgstr ""
+
+#: guten/build/anti-detox-statement/block.json
+#: guten/src/blocks/anti-detox-statement/block.json
+msgctxt "block description"
+msgid "A block to display anti-detox messaging with customizable text and styling"
+msgstr ""
+
+#: guten/build/anti-detox-statement/block.json
+#: guten/src/blocks/anti-detox-statement/block.json
+msgctxt "block keyword"
+msgid "statement"
+msgstr ""
+
+#: guten/build/anti-detox-statement/block.json
+#: guten/src/blocks/anti-detox-statement/block.json
+msgctxt "block keyword"
+msgid "detox"
+msgstr ""
+
+#: guten/build/anti-detox-statement/block.json
+#: guten/src/blocks/anti-detox-statement/block.json
+msgctxt "block keyword"
+msgid "disclaimer"
+msgstr ""
+
+#: guten/build/anti-detox-statement/block.json
+#: guten/src/blocks/anti-detox-statement/block.json
+msgctxt "block keyword"
+msgid "health"
+msgstr ""
+
+#: guten/build/anti-detox-statement/block.json
+#: guten/build/new-year-reset/block.json
+#: guten/build/program-intro/block.json
+#: guten/build/two-phases-system/block.json
+#: guten/src/blocks/anti-detox-statement/block.json
+#: guten/src/blocks/new-year-reset/block.json
+#: guten/src/blocks/program-intro/block.json
+#: guten/src/blocks/two-phases-system/block.json
+msgctxt "block keyword"
+msgid "wellness"
+msgstr ""
+
+#: guten/build/choose-path-pricing/block.json
+#: guten/src/blocks/choose-path-pricing/block.json
+msgctxt "block title"
+msgid "Choose Your Path Pricing"
+msgstr ""
+
+#: guten/build/choose-path-pricing/block.json
+#: guten/src/blocks/choose-path-pricing/block.json
+msgctxt "block description"
+msgid "A two-column pricing section with full program and ebook-only options."
+msgstr ""
+
+#: guten/build/choose-path-pricing/block.json
+#: guten/build/reset-programs-section/block.json
+#: guten/src/blocks/choose-path-pricing/block.json
+#: guten/src/blocks/reset-programs-section/block.json
+msgctxt "block keyword"
+msgid "pricing"
+msgstr ""
+
+#: guten/build/choose-path-pricing/block.json
+#: guten/src/blocks/choose-path-pricing/block.json
+msgctxt "block keyword"
+msgid "options"
+msgstr ""
+
+#: guten/build/choose-path-pricing/block.json
+#: guten/src/blocks/choose-path-pricing/block.json
+msgctxt "block keyword"
+msgid "products"
+msgstr ""
+
+#: guten/build/choose-path-pricing/block.json
+#: guten/build/faq-about-section/block.json
+#: guten/build/is-this-for-you/block.json
+#: guten/build/personal-facts/block.json
+#: guten/build/three-cards-section/block.json
+#: guten/build/what-i-do-today/block.json
+#: guten/src/blocks/choose-path-pricing/block.json
+#: guten/src/blocks/faq-about-section/block.json
+#: guten/src/blocks/is-this-for-you/block.json
+#: guten/src/blocks/personal-facts/block.json
+#: guten/src/blocks/three-cards-section/block.json
+#: guten/src/blocks/what-i-do-today/block.json
+msgctxt "block keyword"
+msgid "cards"
+msgstr ""
+
+#: guten/build/choose-path-pricing/block.json
+#: guten/build/countdown-to-change/block.json
+#: guten/build/dont-have-to-be-ready/block.json
+#: guten/build/holiday-support/block.json
+#: guten/build/home-cta-features/block.json
+#: guten/src/blocks/choose-path-pricing/block.json
+#: guten/src/blocks/countdown-to-change/block.json
+#: guten/src/blocks/dont-have-to-be-ready/block.json
+#: guten/src/blocks/holiday-support/block.json
+#: guten/src/blocks/home-cta-features/block.json
+msgctxt "block keyword"
+msgid "cta"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/src/blocks/community-support/block.json
+msgctxt "block title"
+msgid "Community Support"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/src/blocks/community-support/block.json
+msgctxt "block description"
+msgid "A block to display community support message with illustration and key points"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/build/testimonial-gallery/block.json
+#: guten/src/blocks/community-support/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+msgctxt "block keyword"
+msgid "community"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/build/holiday-support/block.json
+#: guten/src/blocks/community-support/block.json
+#: guten/src/blocks/holiday-support/block.json
+msgctxt "block keyword"
+msgid "support"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/src/blocks/community-support/block.json
+msgctxt "block keyword"
+msgid "women"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/build/whats-pulled-me-forward/block.json
+#: guten/src/blocks/community-support/block.json
+#: guten/src/blocks/whats-pulled-me-forward/block.json
+msgctxt "block keyword"
+msgid "motivation"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/build/holiday-support/block.json
+#: guten/build/program-intro/block.json
+#: guten/build/why-timing-matters/block.json
+#: guten/src/blocks/community-support/block.json
+#: guten/src/blocks/holiday-support/block.json
+#: guten/src/blocks/program-intro/block.json
+#: guten/src/blocks/why-timing-matters/block.json
+msgctxt "block keyword"
+msgid "illustration"
+msgstr ""
+
+#: guten/build/community-support/block.json
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/build/home-transformation-journey/block.json
+#: guten/build/personal-journey/block.json
+#: guten/build/personal-story/block.json
+#: guten/build/testimonial-gallery/block.json
+#: guten/build/where-i-started/block.json
+#: guten/build/why-timing-matters/block.json
+#: guten/src/blocks/community-support/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/home-transformation-journey/block.json
+#: guten/src/blocks/personal-journey/block.json
+#: guten/src/blocks/personal-story/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+#: guten/src/blocks/where-i-started/block.json
+#: guten/src/blocks/why-timing-matters/block.json
+msgctxt "block keyword"
+msgid "testimonial"
+msgstr ""
+
+#: guten/build/countdown-to-change/block.json
+#: guten/src/blocks/countdown-to-change/block.json
+msgctxt "block title"
+msgid "Countdown to Change Block"
+msgstr ""
+
+#: guten/build/countdown-to-change/block.json
+#: guten/src/blocks/countdown-to-change/block.json
+msgctxt "block description"
+msgid "A section with main content, date/countdown cards, and call-to-action buttons. Perfect for program launches and announcements."
+msgstr ""
+
+#: guten/build/countdown-to-change/block.json
+#: guten/src/blocks/countdown-to-change/block.json
+msgctxt "block keyword"
+msgid "time"
+msgstr ""
+
+#: guten/build/countdown-to-change/block.json
+#: guten/src/blocks/countdown-to-change/block.json
+msgctxt "block keyword"
+msgid "countdown"
+msgstr ""
+
+#: guten/build/countdown-to-change/block.json
+#: guten/src/blocks/countdown-to-change/block.json
+msgctxt "block keyword"
+msgid "launch"
+msgstr ""
+
+#: guten/build/countdown-to-change/block.json
+#: guten/src/blocks/countdown-to-change/block.json
+msgctxt "block keyword"
+msgid "announcement"
+msgstr ""
+
+#: guten/build/dont-have-to-be-ready/block.json
+#: guten/src/blocks/dont-have-to-be-ready/block.json
+msgctxt "block title"
+msgid "Don't Have to Be Ready"
+msgstr ""
+
+#: guten/build/dont-have-to-be-ready/block.json
+#: guten/src/blocks/dont-have-to-be-ready/block.json
+msgctxt "block description"
+msgid "A motivational section with empowering headline, supportive text, and call-to-action button."
+msgstr ""
+
+#: guten/build/dont-have-to-be-ready/block.json
+#: guten/src/blocks/dont-have-to-be-ready/block.json
+msgctxt "block keyword"
+msgid "motivational"
+msgstr ""
+
+#: guten/build/dont-have-to-be-ready/block.json
+#: guten/src/blocks/dont-have-to-be-ready/block.json
+msgctxt "block keyword"
+msgid "empowerment"
+msgstr ""
+
+#: guten/build/dont-have-to-be-ready/block.json
+#: guten/src/blocks/dont-have-to-be-ready/block.json
+msgctxt "block keyword"
+msgid "ready"
+msgstr ""
+
+#: guten/build/dont-have-to-be-ready/block.json
+#: guten/src/blocks/dont-have-to-be-ready/block.json
+msgctxt "block keyword"
+msgid "willing"
+msgstr ""
+
+#: guten/build/email-support-pack/block.json
+#: guten/src/blocks/email-support-pack/block.json
+msgctxt "block title"
+msgid "Email Support Pack"
+msgstr ""
+
+#: guten/build/email-support-pack/block.json
+#: guten/src/blocks/email-support-pack/block.json
+msgctxt "block description"
+msgid "A promotional block showcasing email support features with diamond-shaped containers"
+msgstr ""
+
+#: guten/build/faq-about-section/block.json
+#: guten/src/blocks/faq-about-section/block.json
+msgctxt "block title"
+msgid "FAQ & About Section"
+msgstr ""
+
+#: guten/build/faq-about-section/block.json
+#: guten/src/blocks/faq-about-section/block.json
+msgctxt "block description"
+msgid "A two-column FAQ and About section with rounded cards and buttons."
+msgstr ""
+
+#: guten/build/faq-about-section/block.json
+#: guten/src/blocks/faq-about-section/block.json
+msgctxt "block keyword"
+msgid "faq"
+msgstr ""
+
+#: guten/build/faq-about-section/block.json
+#: guten/build/personal-facts/block.json
+#: guten/src/blocks/faq-about-section/block.json
+#: guten/src/blocks/personal-facts/block.json
+msgctxt "block keyword"
+msgid "about"
+msgstr ""
+
+#: guten/build/faq-disclaimer/block.json
+#: guten/src/blocks/faq-disclaimer/block.json
+msgctxt "block title"
+msgid "FAQ Disclaimer"
+msgstr ""
+
+#: guten/build/faq-disclaimer/block.json
+#: guten/src/blocks/faq-disclaimer/block.json
+msgctxt "block description"
+msgid "FAQ Disclaimer Block"
+msgstr ""
+
+#: guten/build/faq-head-info/block.json
+#: guten/src/blocks/faq-head-info/block.json
+msgctxt "block title"
+msgid "FAQ Head Info"
+msgstr ""
+
+#: guten/build/faq-head-info/block.json
+#: guten/src/blocks/faq-head-info/block.json
+msgctxt "block description"
+msgid "FAQ Head Info Block"
+msgstr ""
+
+#: guten/build/faq/block.json
+#: guten/src/blocks/faq/block.json
+msgctxt "block title"
+msgid "FAQ"
+msgstr ""
+
+#: guten/build/faq/block.json
+#: guten/src/blocks/faq/block.json
+msgctxt "block description"
+msgid "FAQ Block"
+msgstr ""
+
+#: guten/build/hero-section/block.json
+#: guten/src/blocks/hero-section/block.json
+msgctxt "block title"
+msgid "Hero Section"
+msgstr ""
+
+#: guten/build/hero-section/block.json
+#: guten/src/blocks/hero-section/block.json
+msgctxt "block description"
+msgid "A prominent hero section featuring a title, text, and button."
+msgstr ""
+
+#: guten/build/holiday-support/block.json
+#: guten/src/blocks/holiday-support/block.json
+msgctxt "block title"
+msgid "Holiday Support Section"
+msgstr ""
+
+#: guten/build/holiday-support/block.json
+#: guten/src/blocks/holiday-support/block.json
+msgctxt "block description"
+msgid "A support section with illustration, headline, descriptive text and call-to-action for seasonal challenges."
+msgstr ""
+
+#: guten/build/holiday-support/block.json
+#: guten/src/blocks/holiday-support/block.json
+msgctxt "block keyword"
+msgid "holiday"
+msgstr ""
+
+#: guten/build/holiday-support/block.json
+#: guten/build/seasonal-resets-section/block.json
+#: guten/src/blocks/holiday-support/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+msgctxt "block keyword"
+msgid "seasonal"
+msgstr ""
+
+#: guten/build/holiday-support/block.json
+#: guten/src/blocks/holiday-support/block.json
+msgctxt "block keyword"
+msgid "challenge"
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+msgctxt "block title"
+msgid "Comparison Block"
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+msgctxt "block description"
+msgid "A comparison block showing what something is versus what it's not, with customizable quote and content sections."
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+msgctxt "block keyword"
+msgid "comparison"
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+msgctxt "block keyword"
+msgid "vs"
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+msgctxt "block keyword"
+msgid "what it is"
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+msgctxt "block keyword"
+msgid "what it's not"
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+msgctxt "block keyword"
+msgid "feature"
+msgstr ""
+
+#: guten/build/home-comparison-block/block.json
+#: guten/build/home-cta-features/block.json
+#: guten/build/new-year-reset/block.json
+#: guten/build/package-contents/block.json
+#: guten/build/three-cards-section/block.json
+#: guten/build/why-it-works/block.json
+#: guten/src/blocks/home-comparison-block/block.json
+#: guten/src/blocks/home-cta-features/block.json
+#: guten/src/blocks/new-year-reset/block.json
+#: guten/src/blocks/package-contents/block.json
+#: guten/src/blocks/three-cards-section/block.json
+#: guten/src/blocks/why-it-works/block.json
+msgctxt "block keyword"
+msgid "benefits"
+msgstr ""
+
+#: guten/build/home-cta-features/block.json
+#: guten/src/blocks/home-cta-features/block.json
+msgctxt "block title"
+msgid "CTA with Features"
+msgstr ""
+
+#: guten/build/home-cta-features/block.json
+#: guten/src/blocks/home-cta-features/block.json
+msgctxt "block description"
+msgid "The section with image, compelling headline, CTA button, and feature bubbles highlighting key benefits."
+msgstr ""
+
+#: guten/build/home-cta-features/block.json
+#: guten/src/blocks/home-cta-features/block.json
+msgctxt "block keyword"
+msgid "hero"
+msgstr ""
+
+#: guten/build/home-cta-features/block.json
+#: guten/build/package-contents/block.json
+#: guten/build/reset-programs-section/block.json
+#: guten/build/three-cards-section/block.json
+#: guten/build/why-it-works/block.json
+#: guten/src/blocks/home-cta-features/block.json
+#: guten/src/blocks/package-contents/block.json
+#: guten/src/blocks/reset-programs-section/block.json
+#: guten/src/blocks/three-cards-section/block.json
+#: guten/src/blocks/why-it-works/block.json
+msgctxt "block keyword"
+msgid "features"
+msgstr ""
+
+#: guten/build/home-cta-features/block.json
+#: guten/src/blocks/home-cta-features/block.json
+msgctxt "block keyword"
+msgid "image"
+msgstr ""
+
+#: guten/build/home-cta-features/block.json
+#: guten/src/blocks/home-cta-features/block.json
+msgctxt "block keyword"
+msgid "call to action"
+msgstr ""
+
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+msgctxt "block title"
+msgid "Testimonial Lead Magnet"
+msgstr ""
+
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+msgctxt "block description"
+msgid "A testimonial quote bubble paired with a lead magnet offer card for email capture."
+msgstr ""
+
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+msgctxt "block keyword"
+msgid "lead magnet"
+msgstr ""
+
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/build/personal-story/block.json
+#: guten/build/professional-background/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/personal-story/block.json
+#: guten/src/blocks/professional-background/block.json
+msgctxt "block keyword"
+msgid "quote"
+msgstr ""
+
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+msgctxt "block keyword"
+msgid "opt-in"
+msgstr ""
+
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+msgctxt "block keyword"
+msgid "free offer"
+msgstr ""
+
+#: guten/build/home-testimonial-lead-magnet/block.json
+#: guten/src/blocks/home-testimonial-lead-magnet/block.json
+msgctxt "block keyword"
+msgid "email capture"
+msgstr ""
+
+#: guten/build/home-transformation-journey/block.json
+#: guten/src/blocks/home-transformation-journey/block.json
+msgctxt "block title"
+msgid "4-Phase Transformation Journey"
+msgstr ""
+
+#: guten/build/home-transformation-journey/block.json
+#: guten/src/blocks/home-transformation-journey/block.json
+msgctxt "block description"
+msgid "A testimonial block showcasing a 4-phase transformation journey with illustrated phases and customer success story."
+msgstr ""
+
+#: guten/build/home-transformation-journey/block.json
+#: guten/build/transformation-story/block.json
+#: guten/src/blocks/home-transformation-journey/block.json
+#: guten/src/blocks/transformation-story/block.json
+msgctxt "block keyword"
+msgid "transformation"
+msgstr ""
+
+#: guten/build/home-transformation-journey/block.json
+#: guten/build/personal-journey/block.json
+#: guten/build/transformation-story/block.json
+#: guten/build/two-phases-system/block.json
+#: guten/build/whats-pulled-me-forward/block.json
+#: guten/build/where-i-started/block.json
+#: guten/src/blocks/home-transformation-journey/block.json
+#: guten/src/blocks/personal-journey/block.json
+#: guten/src/blocks/transformation-story/block.json
+#: guten/src/blocks/two-phases-system/block.json
+#: guten/src/blocks/whats-pulled-me-forward/block.json
+#: guten/src/blocks/where-i-started/block.json
+msgctxt "block keyword"
+msgid "journey"
+msgstr ""
+
+#: guten/build/home-transformation-journey/block.json
+#: guten/build/two-phases-system/block.json
+#: guten/src/blocks/home-transformation-journey/block.json
+#: guten/src/blocks/two-phases-system/block.json
+msgctxt "block keyword"
+msgid "phases"
+msgstr ""
+
+#: guten/build/home-transformation-journey/block.json
+#: guten/src/blocks/home-transformation-journey/block.json
+msgctxt "block keyword"
+msgid "success"
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block title"
+msgid "How It Works"
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block description"
+msgid "A step-by-step process section with icons, descriptions, and call-to-action button."
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block keyword"
+msgid "process"
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block keyword"
+msgid "steps"
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block keyword"
+msgid "how-it-works"
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block keyword"
+msgid "workflow"
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block keyword"
+msgid "icons"
+msgstr ""
+
+#: guten/build/how-it-works/block.json
+#: guten/src/blocks/how-it-works/block.json
+msgctxt "block keyword"
+msgid "guide"
+msgstr ""
+
+#: guten/build/is-this-for-you/block.json
+#: guten/src/blocks/is-this-for-you/block.json
+msgctxt "block title"
+msgid "Is This For You"
+msgstr ""
+
+#: guten/build/is-this-for-you/block.json
+#: guten/src/blocks/is-this-for-you/block.json
+msgctxt "block description"
+msgid "A qualification section with headline and multiple pain point/qualification cards in a grid layout."
+msgstr ""
+
+#: guten/build/is-this-for-you/block.json
+#: guten/src/blocks/is-this-for-you/block.json
+msgctxt "block keyword"
+msgid "qualification"
+msgstr ""
+
+#: guten/build/is-this-for-you/block.json
+#: guten/src/blocks/is-this-for-you/block.json
+msgctxt "block keyword"
+msgid "target audience"
+msgstr ""
+
+#: guten/build/is-this-for-you/block.json
+#: guten/src/blocks/is-this-for-you/block.json
+msgctxt "block keyword"
+msgid "pain points"
+msgstr ""
+
+#: guten/build/is-this-for-you/block.json
+#: guten/build/personal-facts/block.json
+#: guten/build/why-it-works/block.json
+#: guten/src/blocks/is-this-for-you/block.json
+#: guten/src/blocks/personal-facts/block.json
+#: guten/src/blocks/why-it-works/block.json
+msgctxt "block keyword"
+msgid "grid"
+msgstr ""
+
+#: guten/build/join-us/block.json
+#: guten/src/blocks/join-us/block.json
+msgctxt "block title"
+msgid "Join Us"
+msgstr ""
+
+#: guten/build/join-us/block.json
+#: guten/src/blocks/join-us/block.json
+msgctxt "block description"
+msgid "Join Us Block"
+msgstr ""
+
+#: guten/build/my-message/block.json
+#: guten/src/blocks/my-message/block.json
+msgctxt "block title"
+msgid "My Message"
+msgstr ""
+
+#: guten/build/my-message/block.json
+#: guten/src/blocks/my-message/block.json
+msgctxt "block description"
+msgid "My Message Block"
+msgstr ""
+
+#: guten/build/new-year-reset/block.json
+#: guten/src/blocks/new-year-reset/block.json
+msgctxt "block title"
+msgid "New Year Reset Promo"
+msgstr ""
+
+#: guten/build/new-year-reset/block.json
+#: guten/src/blocks/new-year-reset/block.json
+msgctxt "block description"
+msgid "A promotional section for New Year Reset program with connected benefits display."
+msgstr ""
+
+#: guten/build/new-year-reset/block.json
+#: guten/build/reset-programs-section/block.json
+#: guten/src/blocks/new-year-reset/block.json
+#: guten/src/blocks/reset-programs-section/block.json
+msgctxt "block keyword"
+msgid "reset"
+msgstr ""
+
+#: guten/build/new-year-reset/block.json
+#: guten/src/blocks/new-year-reset/block.json
+msgctxt "block keyword"
+msgid "promo"
+msgstr ""
+
+#: guten/build/package-contents/block.json
+#: guten/src/blocks/package-contents/block.json
+msgctxt "block title"
+msgid "Package Contents"
+msgstr ""
+
+#: guten/build/package-contents/block.json
+#: guten/src/blocks/package-contents/block.json
+msgctxt "block description"
+msgid "A block to display package contents with flowing arrow design and feature details"
+msgstr ""
+
+#: guten/build/package-contents/block.json
+#: guten/src/blocks/package-contents/block.json
+msgctxt "block keyword"
+msgid "package"
+msgstr ""
+
+#: guten/build/package-contents/block.json
+#: guten/src/blocks/package-contents/block.json
+msgctxt "block keyword"
+msgid "contents"
+msgstr ""
+
+#: guten/build/package-contents/block.json
+#: guten/build/seasonal-resets-section/block.json
+#: guten/src/blocks/package-contents/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+msgctxt "block keyword"
+msgid "flow"
+msgstr ""
+
+#: guten/build/package-contents/block.json
+#: guten/build/seasonal-resets-section/block.json
+#: guten/src/blocks/package-contents/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+msgctxt "block keyword"
+msgid "arrow"
+msgstr ""
+
+#: guten/build/personal-facts/block.json
+#: guten/src/blocks/personal-facts/block.json
+msgctxt "block title"
+msgid "Personal Facts Grid"
+msgstr ""
+
+#: guten/build/personal-facts/block.json
+#: guten/src/blocks/personal-facts/block.json
+msgctxt "block description"
+msgid "A grid of personal facts or about me cards with customizable title and background."
+msgstr ""
+
+#: guten/build/personal-facts/block.json
+#: guten/src/blocks/personal-facts/block.json
+msgctxt "block keyword"
+msgid "facts"
+msgstr ""
+
+#: guten/build/personal-facts/block.json
+#: guten/build/personal-journey/block.json
+#: guten/build/personal-story/block.json
+#: guten/build/transformation-story/block.json
+#: guten/build/where-i-started/block.json
+#: guten/src/blocks/personal-facts/block.json
+#: guten/src/blocks/personal-journey/block.json
+#: guten/src/blocks/personal-story/block.json
+#: guten/src/blocks/transformation-story/block.json
+#: guten/src/blocks/where-i-started/block.json
+msgctxt "block keyword"
+msgid "personal"
+msgstr ""
+
+#: guten/build/personal-facts/block.json
+#: guten/src/blocks/personal-facts/block.json
+msgctxt "block keyword"
+msgid "bio"
+msgstr ""
+
+#: guten/build/personal-journey/block.json
+#: guten/src/blocks/personal-journey/block.json
+msgctxt "block title"
+msgid "Personal Journey"
+msgstr ""
+
+#: guten/build/personal-journey/block.json
+#: guten/src/blocks/personal-journey/block.json
+msgctxt "block description"
+msgid "A background section with floating bubble cards to showcase personal experiences and journey milestones."
+msgstr ""
+
+#: guten/build/personal-journey/block.json
+#: guten/build/professional-background/block.json
+#: guten/src/blocks/personal-journey/block.json
+#: guten/src/blocks/professional-background/block.json
+msgctxt "block keyword"
+msgid "experience"
+msgstr ""
+
+#: guten/build/personal-journey/block.json
+#: guten/src/blocks/personal-journey/block.json
+msgctxt "block keyword"
+msgid "bubbles"
+msgstr ""
+
+#: guten/build/personal-journey/block.json
+#: guten/build/professional-background/block.json
+#: guten/src/blocks/personal-journey/block.json
+#: guten/src/blocks/professional-background/block.json
+msgctxt "block keyword"
+msgid "background"
+msgstr ""
+
+#: guten/build/personal-story/block.json
+#: guten/src/blocks/personal-story/block.json
+msgctxt "block title"
+msgid "Personal Story Card"
+msgstr ""
+
+#: guten/build/personal-story/block.json
+#: guten/src/blocks/personal-story/block.json
+msgctxt "block description"
+msgid "A rounded card block for displaying personal stories, testimonials, or reflections with elegant typography."
+msgstr ""
+
+#: guten/build/personal-story/block.json
+#: guten/build/transformation-story/block.json
+#: guten/build/where-i-started/block.json
+#: guten/src/blocks/personal-story/block.json
+#: guten/src/blocks/transformation-story/block.json
+#: guten/src/blocks/where-i-started/block.json
+msgctxt "block keyword"
+msgid "story"
+msgstr ""
+
+#: guten/build/personal-story/block.json
+#: guten/src/blocks/personal-story/block.json
+msgctxt "block keyword"
+msgid "card"
+msgstr ""
+
+#: guten/build/products-filter/block.json
+#: guten/src/blocks/products-filter/block.json
+msgctxt "block title"
+msgid "Products Filter"
+msgstr ""
+
+#: guten/build/products-filter/block.json
+#: guten/src/blocks/products-filter/block.json
+msgctxt "block description"
+msgid "Filterable list of products by Topics and Tones."
+msgstr ""
+
+#: guten/build/professional-background/block.json
+#: guten/src/blocks/professional-background/block.json
+msgctxt "block title"
+msgid "Professional Background"
+msgstr ""
+
+#: guten/build/professional-background/block.json
+#: guten/src/blocks/professional-background/block.json
+msgctxt "block description"
+msgid "A professional credentials section with headline, quote bubble, and experience details."
+msgstr ""
+
+#: guten/build/professional-background/block.json
+#: guten/src/blocks/professional-background/block.json
+msgctxt "block keyword"
+msgid "professional"
+msgstr ""
+
+#: guten/build/professional-background/block.json
+#: guten/src/blocks/professional-background/block.json
+msgctxt "block keyword"
+msgid "credentials"
+msgstr ""
+
+#: guten/build/program-intro/block.json
+#: guten/src/blocks/program-intro/block.json
+msgctxt "block title"
+msgid "Program Introduction"
+msgstr ""
+
+#: guten/build/program-intro/block.json
+#: guten/src/blocks/program-intro/block.json
+msgctxt "block description"
+msgid "Introduction section with illustration and program description featuring restart messaging."
+msgstr ""
+
+#: guten/build/program-intro/block.json
+#: guten/build/seasonal-resets-section/block.json
+#: guten/build/two-phases-system/block.json
+#: guten/src/blocks/program-intro/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+#: guten/src/blocks/two-phases-system/block.json
+msgctxt "block keyword"
+msgid "program"
+msgstr ""
+
+#: guten/build/program-intro/block.json
+#: guten/src/blocks/program-intro/block.json
+msgctxt "block keyword"
+msgid "introduction"
+msgstr ""
+
+#: guten/build/program-intro/block.json
+#: guten/src/blocks/program-intro/block.json
+msgctxt "block keyword"
+msgid "restart"
+msgstr ""
+
+#: guten/build/reset-programs-section/block.json
+#: guten/src/blocks/reset-programs-section/block.json
+msgctxt "block title"
+msgid "Reset Programs Section"
+msgstr ""
+
+#: guten/build/reset-programs-section/block.json
+#: guten/src/blocks/reset-programs-section/block.json
+msgctxt "block description"
+msgid "A two-column section showcasing Reset with Domca programs with detailed feature lists."
+msgstr ""
+
+#: guten/build/reset-programs-section/block.json
+#: guten/src/blocks/reset-programs-section/block.json
+msgctxt "block keyword"
+msgid "programs"
+msgstr ""
+
+#: guten/build/reviews-slider/block.json
+#: guten/src/blocks/reviews-slider/block.json
+msgctxt "block title"
+msgid "Reviews Slider"
+msgstr ""
+
+#: guten/build/reviews-slider/block.json
+#: guten/src/blocks/reviews-slider/block.json
+msgctxt "block description"
+msgid "Display client reviews quotes, and author information."
+msgstr ""
+
+#: guten/build/seasonal-resets-section/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+msgctxt "block title"
+msgid "Seasonal Resets Section"
+msgstr ""
+
+#: guten/build/seasonal-resets-section/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+msgctxt "block description"
+msgid "A section explaining seasonal resets with arrow flow design and inspirational messaging. Perfect for program timelines and seasonal offerings."
+msgstr ""
+
+#: guten/build/seasonal-resets-section/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+msgctxt "block keyword"
+msgid "resets"
+msgstr ""
+
+#: guten/build/seasonal-resets-section/block.json
+#: guten/build/whats-pulled-me-forward/block.json
+#: guten/src/blocks/seasonal-resets-section/block.json
+#: guten/src/blocks/whats-pulled-me-forward/block.json
+msgctxt "block keyword"
+msgid "timeline"
+msgstr ""
+
+#: guten/build/support-styles/block.json
+#: guten/src/blocks/support-styles/block.json
+msgctxt "block title"
+msgid "Support Styles"
+msgstr ""
+
+#: guten/build/support-styles/block.json
+#: guten/src/blocks/support-styles/block.json
+msgctxt "block description"
+msgid "Support Styles Block"
+msgstr ""
+
+#: guten/build/test-block/block.json
+#: guten/src/blocks/test-block/block.json
+msgctxt "block title"
+msgid "Test Block"
+msgstr ""
+
+#: guten/build/test-block/block.json
+#: guten/src/blocks/test-block/block.json
+msgctxt "block description"
+msgid "Test Block"
+msgstr ""
+
+#: guten/build/testimonial-gallery/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+msgctxt "block title"
+msgid "Testimonial Gallery"
+msgstr ""
+
+#: guten/build/testimonial-gallery/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+msgctxt "block description"
+msgid "A social proof section with headline, description, and carousel of testimonial images or screenshots."
+msgstr ""
+
+#: guten/build/testimonial-gallery/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+msgctxt "block keyword"
+msgid "social proof"
+msgstr ""
+
+#: guten/build/testimonial-gallery/block.json
+#: guten/build/transformation-story/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+#: guten/src/blocks/transformation-story/block.json
+msgctxt "block keyword"
+msgid "gallery"
+msgstr ""
+
+#: guten/build/testimonial-gallery/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+msgctxt "block keyword"
+msgid "carousel"
+msgstr ""
+
+#: guten/build/testimonial-gallery/block.json
+#: guten/src/blocks/testimonial-gallery/block.json
+msgctxt "block keyword"
+msgid "reviews"
+msgstr ""
+
+#: guten/build/three-cards-section/block.json
+#: guten/src/blocks/three-cards-section/block.json
+msgctxt "block title"
+msgid "Three Cards Section"
+msgstr ""
+
+#: guten/build/three-cards-section/block.json
+#: guten/src/blocks/three-cards-section/block.json
+msgctxt "block description"
+msgid "A reusable section with intro text, three feature cards, and concluding text. Perfect for benefits, features, or process steps."
+msgstr ""
+
+#: guten/build/three-cards-section/block.json
+#: guten/src/blocks/three-cards-section/block.json
+msgctxt "block keyword"
+msgid "three"
+msgstr ""
+
+#: guten/build/three-cards-section/block.json
+#: guten/src/blocks/three-cards-section/block.json
+msgctxt "block keyword"
+msgid "section"
+msgstr ""
+
+#: guten/build/topics-carousel/block.json
+#: guten/src/blocks/topics-carousel/block.json
+msgctxt "block title"
+msgid "Topics Carousel"
+msgstr ""
+
+#: guten/build/topics-carousel/block.json
+#: guten/src/blocks/topics-carousel/block.json
+msgctxt "block description"
+msgid "A carousel showcasing real-life topics with slider navigation and dot indicators"
+msgstr ""
+
+#: guten/build/transformation-story/block.json
+#: guten/src/blocks/transformation-story/block.json
+msgctxt "block title"
+msgid "Transformation Story"
+msgstr ""
+
+#: guten/build/transformation-story/block.json
+#: guten/src/blocks/transformation-story/block.json
+msgctxt "block description"
+msgid "A personal transformation story section with headline, narrative text, and before/after photo gallery in masonry layout."
+msgstr ""
+
+#: guten/build/transformation-story/block.json
+#: guten/src/blocks/transformation-story/block.json
+msgctxt "block keyword"
+msgid "before after"
+msgstr ""
+
+#: guten/build/transformation-story/block.json
+#: guten/src/blocks/transformation-story/block.json
+msgctxt "block keyword"
+msgid "results"
+msgstr ""
+
+#: guten/build/two-phases-system/block.json
+#: guten/src/blocks/two-phases-system/block.json
+msgctxt "block title"
+msgid "Two Phases System"
+msgstr ""
+
+#: guten/build/two-phases-system/block.json
+#: guten/src/blocks/two-phases-system/block.json
+msgctxt "block description"
+msgid "A block to display a two-phase system with icons, phases, and bonus content"
+msgstr ""
+
+#: guten/build/two-phases-system/block.json
+#: guten/src/blocks/two-phases-system/block.json
+msgctxt "block keyword"
+msgid "system"
+msgstr ""
+
+#: guten/build/two-phases-system/block.json
+#: guten/src/blocks/two-phases-system/block.json
+msgctxt "block keyword"
+msgid "bonus"
+msgstr ""
+
+#: guten/build/what-i-do-today/block.json
+#: guten/src/blocks/what-i-do-today/block.json
+msgctxt "block title"
+msgid "What I Do Today"
+msgstr ""
+
+#: guten/build/what-i-do-today/block.json
+#: guten/src/blocks/what-i-do-today/block.json
+msgctxt "block description"
+msgid "Two-column section showcasing current activities and services with rounded cards."
+msgstr ""
+
+#: guten/build/what-i-do-today/block.json
+#: guten/src/blocks/what-i-do-today/block.json
+msgctxt "block keyword"
+msgid "services"
+msgstr ""
+
+#: guten/build/what-i-do-today/block.json
+#: guten/src/blocks/what-i-do-today/block.json
+msgctxt "block keyword"
+msgid "activities"
+msgstr ""
+
+#: guten/build/what-i-do-today/block.json
+#: guten/src/blocks/what-i-do-today/block.json
+msgctxt "block keyword"
+msgid "today"
+msgstr ""
+
+#: guten/build/what-i-do-today/block.json
+#: guten/src/blocks/what-i-do-today/block.json
+msgctxt "block keyword"
+msgid "columns"
+msgstr ""
+
+#: guten/build/whats-pulled-me-forward/block.json
+#: guten/src/blocks/whats-pulled-me-forward/block.json
+msgctxt "block title"
+msgid "What's Pulled Me Forward"
+msgstr ""
+
+#: guten/build/whats-pulled-me-forward/block.json
+#: guten/src/blocks/whats-pulled-me-forward/block.json
+msgctxt "block description"
+msgid "A motivational journey section with numbered progression points and circular icons."
+msgstr ""
+
+#: guten/build/whats-pulled-me-forward/block.json
+#: guten/src/blocks/whats-pulled-me-forward/block.json
+msgctxt "block keyword"
+msgid "progression"
+msgstr ""
+
+#: guten/build/whats-pulled-me-forward/block.json
+#: guten/src/blocks/whats-pulled-me-forward/block.json
+msgctxt "block keyword"
+msgid "forward"
+msgstr ""
+
+#: guten/build/where-i-started/block.json
+#: guten/src/blocks/where-i-started/block.json
+msgctxt "block title"
+msgid "Where I Started Story"
+msgstr ""
+
+#: guten/build/where-i-started/block.json
+#: guten/src/blocks/where-i-started/block.json
+msgctxt "block description"
+msgid "A personal story section with narrative text, emphasized keywords, and character illustration."
+msgstr ""
+
+#: guten/build/where-i-started/block.json
+#: guten/src/blocks/where-i-started/block.json
+msgctxt "block keyword"
+msgid "narrative"
+msgstr ""
+
+#: guten/build/why-it-works/block.json
+#: guten/src/blocks/why-it-works/block.json
+msgctxt "block title"
+msgid "Why It Works Benefits"
+msgstr ""
+
+#: guten/build/why-it-works/block.json
+#: guten/src/blocks/why-it-works/block.json
+msgctxt "block description"
+msgid "A benefits explanation section with title, subtitle, benefit cards, and concluding message."
+msgstr ""
+
+#: guten/build/why-it-works/block.json
+#: guten/src/blocks/why-it-works/block.json
+msgctxt "block keyword"
+msgid "why-it-works"
+msgstr ""
+
+#: guten/build/why-it-works/block.json
+#: guten/build/why-timing-matters/block.json
+#: guten/src/blocks/why-it-works/block.json
+#: guten/src/blocks/why-timing-matters/block.json
+msgctxt "block keyword"
+msgid "explanation"
+msgstr ""
+
+#: guten/build/why-it-works/block.json
+#: guten/src/blocks/why-it-works/block.json
+msgctxt "block keyword"
+msgid "psychology"
+msgstr ""
+
+#: guten/build/why-timing-matters/block.json
+#: guten/src/blocks/why-timing-matters/block.json
+msgctxt "block title"
+msgid "Why Timing Matters"
+msgstr ""
+
+#: guten/build/why-timing-matters/block.json
+#: guten/src/blocks/why-timing-matters/block.json
+msgctxt "block description"
+msgid "An explanatory section with headline, compelling text content, and character illustration."
+msgstr ""
+
+#: guten/build/why-timing-matters/block.json
+#: guten/src/blocks/why-timing-matters/block.json
+msgctxt "block keyword"
+msgid "timing"
+msgstr ""
+
+#: guten/build/why-timing-matters/block.json
+#: guten/src/blocks/why-timing-matters/block.json
+msgctxt "block keyword"
+msgid "why"
 msgstr ""
