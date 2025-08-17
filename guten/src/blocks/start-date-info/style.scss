@@ -1,0 +1,157 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-start-date-info {
+  background-color: #DEA8A8;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @container dm-main (min-width: #{$bp-xl}) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__separator {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    display: block;
+    left: 0;
+    transform: translateY(50%);
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__separator + &__separator {
+    transform: translateY(-50%);
+    bottom: auto;
+    top: 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    align-items: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 20px;
+    max-width: 400px;
+    text-align: center;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      text-align: left;
+      padding: 20px 40px;
+      max-width: none;
+      grid-template-columns: 1fr 280px;
+      gap: 30px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      padding: 40px 70px;
+      grid-template-columns: 1fr 354px;
+      gap: 50px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      gap: 78px;
+    }
+
+    &-inner {
+      position: relative;
+      z-index: 20;
+    }
+  }
+
+  &__text,
+  &__caption {
+    margin-top: 0;
+    line-height: 1.17;
+    font-size: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 20px;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 20;
+    max-width: 75%;
+    margin: 0 auto;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      max-width: none;
+      margin: 0;
+    }
+  }
+
+  &__decor-mob,
+  &__decor {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__decor {
+    display: none;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      display: block;
+    }
+  }
+
+  &__decor-mob {
+    display: block;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      display: none;
+    }
+  }
+}
