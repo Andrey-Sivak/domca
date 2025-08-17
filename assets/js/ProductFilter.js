@@ -43,6 +43,7 @@ class ProductFilter {
 		window.Domca.ProductFilter = ProductFilter;
 
 		this._ensureLiveRegion();
+		this._ensureNoResults();
 
 		this._bindEvents();
 		this.applyFilter();
@@ -113,6 +114,34 @@ class ProductFilter {
 		}
 	}
 
+	_ensureNoResults() {
+		if (!this.cards || this.cards.length === 0) return;
+
+		if (this.noResultsEl) return;
+
+		const host =
+			this.root.querySelector(
+				'.wp-block-domca-products-filter__results',
+			) || this.root;
+
+		const grid = this.root.querySelector('[data-products-grid="1"]');
+
+		const el = document.createElement('p');
+		el.className = 'wp-block-domca-products-filter__no-results';
+		el.setAttribute('role', 'status');
+		el.hidden = true;
+
+		el.textContent = options.no_results_products;
+
+		if (grid && grid.parentNode) {
+			grid.parentNode.insertBefore(el, grid.nextSibling);
+		} else {
+			host.appendChild(el);
+		}
+
+		this.noResultsEl = el;
+	}
+
 	_ensureLiveRegion() {
 		if (this.liveRegion) return;
 		const lr = document.createElement('div');
@@ -153,6 +182,8 @@ class ProductFilter {
 		const topics = this.activeTopics; // Set
 		const tones = this.activeTones; // Set
 
+		let visibleCount = 0;
+
 		for (const card of this.cards) {
 			const matchesTopic =
 				topics.size === 0 ||
@@ -166,6 +197,16 @@ class ProductFilter {
 
 			const visible = matchesTopic && matchesTone;
 			card.hidden = !visible;
+			if (visible) visibleCount++;
+		}
+
+		if (this.noResultsEl) {
+			const shouldShow = visibleCount === 0;
+			this.noResultsEl.hidden = !shouldShow;
+
+			if (shouldShow) {
+				this._announce(this.noResultsEl.textContent);
+			}
 		}
 	}
 

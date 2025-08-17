@@ -81,6 +81,27 @@
     }
   }
 
+  &__no-results {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.21;
+    font-weight: 600;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 18px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 20px;
+    }
+
+    @container dm-main (min-width: #{$bp-container}) {
+      font-size: 25px;
+    }
+  }
+
   &__filter {
 
     &-btn {
