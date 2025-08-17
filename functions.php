@@ -343,3 +343,30 @@ function domca_render_logo( ?string $lang = null ): void {
 }
 
 require_once get_template_directory() . '/inc/product-cpt.php';
+
+add_action(
+	'init',
+	function() {
+		if ( function_exists( 'apply_filters' ) ) {
+			$current_language = apply_filters( 'wpml_current_language', null );
+			error_log( 'WPML API current language: ' . $current_language );
+
+			if ( $current_language === 'cs' ) {
+				global $locale;
+				$locale = 'cs_CZ';
+
+				unload_textdomain( 'dm' );
+				load_textdomain( 'dm', get_template_directory() . '/languages/dm-cs_CZ.mo' );
+			}
+
+			if ( $current_language === 'sk' ) {
+				global $locale;
+				$locale = 'sk_SK';
+
+				unload_textdomain( 'dm' );
+				load_textdomain( 'dm', get_template_directory() . '/languages/dm-sk_SK.mo' );
+			}
+		}
+	},
+	0
+);
