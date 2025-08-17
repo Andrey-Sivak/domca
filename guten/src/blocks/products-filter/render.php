@@ -236,7 +236,7 @@ $domca_products_filter_render_decor_svg = static function () use ( $base_class )
 
 								<div class="<?php echo esc_attr( $base_class . '__product-meta' ); ?>">
 									<p class="<?php echo esc_attr( $base_class . '__product-meta-title' ); ?>">
-										<?php echo esc_html__( 'Topic:', 'domca' ); ?>
+										<?php echo esc_html__( 'Topic:', 'dm' ); ?>
 									</p>
 									<?php if ( ! empty( $topic_names ) ) : ?>
 										<ul class="<?php echo esc_attr( $base_class . '__product-meta-list' ); ?>"
@@ -253,7 +253,7 @@ $domca_products_filter_render_decor_svg = static function () use ( $base_class )
 								<?php if ( $tone_name ) : ?>
 									<div class="<?php echo esc_attr( $base_class . '__product-meta' ); ?>">
 										<p class="<?php echo esc_attr( $base_class . '__product-meta-title' ); ?>">
-											<?php echo esc_html__( 'Tone:', 'domca' ); ?>
+											<?php echo esc_html__( 'Tone:', 'dm' ); ?>
 										</p>
 										<ul class="<?php echo esc_attr( $base_class . '__product-meta-list' ); ?>"
 											role="list">
@@ -267,7 +267,7 @@ $domca_products_filter_render_decor_svg = static function () use ( $base_class )
 								<?php if ( $length ) : ?>
 									<div class="<?php echo esc_attr( $base_class . '__product-info' ); ?>">
 										<span class="<?php echo esc_attr( $base_class . '__product-info-title' ); ?>">
-											<?php echo esc_html__( 'Length:', 'domca' ); ?>
+											<?php echo esc_html__( 'Length:', 'dm' ); ?>
 										</span>
 										<span class="<?php echo esc_attr( $base_class . '__product-info-value' ); ?>">
 											<?php echo esc_html( $length ); ?>
@@ -278,7 +278,7 @@ $domca_products_filter_render_decor_svg = static function () use ( $base_class )
 								<?php if ( $price ) : ?>
 									<div class="<?php echo esc_attr( $base_class . '__product-info' ); ?>">
 										<span class="<?php echo esc_attr( $base_class . '__product-info-title' ); ?>">
-											<?php echo esc_html__( 'Price:', 'domca' ); ?>
+											<?php echo esc_html__( 'Price:', 'dm' ); ?>
 										</span>
 										<span class="<?php echo esc_attr( $base_class . '__product-info-value' ); ?>">
 											<?php echo esc_html( $price ); ?>
@@ -290,7 +290,7 @@ $domca_products_filter_render_decor_svg = static function () use ( $base_class )
 									<p class="<?php echo esc_attr( $base_class . '__product-link' ); ?>">
 										<a href="<?php echo esc_url( $link ); ?>" target="_blank"
 										   rel="noopener nofollow">
-											<?php echo esc_html__( 'Open', 'domca' ); ?>
+											<?php echo esc_html__( 'Open', 'dm' ); ?>
 										</a>
 									</p>
 								<?php endif; ?>
@@ -302,7 +302,7 @@ $domca_products_filter_render_decor_svg = static function () use ( $base_class )
 			else :
 				?>
 				<p class="<?php echo esc_attr( $base_class . '__empty' ); ?>">
-					<?php echo esc_html__( 'No products found.', 'domca' ); ?>
+					<?php echo esc_html__( 'No products found.', 'dm' ); ?>
 				</p>
 			<?php endif; ?>
 		</div>

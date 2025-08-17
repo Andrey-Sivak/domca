@@ -17,17 +17,17 @@ function domca_register_product_cpt_and_taxonomies(): void {
 		'product',
 		array(
 			'labels'       => array(
-				'name'               => __( 'Products', 'domca' ),
-				'singular_name'      => __( 'Product', 'domca' ),
-				'add_new'            => __( 'Add New', 'domca' ),
-				'add_new_item'       => __( 'Add New Product', 'domca' ),
-				'edit_item'          => __( 'Edit Product', 'domca' ),
-				'new_item'           => __( 'New Product', 'domca' ),
-				'all_items'          => __( 'All Products', 'domca' ),
-				'view_item'          => __( 'View Product', 'domca' ),
-				'search_items'       => __( 'Search Products', 'domca' ),
-				'not_found'          => __( 'No products found', 'domca' ),
-				'not_found_in_trash' => __( 'No products found in Trash', 'domca' ),
+				'name'               => __( 'Products', 'dm' ),
+				'singular_name'      => __( 'Product', 'dm' ),
+				'add_new'            => __( 'Add New', 'dm' ),
+				'add_new_item'       => __( 'Add New Product', 'dm' ),
+				'edit_item'          => __( 'Edit Product', 'dm' ),
+				'new_item'           => __( 'New Product', 'dm' ),
+				'all_items'          => __( 'All Products', 'dm' ),
+				'view_item'          => __( 'View Product', 'dm' ),
+				'search_items'       => __( 'Search Products', 'dm' ),
+				'not_found'          => __( 'No products found', 'dm' ),
+				'not_found_in_trash' => __( 'No products found in Trash', 'dm' ),
 			),
 			'public'       => true,
 			'show_ui'      => true,
@@ -47,8 +47,8 @@ function domca_register_product_cpt_and_taxonomies(): void {
 		array( 'product' ),
 		array(
 			'labels'            => array(
-				'name'          => __( 'Topics', 'domca' ),
-				'singular_name' => __( 'Topic', 'domca' ),
+				'name'          => __( 'Topics', 'dm' ),
+				'singular_name' => __( 'Topic', 'dm' ),
 			),
 			'public'            => true,
 			'show_ui'           => true,
@@ -66,8 +66,8 @@ function domca_register_product_cpt_and_taxonomies(): void {
 		array( 'product' ),
 		array(
 			'labels'            => array(
-				'name'          => __( 'Tones', 'domca' ),
-				'singular_name' => __( 'Tone', 'domca' ),
+				'name'          => __( 'Tones', 'dm' ),
+				'singular_name' => __( 'Tone', 'dm' ),
 			),
 			'public'            => true,
 			'show_ui'           => true,
@@ -102,7 +102,7 @@ function domca_register_product_meta(): void {
 		'domca_product_link',
 		array(
 			'type'              => 'string',
-			'description'       => __( 'Product link (URL)', 'domca' ),
+			'description'       => __( 'Product link (URL)', 'dm' ),
 			'single'            => true,
 			'show_in_rest'      => true,
 			'sanitize_callback' => 'domca_sanitize_product_link',
@@ -115,7 +115,7 @@ function domca_register_product_meta(): void {
 		'domca_product_price',
 		array(
 			'type'              => 'string',
-			'description'       => __( 'Product price', 'domca' ),
+			'description'       => __( 'Product price', 'dm' ),
 			'single'            => true,
 			'show_in_rest'      => true,
 			'sanitize_callback' => 'domca_sanitize_product_price',
@@ -128,7 +128,7 @@ function domca_register_product_meta(): void {
 		'domca_product_description',
 		array(
 			'type'              => 'string',
-			'description'       => __( 'Product description', 'domca' ),
+			'description'       => __( 'Product description', 'dm' ),
 			'single'            => true,
 			'show_in_rest'      => true,
 			'sanitize_callback' => 'domca_sanitize_product_description',
@@ -141,7 +141,7 @@ function domca_register_product_meta(): void {
 		'domca_product_length',
 		array(
 			'type'              => 'string',
-			'description'       => __( 'Product length', 'domca' ),
+			'description'       => __( 'Product length', 'dm' ),
 			'single'            => true,
 			'show_in_rest'      => true,
 			'sanitize_callback' => 'domca_sanitize_product_length',
@@ -190,7 +190,7 @@ add_action( 'add_meta_boxes', 'domca_add_product_meta_boxes' );
 function domca_add_product_meta_boxes(): void {
 	add_meta_box(
 		'domca_product_details',
-		__( 'Product Details', 'domca' ),
+		__( 'Product Details', 'dm' ),
 		'domca_render_product_details_metabox',
 		'product',
 		'normal',
@@ -199,7 +199,7 @@ function domca_add_product_meta_boxes(): void {
 
 	add_meta_box(
 		'domca_product_description_box',
-		__( 'Product Description', 'domca' ),
+		__( 'Product Description', 'dm' ),
 		'domca_render_product_description_metabox',
 		'product',
 		'normal',
@@ -220,18 +220,18 @@ function domca_render_product_details_metabox( $post ): void {
 	$length = get_post_meta( $post->ID, 'domca_product_length', true );
 	?>
 	<p>
-		<label for="domca_product_link"><strong><?php echo esc_html__( 'Link (URL):', 'domca' ); ?></strong></label><br />
-		<input type="url" style="width:100%" id="domca_product_link" name="domca_product_link" value="<?php echo esc_attr( (string) $link ); ?>" placeholder="<?php echo esc_attr__( 'https://example.com/product', 'domca' ); ?>" />
+		<label for="domca_product_link"><strong><?php echo esc_html__( 'Link (URL):', 'dm' ); ?></strong></label><br />
+		<input type="url" style="width:100%" id="domca_product_link" name="domca_product_link" value="<?php echo esc_attr( (string) $link ); ?>" placeholder="<?php echo esc_attr__( 'https://example.com/product', 'dm' ); ?>" />
 	</p>
 	<p>
-		<label for="domca_product_length"><strong><?php echo esc_html__( 'Length:', 'domca' ); ?></strong></label><br />
-		<input type="text" style="width:100%" id="domca_product_length" name="domca_product_length" value="<?php echo esc_attr( (string) $length ); ?>" placeholder="<?php echo esc_attr__( 'e.g. 10 days', 'domca' ); ?>" />
+		<label for="domca_product_length"><strong><?php echo esc_html__( 'Length:', 'dm' ); ?></strong></label><br />
+		<input type="text" style="width:100%" id="domca_product_length" name="domca_product_length" value="<?php echo esc_attr( (string) $length ); ?>" placeholder="<?php echo esc_attr__( 'e.g. 10 days', 'dm' ); ?>" />
 	</p>
 
 	<p>
-		<label for="domca_product_price"><strong><?php echo esc_html__( 'Price:', 'domca' ); ?></strong></label><br />
-		<input type="text" style="width:100%" id="domca_product_price" name="domca_product_price" value="<?php echo esc_attr( (string) $price ); ?>" placeholder="<?php echo esc_attr__( 'e.g. €9.60 / $10.50', 'domca' ); ?>" />
-		<small><?php echo esc_html__( 'Any plain text is allowed (stored as-is without numeric validation).', 'domca' ); ?></small>
+		<label for="domca_product_price"><strong><?php echo esc_html__( 'Price:', 'dm' ); ?></strong></label><br />
+		<input type="text" style="width:100%" id="domca_product_price" name="domca_product_price" value="<?php echo esc_attr( (string) $price ); ?>" placeholder="<?php echo esc_attr__( 'e.g. €9.60 / $10.50', 'dm' ); ?>" />
+		<small><?php echo esc_html__( 'Any plain text is allowed (stored as-is without numeric validation).', 'dm' ); ?></small>
 
 	</p>
 	<?php
@@ -248,10 +248,10 @@ function domca_render_product_description_metabox( $post ): void {
 	$desc = get_post_meta( $post->ID, 'domca_product_description', true );
 	?>
 	<p>
-		<label for="domca_product_description"><strong><?php echo esc_html__( 'Description:', 'domca' ); ?></strong></label><br />
-		<textarea id="domca_product_description" name="domca_product_description" rows="8" style="width:100%" placeholder="<?php echo esc_attr__( 'Enter product description…', 'domca' ); ?>"><?php echo esc_textarea( (string) $desc ); ?></textarea>
+		<label for="domca_product_description"><strong><?php echo esc_html__( 'Description:', 'dm' ); ?></strong></label><br />
+		<textarea id="domca_product_description" name="domca_product_description" rows="8" style="width:100%" placeholder="<?php echo esc_attr__( 'Enter product description…', 'dm' ); ?>"><?php echo esc_textarea( (string) $desc ); ?></textarea>
 	</p>
-	<small><?php echo esc_html__( 'Plain text is stored; line breaks are preserved.', 'domca' ); ?></small>
+	<small><?php echo esc_html__( 'Plain text is stored; line breaks are preserved.', 'dm' ); ?></small>
 	<?php
 }
 
