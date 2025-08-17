@@ -223,77 +223,83 @@ $domca_products_filter_render_decor_svg = static function () use ( $base_class )
 							<div class="<?php echo esc_attr( $base_class . '__product-content' ); ?>">
 								<h3 class="<?php echo esc_attr( $base_class . '__product-title' ); ?>">
 									<?php echo esc_html( get_the_title( $post ) ); ?>
+
+									<svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+										<path d="M21.2947 16.5589C20.9552 15.5612 18.9742 16.4895 18.3649 15.469C17.7556 14.4485 18.4052 13.5548 17.2983 12.7952C16.1915 12.0355 15.7855 10.574 15.053 10.4755C14.3203 10.3771 15.2352 9.37449 14.4322 8.99736C13.6292 8.62022 13.3968 8.13746 13.1924 7.30978C12.9879 6.48207 11.6685 4.63056 10.7092 4.43687C9.74981 4.24317 9.75651 2.92137 9.5186 2.36838C9.4445 2.19613 9.41472 2.03204 9.41027 1.88786C9.40842 1.82675 9.45585 1.75023 9.51701 1.68904C9.51705 1.689 9.51709 1.68896 9.51713 1.68892C9.59332 1.61276 9.69076 1.56041 9.74085 1.59125C9.98397 1.74094 10.4008 1.91122 11.0238 1.98176C12.1854 2.11326 11.6869 2.7531 12.8247 3.36154C13.9625 3.96997 15.0162 3.96539 15.7013 5.33488C16.3865 6.70432 18.0543 5.50844 18.693 7.77005C19.3317 10.0316 20.9818 8.68673 22.626 9.9327C24.2702 11.1787 25.2681 13.8291 26.2078 14.6317C26.268 14.6831 26.3298 14.7353 26.3932 14.7884L28.1627 17.2491L26.4315 18.5484C25.6753 19.4892 24.7428 20.7484 23.4222 21.7464C22.0111 22.8127 21.0269 24.8566 19.3322 25.9019C17.6374 26.9473 15.2956 28.4772 14.1191 29.0933C12.9427 29.7093 12.6615 29.8648 12.0083 30.9177C11.6328 31.5229 10.8673 32.1184 9.91272 32.3256C9.43229 32.4299 9.22074 32.0987 9.37326 31.6759C9.5963 31.0577 10.0665 30.8257 9.93634 30.2719C9.67622 29.1652 9.59416 28.7222 10.5353 28.5438C11.4763 28.3653 10.8206 27.2261 11.2405 26.9985C11.6604 26.7709 12.1921 27.2918 13.3805 25.2259C14.5688 23.1599 15.3415 22.1438 15.8489 21.4165C16.3562 20.6892 18.089 19.8169 18.9096 18.6255C19.6795 17.5076 21.6326 15.7253 22.3125 14.594L22.3556 18.8259C22.2822 18.7798 22.2115 18.7391 22.1439 18.7048C21.0467 18.1474 21.6341 17.5566 21.2947 16.5589Z" fill="#967376"/>
+									</svg>
 								</h3>
 
-								<?php if ( $description ) : ?>
-									<p class="<?php echo esc_attr( $base_class . '__product-description' ); ?>">
-										<?php
-										// Preserve newlines as <br>, keep plain text safe.
-										echo wp_kses_post( nl2br( esc_html( $description ) ) );
-										?>
-									</p>
-								<?php endif; ?>
-
-								<div class="<?php echo esc_attr( $base_class . '__product-meta' ); ?>">
-									<p class="<?php echo esc_attr( $base_class . '__product-meta-title' ); ?>">
-										<?php echo esc_html__( 'Topic:', 'dm' ); ?>
-									</p>
-									<?php if ( ! empty( $topic_names ) ) : ?>
-										<ul class="<?php echo esc_attr( $base_class . '__product-meta-list' ); ?>"
-											role="list">
-											<?php foreach ( $topic_names as $tn ) : ?>
-												<li class="<?php echo esc_attr( $base_class . '__product-meta-item' ); ?>">
-													<?php echo esc_html( $tn ); ?>
-												</li>
-											<?php endforeach; ?>
-										</ul>
+								<div class="<?php echo esc_attr( $base_class . '__product-content-inner' ); ?>">
+									<?php if ( $description ) : ?>
+										<p class="<?php echo esc_attr( $base_class . '__product-description' ); ?>">
+											<?php
+											// Preserve newlines as <br>, keep plain text safe.
+											echo wp_kses_post( nl2br( esc_html( $description ) ) );
+											?>
+										</p>
 									<?php endif; ?>
-								</div>
 
-								<?php if ( $tone_name ) : ?>
 									<div class="<?php echo esc_attr( $base_class . '__product-meta' ); ?>">
 										<p class="<?php echo esc_attr( $base_class . '__product-meta-title' ); ?>">
-											<?php echo esc_html__( 'Tone:', 'dm' ); ?>
+											<?php echo esc_html__( 'Topic:', 'dm' ); ?>
 										</p>
-										<ul class="<?php echo esc_attr( $base_class . '__product-meta-list' ); ?>"
-											role="list">
-											<li class="<?php echo esc_attr( $base_class . '__product-meta-item' ); ?>">
-												<?php echo esc_html( $tone_name ); ?>
-											</li>
-										</ul>
+										<?php if ( ! empty( $topic_names ) ) : ?>
+											<ul class="<?php echo esc_attr( $base_class . '__product-meta-list' ); ?>"
+												role="list">
+												<?php foreach ( $topic_names as $tn ) : ?>
+													<li class="<?php echo esc_attr( $base_class . '__product-meta-item' ); ?>">
+														<?php echo esc_html( $tn ); ?>
+													</li>
+												<?php endforeach; ?>
+											</ul>
+										<?php endif; ?>
 									</div>
-								<?php endif; ?>
 
-								<?php if ( $length ) : ?>
-									<div class="<?php echo esc_attr( $base_class . '__product-info' ); ?>">
-										<span class="<?php echo esc_attr( $base_class . '__product-info-title' ); ?>">
-											<?php echo esc_html__( 'Length:', 'dm' ); ?>
-										</span>
-										<span class="<?php echo esc_attr( $base_class . '__product-info-value' ); ?>">
-											<?php echo esc_html( $length ); ?>
-										</span>
-									</div>
-								<?php endif; ?>
+									<?php if ( $tone_name ) : ?>
+										<div class="<?php echo esc_attr( $base_class . '__product-meta' ); ?>">
+											<p class="<?php echo esc_attr( $base_class . '__product-meta-title' ); ?>">
+												<?php echo esc_html__( 'Tone:', 'dm' ); ?>
+											</p>
+											<ul class="<?php echo esc_attr( $base_class . '__product-meta-list' ); ?>"
+												role="list">
+												<li class="<?php echo esc_attr( $base_class . '__product-meta-item' ); ?>">
+													<?php echo esc_html( $tone_name ); ?>
+												</li>
+											</ul>
+										</div>
+									<?php endif; ?>
 
-								<?php if ( $price ) : ?>
-									<div class="<?php echo esc_attr( $base_class . '__product-info' ); ?>">
-										<span class="<?php echo esc_attr( $base_class . '__product-info-title' ); ?>">
-											<?php echo esc_html__( 'Price:', 'dm' ); ?>
-										</span>
-										<span class="<?php echo esc_attr( $base_class . '__product-info-value' ); ?>">
-											<?php echo esc_html( $price ); ?>
-										</span>
-									</div>
-								<?php endif; ?>
+									<?php if ( $length ) : ?>
+										<div class="<?php echo esc_attr( $base_class . '__product-info' ); ?>">
+											<span class="<?php echo esc_attr( $base_class . '__product-info-title' ); ?>">
+												<?php echo esc_html__( 'Length:', 'dm' ); ?>
+											</span>
+											<span class="<?php echo esc_attr( $base_class . '__product-info-value' ); ?>">
+												<?php echo esc_html( $length ); ?>
+											</span>
+										</div>
+									<?php endif; ?>
 
-								<?php if ( $link ) : ?>
-									<p class="<?php echo esc_attr( $base_class . '__product-link' ); ?>">
-										<a href="<?php echo esc_url( $link ); ?>" target="_blank"
-										   rel="noopener nofollow">
-											<?php echo esc_html__( 'Open', 'dm' ); ?>
-										</a>
-									</p>
-								<?php endif; ?>
+									<?php if ( $price ) : ?>
+										<div class="<?php echo esc_attr( $base_class . '__product-info' ); ?>">
+											<span class="<?php echo esc_attr( $base_class . '__product-info-title' ); ?>">
+												<?php echo esc_html__( 'Price:', 'dm' ); ?>
+											</span>
+											<span class="<?php echo esc_attr( $base_class . '__product-info-value' ); ?>">
+												<?php echo esc_html( $price ); ?>
+											</span>
+										</div>
+									<?php endif; ?>
+
+									<?php if ( $link ) : ?>
+										<p class="<?php echo esc_attr( $base_class . '__product-link' ); ?>">
+											<a href="<?php echo esc_url( $link ); ?>" target="_blank"
+											   rel="noopener nofollow">
+												<?php echo esc_html__( 'Open', 'dm' ); ?>
+											</a>
+										</p>
+									<?php endif; ?>
+								</div>
 							</div>
 						</article>
 						<?php

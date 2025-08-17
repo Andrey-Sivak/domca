@@ -46,6 +46,7 @@ class ProductFilter {
 		this._ensureNoResults();
 
 		this._bindEvents();
+		this._setupMobileCardToggle();
 		this.applyFilter();
 	}
 
@@ -111,6 +112,68 @@ class ProductFilter {
 				).join(' ');
 				this.applyFilter();
 			});
+		}
+	}
+
+	_setupMobileCardToggle() {
+		// Media query для ширины 768px и меньше
+		this._mq = window.matchMedia('(max-width: 768px)');
+
+		// Изначально применяем состояние
+		this._applyCardToggle(this._mq.matches);
+
+		// Обновляем на изменение ширины
+		const mqListener = (e) => this._applyCardToggle(e.matches);
+		// Современный API
+		if (typeof this._mq.addEventListener === 'function') {
+			this._mq.addEventListener('change', mqListener);
+		} else {
+			// Старый API для совместимости
+			this._mq.addListener(mqListener);
+		}
+	}
+
+	_applyCardToggle(enable) {
+		for (const card of this.cards) {
+			if (enable) {
+				if (card.__pfClickHandler) continue;
+
+				const handler = (e) => {
+					if (!this._mq || !this._mq.matches) return;
+
+					const titleClicked = !!e.target.closest(
+						'.wp-block-domca-products-filter__product-title',
+					);
+
+					if (!card.classList.contains('dm-active')) {
+						card.classList.add('dm-active');
+
+						const interactive = e.target.closest(
+							'a, button, [role="button"], input, select, textarea, summary',
+						);
+						if (interactive) {
+							e.preventDefault();
+							e.stopPropagation();
+						}
+						return;
+					}
+
+					if (titleClicked) {
+						card.classList.remove('dm-active');
+						e.preventDefault();
+						e.stopPropagation();
+					}
+				};
+
+				card.__pfClickHandler = handler;
+				card.addEventListener('click', handler);
+			} else {
+				if (card.__pfClickHandler) {
+					card.removeEventListener('click', card.__pfClickHandler);
+					delete card.__pfClickHandler;
+				}
+				card.classList.remove('dm-active');
+			}
 		}
 	}
 

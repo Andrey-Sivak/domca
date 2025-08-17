@@ -183,9 +183,9 @@ function domca_scripts(): void {
 	$ajax_url = domca_get_ajax_url();
 
 	$domca_options = array(
-		'ajax_url'   => $ajax_url,
-		'home_url'   => get_home_url(),
-		'topic_hint' => esc_html__( 'At least one topic must remain active.', 'dm' ),
+		'ajax_url'            => $ajax_url,
+		'home_url'            => get_home_url(),
+		'topic_hint'          => esc_html__( 'At least one topic must remain active.', 'dm' ),
 		'no_results_products' => esc_html__( 'No products found. Try another filters', 'dm' ),
 	);
 
