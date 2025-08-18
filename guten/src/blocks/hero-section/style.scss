@@ -369,6 +369,106 @@
       }
     }
   }
+
+  &.dm-contact-us {
+
+    .wp-block-domca-home-hero-section__inner {
+      padding-bottom: 30px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        padding-bottom: 150px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        padding-top: 294px;
+      }
+    }
+
+    .wp-block-domca-home-hero-section__main-img {
+      max-width: 300px;
+      margin: 30px auto 0;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        max-width: none;
+        margin: 0;
+        left: auto;
+        display: none;
+        top: 80px;
+        right: 40px;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        display: block;
+      }
+
+      @container dm-main (min-width: #{$bp-xxxl}) {
+        right: 156px;
+      }
+
+      img {
+        width: auto;
+        max-width: 100%;
+
+        @container dm-main (min-width: #{$bp-md}) {
+          width: 35vw;
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          width: 528px;
+        }
+      }
+    }
+
+    .wp-block-domca-home-hero-section__text {
+      line-height: 1.2;
+      font-size: 18px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 24px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        font-size: 28px;
+      }
+
+      @container dm-main (min-width: #{$bp-container}) {
+        font-size: 30px;
+      }
+    }
+
+    .wp-block-domca-home-hero-section__content {
+      max-width: none;
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        max-width: 640px;
+      }
+
+      @container dm-main (min-width: #{$bp-xl}) {
+        max-width: 775px;
+      }
+
+      @container dm-main (min-width: #{$bp-xxxl}) {
+        max-width: 950px;
+      }
+
+      em {
+        line-height: 1.12;
+        font-size: 16px;
+
+        @container dm-main (min-width: #{$bp-md}) {
+          font-size: 18px;
+        }
+
+        @container dm-main (min-width: #{$bp-lg}) {
+          font-size: 22px;
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          font-size: 25px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes floatUp {
