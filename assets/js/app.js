@@ -1,7 +1,8 @@
-import BgBlockWrapper from './BgBlockWrapper.js';
-import FAQPage from './FAQPage.js';
+import scrollToElement from './utils/scrollToElement.js';
 
 (function () {
+	const origin = new URL(window.location.href).origin;
+
 	const elements = {
 		header: document.querySelector('#dm-header'),
 		testimonialGallery: document.querySelector(
@@ -22,6 +23,11 @@ import FAQPage from './FAQPage.js';
 		productFilter: document.querySelector(
 			'.wp-block-domca-products-filter',
 		),
+		anchorButtons: [
+			...document.querySelectorAll(
+				`.dm-button a[href^="${origin}#"], .dm-button a[href^="#"]`,
+			),
+		],
 	};
 
 	if (elements.header) {
@@ -72,6 +78,18 @@ import FAQPage from './FAQPage.js';
 		import('./ProductFilter.js').then(
 			({ default: ProductFilter }) =>
 				new ProductFilter(elements.productFilter),
+		);
+	}
+
+	if (elements.anchorButtons.length) {
+		elements.anchorButtons.forEach((button) =>
+			button.addEventListener('click', (e) => {
+				scrollToElement(e);
+
+				if (document.body.classList.contains('mob-menu-active')) {
+					document.body.classList.remove('mob-menu-active');
+				}
+			}),
 		);
 	}
 })();
