@@ -28,6 +28,9 @@ import scrollToElement from './utils/scrollToElement.js';
 				`.dm-button a[href^="${origin}#"], .dm-button a[href^="#"]`,
 			),
 		],
+		aboutSlider: document.querySelector(
+			'.wp-block-domca-about-slider__images',
+		),
 	};
 
 	if (elements.header) {
@@ -78,6 +81,12 @@ import scrollToElement from './utils/scrollToElement.js';
 		import('./ProductFilter.js').then(
 			({ default: ProductFilter }) =>
 				new ProductFilter(elements.productFilter),
+		);
+	}
+
+	if (elements.aboutSlider) {
+		import('./AboutSlider.js').then(
+			({ default: AboutSlider }) => new AboutSlider(),
 		);
 	}
 
