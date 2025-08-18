@@ -13,6 +13,7 @@ $current_lang = apply_filters( 'wpml_current_language', '' );
 $domca_products_filter_title       = isset( $attributes['title'] ) ? (string) $attributes['title'] : '';
 $domca_products_filter_tone_title  = isset( $attributes['toneButtonsTitle'] ) ? (string) $attributes['toneButtonsTitle'] : '';
 $domca_products_filter_topic_title = isset( $attributes['topicButtonsTitle'] ) ? (string) $attributes['topicButtonsTitle'] : '';
+$domca_products_filter_block_id    = isset( $attributes['blockId'] ) ? (string) $attributes['blockId'] : '';
 
 $topics = get_terms(
 	array(
@@ -59,6 +60,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 		'class'             => $base_class . ' dm-wrap',
 		'data-active-topic' => $active_topic_slug,
 		'data-active-tones' => '', // none active by default => all tones visible
+		'id'                => ! empty( $domca_products_filter_block_id ) ? esc_attr( $domca_products_filter_block_id ) : null,
 	)
 );
 

@@ -7,6 +7,10 @@
   "category": "widgets",
   "description": "Filterable list of products by Topics and Tones.",
   "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
     "title": {
       "type": "string",
       "default": ""
