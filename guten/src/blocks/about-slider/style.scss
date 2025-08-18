@@ -1,0 +1,186 @@
+@use 'swiper/css';
+@use 'swiper/css/pagination';
+@use 'swiper/css/effect-coverflow';
+
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-about-slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @container dm-main (min-width: #{$bp-xl}) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  &__wrap {
+    padding-top: 26px;
+    display: grid;
+    gap: 30px;
+    align-items: center;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      padding-top: 40px;
+      grid-template-columns: 350px 1fr;
+      margin-left: 20px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      padding-top: 70px;
+      grid-template-columns: 420px 1fr;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      grid-template-columns: 520px 1fr;
+    }
+
+    @container dm-main (min-width: #{$bp-container}) {
+      margin-left: calc((100vw - 1474px) / 2);
+    }
+  }
+
+  &__images {
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    padding-bottom: 40px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      padding-bottom: 10px;
+    }
+
+    .swiper-slide {
+      transition: transform 0.3s ease-in-out;
+
+      &.swiper-slide-next {
+
+        @container dm-main (min-width: #{$bp-md}) {
+          transform: scale(0.9) translateX(-10%);
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          transform: scale(0.9) translateX(-8%);
+        }
+      }
+
+      &.swiper-slide-next + .swiper-slide {
+
+        @container dm-main (min-width: #{$bp-md}) {
+          transform: scale(0.8) translateX(-35%);
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          transform: scale(0.8) translateX(-30%);
+        }
+      }
+
+      &.swiper-slide-next + .swiper-slide + .swiper-slide {
+
+        @container dm-main (min-width: #{$bp-md}) {
+          transform: scale(0.7) translateX(-70%);
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    img {
+      border-radius: 32px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --swiper-pagination-bottom: 0;
+    --swiper-pagination-color: var(--color-mauve);
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      display: none;
+      justify-content: flex-start;
+      --swiper-pagination-bullet-horizontal-gap: 6px;
+      --swiper-pagination-bullet-width: 12px;
+      --swiper-pagination-bullet-height: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      --swiper-pagination-bullet-width: 14px;
+      --swiper-pagination-bullet-height: 14px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        --swiper-pagination-bullet-width: 18px;
+        --swiper-pagination-bullet-height: 18px;
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      text-align: left;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.17;
+    font-size: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 34px;
+    }
+  }
+
+  &__credentials,
+  &__location,
+  &__email,
+  &__instagram {
+    margin: 0;
+    line-height: 1.12;
+    font-size: 18px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 20px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      font-size: 22px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 25px;
+    }
+
+    a {
+      color: var(--color-mauve);
+      text-decoration: underline;
+    }
+  }
+}
+
