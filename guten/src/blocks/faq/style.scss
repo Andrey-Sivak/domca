@@ -201,10 +201,31 @@
     position: relative;
     padding-bottom: 20px;
     border: 2px solid var(--color-mauve);
-    border-radius: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      border-radius: 0;
+      border: none;
+      background-color: transparent;
+    }
 
     @container dm-main (min-width: #{$bp-xl}) {
       padding-bottom: 44px;
+    }
+
+    &-decor {
+      display: none;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        position: absolute;
+        z-index: 10;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
