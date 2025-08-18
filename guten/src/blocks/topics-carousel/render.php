@@ -5,15 +5,17 @@
  * @package domca
  */
 
-$domca_topics_carousel_title  = $attributes['title'] ?? '';
-$domca_topics_carousel_slides = $attributes['slides'] ?? array();
-$domca_topics_carousel_button = $attributes['button'] ?? '';
+$domca_topics_carousel_title    = $attributes['title'] ?? '';
+$domca_topics_carousel_slides   = $attributes['slides'] ?? array();
+$domca_topics_carousel_button   = $attributes['button'] ?? '';
+$domca_topics_carousel_block_id = isset( $attributes['blockId'] ) ? (string) $attributes['blockId'] : '';
 
 $domca_topics_carousel_base_class = 'wp-block-domca-topics-carousel';
 
 $domca_topics_carousel_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class' => 'dm-wrap',
+		'id'    => ! empty( $domca_topics_carousel_block_id ) ? esc_attr( $domca_topics_carousel_block_id ) : null,
 	)
 );
 

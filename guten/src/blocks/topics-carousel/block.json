@@ -7,6 +7,10 @@
   "category": "widgets",
   "description": "A carousel showcasing real-life topics with slider navigation and dot indicators",
   "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
     "title": {
       "type": "string",
       "default": ""
