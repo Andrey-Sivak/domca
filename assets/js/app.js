@@ -17,6 +17,7 @@ import FAQPage from './FAQPage.js';
 			document.querySelector('.wp-block-domca-program-intro') &&
 			document.querySelector('.wp-block-domca-what-i-do-today'),
 		faqPage: document.querySelector('.dm-faq-page'),
+		faqBlock: document.querySelector('.wp-block-domca-faq-block'),
 		toTopBtn: document.querySelector('.dm-scroll-top-btn'),
 		productFilter: document.querySelector(
 			'.wp-block-domca-products-filter',
@@ -57,6 +58,10 @@ import FAQPage from './FAQPage.js';
 
 	if (elements.faqPage) {
 		import('./FAQPage.js').then(({ default: FAQPage }) => new FAQPage());
+	}
+
+	if (elements.faqBlock) {
+		import('./FAQBlock.js').then(({ default: FAQBlock }) => new FAQBlock());
 	}
 
 	if (elements.toTopBtn) {
