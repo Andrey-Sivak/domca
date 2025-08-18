@@ -63,6 +63,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/products-filter' );
 	register_block_type( __DIR__ . '/build/start-date-info' );
 	register_block_type( __DIR__ . '/build/faq-block' );
+	register_block_type( __DIR__ . '/build/one-small-step' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
