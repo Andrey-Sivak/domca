@@ -81,7 +81,7 @@ $domca_about_slider_wrapper_attributes = get_block_wrapper_attributes();
 					<?php endforeach; ?>
 				</div>
 
-                <div class="<?php echo esc_attr( $domca_about_slider_base_class . '__pagination swiper-pagination' ); ?>"></div>
+				<div class="<?php echo esc_attr( $domca_about_slider_base_class . '__pagination swiper-pagination' ); ?>"></div>
 			</div>
 		<?php endif; ?>
 	</div>
