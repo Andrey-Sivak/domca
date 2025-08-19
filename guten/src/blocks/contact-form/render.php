@@ -64,12 +64,12 @@ $domca_contact_form_render_decor_svg = static function () use ( $domca_contact_f
 		<div class="dm-form-success" role="status" aria-live="polite">
 			<?php get_template_part( '/vector-images/form-success' ); ?>
 			<p class="dm-form-success-text">
-				<?php echo esc_html__( 'Form submitted successfully', 'dm' ); ?>
+				<?php echo esc_html__( 'Form submitted successfully!', 'dm' ); ?>
 				<br>
 				<?php echo esc_html__( 'I will get back to you soon ❤️', 'dm' ); ?>
 			</p>
 			<span class="screen-reader-text">
-				<?php echo esc_html__( 'Form submitted successfully!', 'dm' ); ?>
+				<?php echo esc_html__( 'Form submitted successfully', 'dm' ); ?>
 			</span>
 		</div>
 		<h2 class="<?php echo esc_attr( $domca_contact_form_base_class . '__title dm-heading dm-heading-h2' ); ?>">
