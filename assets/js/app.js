@@ -31,6 +31,7 @@ import scrollToElement from './utils/scrollToElement.js';
 		aboutSlider: document.querySelector(
 			'.wp-block-domca-about-slider__images',
 		),
+		formContainer: document.querySelector('.wp-block-domca-contact-form'),
 	};
 
 	if (elements.header) {
@@ -87,6 +88,12 @@ import scrollToElement from './utils/scrollToElement.js';
 	if (elements.aboutSlider) {
 		import('./AboutSlider.js').then(
 			({ default: AboutSlider }) => new AboutSlider(),
+		);
+	}
+
+	if (elements.formContainer) {
+		import('./Form.js').then(
+			({ default: Form }) => new Form(elements.formContainer),
 		);
 	}
 

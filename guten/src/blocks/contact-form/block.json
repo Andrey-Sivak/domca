@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/contact-form",
+  "version": "0.1.0",
+  "title": "Contact Form",
+  "category": "widgets",
+  "description": "Contact Form Block",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "formShortcode": {
+      "type": "string",
+      "default": ""
+    },
+    "blockId": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
