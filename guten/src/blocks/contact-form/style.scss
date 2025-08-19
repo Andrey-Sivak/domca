@@ -115,18 +115,25 @@
       }
     }
 
+    .wpcf7-form-control-wrap {
+      display: block;
+    }
+
     .wpcf7-not-valid-tip {
       font-weight: 500;
       position: absolute;
       z-index: 50;
       font-size: 13px;
       top: 95%;
-      left: 20px;
-      right: 0;
+      padding: 0 16px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
       display: block;
       transform: translateY(-100%);
 
       @container dm-main (min-width: #{$bp-md}) {
+        padding: 0 20px;
         font-size: 14px;
       }
     }
