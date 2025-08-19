@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: domca 1.0.134\n"
+"Project-Id-Version: domca 1.0.137\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/domca\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-17T18:24:02+00:00\n"
+"POT-Creation-Date: 2025-08-19T09:44:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: dm\n"
@@ -67,35 +67,55 @@ msgstr ""
 msgid "No products found. Try another filters"
 msgstr ""
 
-#: guten/build/products-filter/render.php:244
-#: guten/src/blocks/products-filter/render.php:244
+#: guten/build/contact-form/render.php:61
+#: guten/src/blocks/contact-form/render.php:61
+msgid "Loading form submission"
+msgstr ""
+
+#: guten/build/contact-form/render.php:67
+#: guten/src/blocks/contact-form/render.php:72
+msgid "Form submitted successfully"
+msgstr ""
+
+#: guten/build/contact-form/render.php:69
+#: guten/src/blocks/contact-form/render.php:69
+msgid "I will get back to you soon ❤️"
+msgstr ""
+
+#: guten/build/contact-form/render.php:72
+#: guten/src/blocks/contact-form/render.php:67
+msgid "Form submitted successfully!"
+msgstr ""
+
+#: guten/build/products-filter/render.php:246
+#: guten/src/blocks/products-filter/render.php:246
 msgid "Topic:"
 msgstr ""
 
-#: guten/build/products-filter/render.php:261
-#: guten/src/blocks/products-filter/render.php:261
+#: guten/build/products-filter/render.php:263
+#: guten/src/blocks/products-filter/render.php:263
 msgid "Tone:"
 msgstr ""
 
-#: guten/build/products-filter/render.php:275
-#: guten/src/blocks/products-filter/render.php:275
+#: guten/build/products-filter/render.php:277
+#: guten/src/blocks/products-filter/render.php:277
 #: inc/product-cpt.php:227
 msgid "Length:"
 msgstr ""
 
-#: guten/build/products-filter/render.php:286
-#: guten/src/blocks/products-filter/render.php:286
+#: guten/build/products-filter/render.php:288
+#: guten/src/blocks/products-filter/render.php:288
 #: inc/product-cpt.php:232
 msgid "Price:"
 msgstr ""
 
-#: guten/build/products-filter/render.php:298
-#: guten/src/blocks/products-filter/render.php:298
+#: guten/build/products-filter/render.php:300
+#: guten/src/blocks/products-filter/render.php:300
 msgid "Open"
 msgstr ""
 
-#: guten/build/products-filter/render.php:311
-#: guten/src/blocks/products-filter/render.php:311
+#: guten/build/products-filter/render.php:313
+#: guten/src/blocks/products-filter/render.php:313
 msgid "No products found."
 msgstr ""
 
@@ -245,6 +265,18 @@ msgstr ""
 
 #: template-parts/language-switcher.php:22
 msgid "Language switcher"
+msgstr ""
+
+#: guten/build/about-slider/block.json
+#: guten/src/blocks/about-slider/block.json
+msgctxt "block title"
+msgid "About Slider"
+msgstr ""
+
+#: guten/build/about-slider/block.json
+#: guten/src/blocks/about-slider/block.json
+msgctxt "block description"
+msgid "About Slider Block"
 msgstr ""
 
 #: guten/build/anti-detox-statement/block.json
@@ -431,6 +463,18 @@ msgctxt "block keyword"
 msgid "testimonial"
 msgstr ""
 
+#: guten/build/contact-form/block.json
+#: guten/src/blocks/contact-form/block.json
+msgctxt "block title"
+msgid "Contact Form"
+msgstr ""
+
+#: guten/build/contact-form/block.json
+#: guten/src/blocks/contact-form/block.json
+msgctxt "block description"
+msgid "Contact Form Block"
+msgstr ""
+
 #: guten/build/countdown-to-change/block.json
 #: guten/src/blocks/countdown-to-change/block.json
 msgctxt "block title"
@@ -541,6 +585,20 @@ msgctxt "block keyword"
 msgid "about"
 msgstr ""
 
+#: guten/build/faq-block/block.json
+#: guten/src/blocks/faq-block/block.json
+msgctxt "block title"
+msgid "FAQ Block"
+msgstr ""
+
+#: guten/build/faq-block/block.json
+#: guten/build/faq/block.json
+#: guten/src/blocks/faq-block/block.json
+#: guten/src/blocks/faq/block.json
+msgctxt "block description"
+msgid "FAQ Block"
+msgstr ""
+
 #: guten/build/faq-disclaimer/block.json
 #: guten/src/blocks/faq-disclaimer/block.json
 msgctxt "block title"
@@ -569,12 +627,6 @@ msgstr ""
 #: guten/src/blocks/faq/block.json
 msgctxt "block title"
 msgid "FAQ"
-msgstr ""
-
-#: guten/build/faq/block.json
-#: guten/src/blocks/faq/block.json
-msgctxt "block description"
-msgid "FAQ Block"
 msgstr ""
 
 #: guten/build/hero-section/block.json
@@ -957,6 +1009,18 @@ msgctxt "block keyword"
 msgid "promo"
 msgstr ""
 
+#: guten/build/one-small-step/block.json
+#: guten/src/blocks/one-small-step/block.json
+msgctxt "block title"
+msgid "One Small Step"
+msgstr ""
+
+#: guten/build/one-small-step/block.json
+#: guten/src/blocks/one-small-step/block.json
+msgctxt "block description"
+msgid "One Small Step Block"
+msgstr ""
+
 #: guten/build/package-contents/block.json
 #: guten/src/blocks/package-contents/block.json
 msgctxt "block title"
@@ -1221,6 +1285,18 @@ msgstr ""
 #: guten/src/blocks/whats-pulled-me-forward/block.json
 msgctxt "block keyword"
 msgid "timeline"
+msgstr ""
+
+#: guten/build/start-date-info/block.json
+#: guten/src/blocks/start-date-info/block.json
+msgctxt "block title"
+msgid "Start Date Info"
+msgstr ""
+
+#: guten/build/start-date-info/block.json
+#: guten/src/blocks/start-date-info/block.json
+msgctxt "block description"
+msgid "Start Date Info Block"
 msgstr ""
 
 #: guten/build/support-styles/block.json

@@ -66,35 +66,35 @@ msgstr "Alespoň jedno téma musí zůstat aktivní."
 msgid "No products found. Try another filters"
 msgstr "Nebyly nalezeny žádné produkty. Zkuste jiné filtry"
 
-#: guten/build/products-filter/render.php:244
-#: guten/src/blocks/products-filter/render.php:244
+#: guten/build/products-filter/render.php:246
+#: guten/src/blocks/products-filter/render.php:246
 msgid "Topic:"
 msgstr "Téma:"
 
-#: guten/build/products-filter/render.php:261
-#: guten/src/blocks/products-filter/render.php:261
+#: guten/build/products-filter/render.php:263
+#: guten/src/blocks/products-filter/render.php:263
 msgid "Tone:"
 msgstr "Tón:"
 
-#: guten/build/products-filter/render.php:275
-#: guten/src/blocks/products-filter/render.php:275
+#: guten/build/products-filter/render.php:277
+#: guten/src/blocks/products-filter/render.php:277
 #: inc/product-cpt.php:227
 msgid "Length:"
 msgstr "Délka:"
 
-#: guten/build/products-filter/render.php:286
-#: guten/src/blocks/products-filter/render.php:286
+#: guten/build/products-filter/render.php:288
+#: guten/src/blocks/products-filter/render.php:288
 #: inc/product-cpt.php:232
 msgid "Price:"
 msgstr "Cena:"
 
-#: guten/build/products-filter/render.php:298
-#: guten/src/blocks/products-filter/render.php:298
+#: guten/build/products-filter/render.php:300
+#: guten/src/blocks/products-filter/render.php:300
 msgid "Open"
 msgstr "Otevřít"
 
-#: guten/build/products-filter/render.php:311
-#: guten/src/blocks/products-filter/render.php:311
+#: guten/build/products-filter/render.php:313
+#: guten/src/blocks/products-filter/render.php:313
 msgid "No products found."
 msgstr "Nebyly nalezeny žádné produkty."
 
@@ -570,7 +570,9 @@ msgctxt "block title"
 msgid "FAQ"
 msgstr ""
 
+#: guten/build/faq-block/block.json
 #: guten/build/faq/block.json
+#: guten/src/blocks/faq-block/block.json
 #: guten/src/blocks/faq/block.json
 msgctxt "block description"
 msgid "FAQ Block"
@@ -1500,4 +1502,78 @@ msgstr ""
 #: guten/src/blocks/why-timing-matters/block.json
 msgctxt "block keyword"
 msgid "why"
+msgstr ""
+
+#: guten/build/contact-form/render.php:61
+#: guten/src/blocks/contact-form/render.php:61
+msgid "Loading form submission"
+msgstr "Načítání odeslaného formuláře"
+
+#: guten/build/contact-form/render.php:67
+#: guten/src/blocks/contact-form/render.php:72
+msgid "Form submitted successfully"
+msgstr "Formulář byl úspěšně odeslán"
+
+#: guten/build/contact-form/render.php:69
+#: guten/src/blocks/contact-form/render.php:69
+msgid "I will get back to you soon ❤️"
+msgstr "Brzy se vám ozvu ❤️"
+
+#: guten/build/contact-form/render.php:72
+#: guten/src/blocks/contact-form/render.php:67
+msgid "Form submitted successfully!"
+msgstr "Formulář byl úspěšně odeslán!"
+
+#: guten/build/about-slider/block.json
+#: guten/src/blocks/about-slider/block.json
+msgctxt "block title"
+msgid "About Slider"
+msgstr ""
+
+#: guten/build/about-slider/block.json
+#: guten/src/blocks/about-slider/block.json
+msgctxt "block description"
+msgid "About Slider Block"
+msgstr ""
+
+#: guten/build/contact-form/block.json
+#: guten/src/blocks/contact-form/block.json
+msgctxt "block title"
+msgid "Contact Form"
+msgstr ""
+
+#: guten/build/contact-form/block.json
+#: guten/src/blocks/contact-form/block.json
+msgctxt "block description"
+msgid "Contact Form Block"
+msgstr ""
+
+#: guten/build/faq-block/block.json
+#: guten/src/blocks/faq-block/block.json
+msgctxt "block title"
+msgid "FAQ Block"
+msgstr ""
+
+#: guten/build/one-small-step/block.json
+#: guten/src/blocks/one-small-step/block.json
+msgctxt "block title"
+msgid "One Small Step"
+msgstr ""
+
+#: guten/build/one-small-step/block.json
+#: guten/src/blocks/one-small-step/block.json
+msgctxt "block description"
+msgid "One Small Step Block"
+msgstr ""
+
+#: guten/build/start-date-info/block.json
+#: guten/src/blocks/start-date-info/block.json
+msgctxt "block title"
+msgid "Start Date Info"
+msgstr ""
+
+#: guten/build/start-date-info/block.json
+#: guten/src/blocks/start-date-info/block.json
+msgctxt "block description"
+msgid "Start Date Info Block"
 msgstr ""
