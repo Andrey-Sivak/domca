@@ -116,13 +116,19 @@
     }
 
     .wpcf7-not-valid-tip {
-      font-weight: bold;
+      font-weight: 500;
       position: absolute;
       z-index: 50;
-      font-size: 14px;
+      font-size: 13px;
       top: 95%;
       left: 20px;
+      right: 0;
+      display: block;
       transform: translateY(-100%);
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 14px;
+      }
     }
 
     .wpcf7-response-output {
@@ -136,6 +142,11 @@
       left: 0;
       border-radius: 6px;
       background-color: #fff;
+      font-size: 14px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 16px;
+      }
     }
 
     .wpcf7-spinner,
