@@ -199,6 +199,22 @@
     }
   }
 
+  &__buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      gap: 50px;
+    }
+  }
+
   &__button {
     transform: translateY(100px);
     opacity: 0;

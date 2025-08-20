@@ -12,7 +12,8 @@ import './editor.scss';
 
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
-	const { title, text, button, decorImage, useButton } = attributes;
+	const { title, text, button, decorImage, useButton, button2, useButton2 } =
+		attributes;
 
 	const baseClass = 'wp-block-domca-home-hero-section';
 
@@ -24,6 +25,10 @@ const Edit = (props) => {
 		setAttributes({ useButton: newValue });
 	};
 
+	const onChangeUseButton2 = (newValue) => {
+		setAttributes({ useButton2: newValue });
+	};
+
 	return (
 		<Fragment>
 			<InspectorControls>
@@ -33,6 +38,12 @@ const Edit = (props) => {
 						help=""
 						checked={useButton}
 						onChange={onChangeUseButton}
+					/>
+					<CheckboxControl
+						label="Use CTA Second Button"
+						help=""
+						checked={useButton2}
+						onChange={onChangeUseButton2}
 					/>
 				</PanelBody>
 			</InspectorControls>
@@ -75,20 +86,35 @@ const Edit = (props) => {
 								placeholder="Input short description text..."
 							/>
 
-							{useButton && (
-								<RichText
-									tagName="p"
-									className={`${baseClass}__button dm-button dm-button-primary`}
-									value={button}
-									onChange={(newButton) =>
-										setAttributes({
-											button: newButton,
-										})
-									}
-									placeholder="Button text..."
-									allowedFormats={['core/link']}
-								/>
-							)}
+							<div className={`${baseClass}__buttons`}>
+								{useButton && (
+									<RichText
+										tagName="p"
+										className={`${baseClass}__button dm-button dm-button-primary`}
+										value={button}
+										onChange={(newButton) =>
+											setAttributes({
+												button: newButton,
+											})
+										}
+										placeholder="Button text..."
+										allowedFormats={['core/link']}
+									/>
+								)}
+								{useButton2 && (
+									<RichText
+										tagName="p"
+										className={`${baseClass}__button dm-button dm-button-secondary`}
+										value={button2}
+										onChange={(newButton2) =>
+											setAttributes({
+												button2: newButton2,
+											})
+										}
+										placeholder="Button text..."
+									/>
+								)}
+							</div>
 						</div>
 					</div>
 				</div>
