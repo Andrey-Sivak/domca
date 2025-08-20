@@ -5,8 +5,10 @@
  * @package domca
  */
 
-$domca_faq_block_title = $attributes['title'] ?? '';
-$domca_faq_block_items = $attributes['items'] ?? array();
+$domca_faq_block_title      = $attributes['title'] ?? '';
+$domca_faq_block_items      = $attributes['items'] ?? array();
+$domca_faq_block_button     = $attributes['button'] ?? array();
+$domca_faq_block_use_button = $attributes['useButton'] ?? false;
 
 $domca_faq_block_wrapper_attributes = get_block_wrapper_attributes(
 	array(
@@ -88,6 +90,12 @@ $domca_faq_block_render_decor_svg = static function () use ( $domca_faq_block_ba
 				endforeach;
 				?>
 			</div>
+		<?php endif; ?>
+
+		<?php if ( ! empty( $domca_faq_block_button ) && $domca_faq_block_use_button ) : ?>
+			<p class="<?php echo esc_attr( $domca_faq_block_base_class . '__button dm-button dm-button-primary' ); ?>">
+				<?php echo wp_kses_post( $domca_faq_block_button ); ?>
+			</p>
 		<?php endif; ?>
 	</div>
 </section>

@@ -196,4 +196,24 @@
       }
     }
   }
+
+  &__button {
+    margin: 30px auto 0;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin: 40px auto 0;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      margin: 50px auto 0;
+    }
+  }
+
+  &.dm-full-reset-package {
+    background-color: transparent;
+
+    .wp-block-domca-faq-block__title {
+      color: var(--color-charcoal);
+    }
+  }
 }

@@ -32,6 +32,14 @@
           }
         }
       }
+    },
+    "useButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "button": {
+      "type": "string",
+      "default": ""
     }
   },
   "supports": {
