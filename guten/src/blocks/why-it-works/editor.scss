@@ -1,3 +1,15 @@
-.wp-block-domca-why-it-works {
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-who-is {
   max-width: unset !important;
+
+  .wp-block-domca-who-is__slides {
+    padding-bottom: 0;
+    display: grid;
+    gap: 30px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
