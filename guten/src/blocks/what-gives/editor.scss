@@ -1,3 +1,60 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
 .wp-block-domca-what-gives {
   max-width: unset !important;
+
+  .wp-block-domca-what-gives__slides {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .dm-remove-button-cross {
+    right: 20px;
+    top: 20px;
+  }
+
+  &__slide {
+
+    &:hover &-image-edit {
+        display: block;
+    }
+
+    &.not-selected {
+      color: #000;
+
+      .wp-block-domca-what-gives__slide-image {
+        position: relative;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &__slide-image-edit {
+    display: none;
+    position:absolute;
+    z-index: 100;
+    width: 40px;
+    padding: 6px;
+    background-color: #fff;
+    left: 10px;
+    top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      display: block;
+      height: auto;
+      fill: #000;
+    }
+  }
 }
