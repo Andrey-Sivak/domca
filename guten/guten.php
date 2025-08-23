@@ -72,6 +72,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/imagine-this' );
 	register_block_type( __DIR__ . '/build/understanding-benefits' );
 	register_block_type( __DIR__ . '/build/start-your-reset' );
+	register_block_type( __DIR__ . '/build/who-is' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
