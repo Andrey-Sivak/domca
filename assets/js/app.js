@@ -15,6 +15,9 @@ import scrollToElement from './utils/scrollToElement.js';
 			'.wp-block-domca-topics-carousel__slides',
 		),
 		whoIsSlider: document.querySelector('.wp-block-domca-who-is__slides'),
+		whatGivesSlider: document.querySelector(
+			'.wp-block-domca-what-gives__slides',
+		),
 		blocksToWrap:
 			document.querySelector('.wp-block-domca-program-intro') &&
 			document.querySelector('.wp-block-domca-what-i-do-today'),
@@ -52,6 +55,12 @@ import scrollToElement from './utils/scrollToElement.js';
 	if (elements.whoIsSlider) {
 		import('./WhoIsSlider.js').then(
 			({ default: WhoIsSlider }) => new WhoIsSlider(),
+		);
+	}
+
+	if (elements.whatGivesSlider) {
+		import('./WhatGivesSlider.js').then(
+			({ default: WhatGivesSlider }) => new WhatGivesSlider(),
 		);
 	}
 
