@@ -1,0 +1,83 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-promo-video-block {
+  position: relative;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-top: 130px;
+    padding-bottom: 70px;
+  }
+
+  &__top-text {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 20px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-container}) {
+      font-size: 30px;
+    }
+  }
+
+  &__video {
+    margin: 30px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      border-radius: 28px;
+      margin: 40px 0;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      border-radius: 40px;
+      margin: 50px 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    line-height: 1.2;
+    font-size: 20px;
+    margin-bottom: 30px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      font-size: 28px;
+    }
+
+    @container dm-main (min-width: #{$bp-container}) {
+      font-size: 30px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+

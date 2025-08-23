@@ -66,6 +66,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/one-small-step' );
 	register_block_type( __DIR__ . '/build/about-slider' );
 	register_block_type( __DIR__ . '/build/contact-form' );
+	register_block_type( __DIR__ . '/build/promo-video-block' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
