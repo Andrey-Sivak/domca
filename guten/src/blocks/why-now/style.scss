@@ -1,0 +1,139 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-why-now {
+  position: relative;
+  background-color: #CBA2A2;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @container dm-main (min-width: #{$bp-xl}) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 20;
+  }
+
+  &__clip {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    height: auto;
+    left: 24px;
+    top: -21px;
+    width: 34px;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      top: -46px;
+      width: 73px;
+    }
+
+    @container dm-main (min-width: #{$bp-container}) {
+      left: 142px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      margin-bottom: 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-xl}) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__reasons {
+    container-type: inline-size;
+    display: grid;
+    gap: 16px;
+    margin: 30px auto 30px;
+    max-width: 350px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      gap: 20px;
+      max-width: 700px;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 30px auto 40px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      max-width: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 40px auto 50px;
+    }
+  }
+
+  &__reason {
+    container-type: inline-size;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 28cqw;
+    padding: 24px 0;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      min-height: 15cqw;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      min-height: 10.74cqw;
+    }
+
+    & p {
+      position: relative;
+      z-index: 20;
+      margin: 0;
+      padding: 0 4.36cqw;
+      line-height: 1.2;
+    }
+
+    &-title {
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--color-mauve);
+      font-size: 16px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 4.36cqw;
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        font-size: 3.5cqw;
+      }
+    }
+
+    &-decor {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+  }
+}
+
