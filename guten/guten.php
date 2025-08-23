@@ -69,6 +69,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/promo-video-block' );
 	register_block_type( __DIR__ . '/build/why-now' );
 	register_block_type( __DIR__ . '/build/different-features' );
+	register_block_type( __DIR__ . '/build/imagine-this' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
