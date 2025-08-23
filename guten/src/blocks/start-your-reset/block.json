@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/start-your-reset",
+  "version": "0.1.0",
+  "title": "Start Your Reset",
+  "category": "widgets",
+  "description": "Start Your Reset Block",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "button": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
