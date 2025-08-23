@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "domca/what-gives",
+  "version": "0.1.0",
+  "title": "What Gives",
+  "category": "widgets",
+  "description": "What Gives Block",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "items": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "default": ""
+          },
+          "text": {
+            "type": "string",
+            "default": ""
+          },
+          "image": {
+            "type": "object",
+            "default": {
+              "id": null,
+              "url": ""
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": true,
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "padding": false,
+      "margin": false
+    },
+    "color": {
+      "background": false,
+      "gradients": false,
+      "text": false
+    }
+  },
+  "textdomain": "dm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

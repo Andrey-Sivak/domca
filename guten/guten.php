@@ -73,6 +73,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/understanding-benefits' );
 	register_block_type( __DIR__ . '/build/start-your-reset' );
 	register_block_type( __DIR__ . '/build/who-is' );
+	register_block_type( __DIR__ . '/build/what-gives' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );
