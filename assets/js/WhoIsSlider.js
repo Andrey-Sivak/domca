@@ -15,11 +15,7 @@ class WhoIsSlider {
 	init() {
 		const slideCount = this.slider.querySelectorAll('.swiper-slide').length;
 
-		console.log(slideCount);
-
 		if (slideCount <= this.initSlidesCount) return;
-
-		console.log(slideCount);
 
 		new Swiper(this.slider, {
 			modules: [Pagination],
