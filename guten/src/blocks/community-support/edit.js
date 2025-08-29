@@ -19,6 +19,8 @@ const Edit = (props) => {
 		image,
 	} = attributes;
 
+	console.log(honestPoints);
+
 	const baseClass = 'wp-block-domca-community-support';
 
 	const blockProps = useBlockProps({

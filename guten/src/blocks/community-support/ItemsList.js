@@ -6,7 +6,7 @@ import RemoveButtonCross from '../../utils/RemoveButtonCross.js';
 const ItemsList = ({ baseClass, setAttributes, items }) => {
 	const updateItem = (index, value) => {
 		const newItems = [...items];
-		setAttributes[index] = value;
+		newItems[index] = value;
 		setAttributes({ honestPoints: newItems });
 	};
 
