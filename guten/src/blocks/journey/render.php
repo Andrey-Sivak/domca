@@ -99,16 +99,16 @@ $domca_journey_flag = '<svg
 						}
 						?>
 						<div>
-						<?php if ( ! empty( $step_period ) ) : ?>
-							<p class="<?php echo esc_attr( $domca_journey_base_class . '__step-period' ); ?>">
-								<?php echo wp_kses_post( $step_period ); ?>
-							</p>
-						<?php endif; ?>
-						<?php if ( ! empty( $step_text ) ) : ?>
-							<p class="<?php echo esc_attr( $domca_journey_base_class . '__step-text' ); ?>">
-								<?php echo wp_kses_post( $step_text ); ?>
-							</p>
-						<?php endif; ?>
+							<?php if ( ! empty( $step_period ) ) : ?>
+								<p class="<?php echo esc_attr( $domca_journey_base_class . '__step-period' ); ?>">
+									<?php echo wp_kses_post( $step_period ); ?>
+								</p>
+							<?php endif; ?>
+							<?php if ( ! empty( $step_text ) ) : ?>
+								<p class="<?php echo esc_attr( $domca_journey_base_class . '__step-text' ); ?>">
+									<?php echo wp_kses_post( $step_text ); ?>
+								</p>
+							<?php endif; ?>
 						</div>
 						<?php
 						if ( $domca_journey_step_count % 2 !== 0 ) {
@@ -143,7 +143,9 @@ $domca_journey_flag = '<svg
 </section>
 
 <style>
-	.<?php echo esc_attr( $domca_journey_base_class ); ?> {
-		background-image: url('<?php echo get_template_directory_uri() . '/images/bg-logo-pattern.svg'; ?>');
+	@container dm-main (min-width: 768px) {
+		.<?php echo esc_attr( $domca_journey_base_class ); ?> {
+			background-image: url('<?php echo get_template_directory_uri() . '/images/bg-logo-pattern.svg'; ?>');
+		}
 	}
 </style>
