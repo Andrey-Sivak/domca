@@ -7,6 +7,10 @@
   position: relative;
   margin-bottom: 70px;
 
+  &__clip {
+    display: none;
+  }
+
   &__title {
     text-align: center;
     text-transform: uppercase;
@@ -189,6 +193,69 @@
       @container dm-main (min-width: #{$bp-md}) {
         --swiper-pagination-bullet-width: 18px;
         --swiper-pagination-bullet-height: 18px;
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+
+  &.dm-full-reset-package {
+    background-color: var(--color-dusty-rose);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 80px;
+
+    @container dm-main (min-width: #{$bp-md}) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-top: 100px;
+    }
+
+    @container dm-main (min-width: #{$bp-lg}) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      margin-top: 120px;
+    }
+
+    .wp-block-domca-reviews-slider__title {
+      color: var(--color-mauve);
+    }
+
+    .wp-block-domca-reviews-slider__button {
+      margin-top: 30px;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        margin-top: 40px;
+      }
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        margin-top: 50px;
+      }
+    }
+
+    .wp-block-domca-reviews-slider__pagination {
+      --swiper-pagination-color: #fff;
+    }
+
+    .wp-block-domca-reviews-slider__clip {
+      position: absolute;
+      z-index: 10;
+      display: block;
+      height: auto;
+      left: auto;
+      right: 18px;
+      top: -21px;
+      width: 34px;
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        top: -46px;
+        width: 73px;
+      }
+
+      @container dm-main (min-width: #{$bp-container}) {
+        right: 142px;
       }
     }
   }

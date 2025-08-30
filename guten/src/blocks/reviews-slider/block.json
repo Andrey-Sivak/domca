@@ -11,6 +11,10 @@
       "type": "string",
       "default": ""
     },
+    "useSubtitle": {
+      "type": "boolean",
+      "default": true
+    },
     "subtitle": {
       "type": "string",
       "default": ""
@@ -31,6 +35,14 @@
           }
         }
       }
+    },
+    "useButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "button": {
+      "type": "string",
+      "default": ""
     }
   },
   "supports": {
