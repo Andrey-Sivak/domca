@@ -141,3 +141,9 @@ $domca_journey_flag = '<svg
 		<?php endif; ?>
 	</div>
 </section>
+
+<style>
+	.<?php echo esc_attr( $domca_journey_base_class ); ?> {
+		background-image: url('<?php echo get_template_directory_uri() . '/images/bg-logo-pattern.svg'; ?>');
+	}
+</style>

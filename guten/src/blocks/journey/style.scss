@@ -2,17 +2,24 @@
 
 .wp-block-domca-journey {
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  background-position: top center;
+  background-repeat: repeat;
+  background-size: 100% auto;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  @container dm-main (min-width: #{$bp-md}) {
+    background-size: 100% auto;
+  }
 
   @container dm-main (min-width: #{$bp-lg}) {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
   }
 
   @container dm-main (min-width: #{$bp-xl}) {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
   }
 
   &__title {
