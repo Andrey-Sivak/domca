@@ -16,15 +16,15 @@ $formatted_date = '';
 $days_remaining = 0;
 
 if ( ! empty( $domca_countdown_to_change_date_start ) ) {
-	$date_obj       = new DateTime( $domca_countdown_to_change_date_start );
-    $base_format = 'F j, Y';
+	$date_obj    = new DateTime( $domca_countdown_to_change_date_start );
+	$base_format = 'F j, Y';
 
-    $timestamp      = $date_obj->getTimestamp();
-    $formatted_date = function_exists( 'wp_date' )
-            ? wp_date( $base_format, $timestamp )
-            : date_i18n( $base_format, $timestamp );
+	$timestamp      = $date_obj->getTimestamp();
+	$formatted_date = function_exists( 'wp_date' )
+			? wp_date( $base_format, $timestamp )
+			: date_i18n( $base_format, $timestamp );
 
-    $today          = new DateTime();
+	$today          = new DateTime();
 	$diff           = $date_obj->diff( $today );
 	$days_remaining = $diff->invert ? $diff->days : 0;
 }
