@@ -61,17 +61,17 @@ declare( strict_types=1 );
 				<?php
 				$domca_footer_socials = array(
 					array(
-						'href' => '#',
+						'href' => 'mailto:hello@resetdomca.com',
 						'icon' => 'icon-email',
 						'type' => 'email',
 					),
 					array(
-						'href' => '#',
+						'href' => 'https://www.facebook.com/p/Fotografka-Dominique-100057211129868/',
 						'icon' => 'icon-fb',
 						'type' => 'social',
 					),
 					array(
-						'href' => '#',
+						'href' => 'https://www.instagram.com/resetdomca',
 						'icon' => 'icon-ig',
 						'type' => 'social',
 					),
