@@ -31,7 +31,7 @@
     display: grid;
     row-gap: 30px;
 
-    @container dm-main (min-width: #{$bp-lg}) {
+    @container dm-main (min-width: #{$bp-xl}) {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -45,50 +45,54 @@
     flex-shrink: 0;
     flex-grow: 0;
     order: 2;
-    max-width: 450px;
+    max-width: 720px;
     width: 100%;
     margin: 0 auto;
 
     @container dm-main (min-width: #{$bp-lg}) {
       transition-delay: .2s!important;
       max-width: unset;
-      margin: 0;
+      min-width: 720px;
       width: 43%;
-      flex-basis: 43%;
-      order: 1;
     }
 
     @container dm-main (min-width: #{$bp-xl}) {
+      order: 1;
+      margin: 0;
       width: 54.53%;
       flex-basis: 54.53%;
     }
 
     &-decor {
-      position: relative;
-      z-index: 10;
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
+      display: none;
+
+      @container dm-main (min-width: #{$bp-md}) {
+        position: relative;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
     }
   }
 
-  &__title {
-    position: absolute;
-    z-index: 20;
-    font-weight: 600;
-    line-height: 1.47;
-    font-style: italic;
-    left: 16.88%;
-    top: 26.52%;
-    max-width: 64.32%;
-    font-size: 4.347cqw;
+  &__form {
+
+    @container dm-main (min-width: #{$bp-md}) {
+      position: absolute;
+      z-index: 20;
+      font-weight: 600;
+      left: 51%;
+      top: 48%;
+      transform: translate(-55%, -55%);
+      max-width: 64.32%;
+    }
   }
 
   &__lead-magnet {
     container-type: inline-size;
     container-name: lead-magner-container;
-    flex-shrink: 0;
     flex-grow: 0;
     width: 100%;
     position: relative;
@@ -103,13 +107,11 @@
 
     @container dm-main (min-width: #{$bp-lg}) {
       padding: 70px 50px;
-      margin: 0;
-      max-width: 47%;
-      flex-basis: 47%;
-      order: 2;
     }
 
     @container dm-main (min-width: #{$bp-xl}) {
+      margin: 0;
+      order: 2;
       max-width: 40.44%;
       flex-basis: 40.44%;
     }

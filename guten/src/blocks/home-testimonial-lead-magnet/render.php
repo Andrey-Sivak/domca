@@ -89,9 +89,10 @@ $domca_home_testimonial_lead_magnet_base_class = 'wp-block-domca-home-testimonia
 			</svg>
 
 			<?php if ( $domca_home_testimonial_lead_magnet_quote ) : ?>
-				<h2 class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__title' ); ?>">
-					“<?php echo wp_kses_post( $domca_home_testimonial_lead_magnet_quote ); ?>”
-				</h2>
+                <div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__form' ); ?>">
+                    <div class="ml-embedded" data-form="xOaVvW"></div>
+                </div>
+
 			<?php endif; ?>
 		</div>
 
@@ -114,9 +115,9 @@ $domca_home_testimonial_lead_magnet_base_class = 'wp-block-domca-home-testimonia
 			</svg>
 			<div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__lead-magnet-content' ); ?>">
 				<?php if ( $domca_home_testimonial_lead_magnet_title ) : ?>
-					<h3 class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__lead-magnet-title' ); ?>">
+					<h2 class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__lead-magnet-title' ); ?>">
 						<?php echo wp_kses_post( $domca_home_testimonial_lead_magnet_title ); ?>
-					</h3>
+					</h2>
 				<?php endif; ?>
 				<?php if ( $domca_home_testimonial_lead_magnet_subtitle ) : ?>
 					<p class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__lead-magnet-subtitle' ); ?>">
