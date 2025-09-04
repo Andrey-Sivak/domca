@@ -76,6 +76,7 @@ function domca_custom_gutenberg_block_init(): void {
 	register_block_type( __DIR__ . '/build/what-gives' );
 	register_block_type( __DIR__ . '/build/journey' );
 	register_block_type( __DIR__ . '/build/lead-magnet-optin' );
+	register_block_type( __DIR__ . '/build/simple-shop' );
 }
 
 add_action( 'init', 'domca_custom_gutenberg_block_init' );

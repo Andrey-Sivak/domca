@@ -1,0 +1,18 @@
+@use '../../../../assets/scss/base/breakpoints' as *;
+
+.wp-block-domca-simple-shop {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @container dm-main (min-width: #{$bp-lg}) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @container dm-main (min-width: #{$bp-xl}) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+
