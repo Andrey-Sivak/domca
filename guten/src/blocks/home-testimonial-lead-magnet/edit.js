@@ -7,7 +7,7 @@ import './editor.scss';
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
 	const {
-		quote,
+		dataFormId,
 		leadMagnetTitle,
 		leadMagnetSubtitle,
 		leadMagnetDescription,
@@ -29,12 +29,12 @@ const Edit = (props) => {
 						<QuoteBgSvg baseClass={baseClass} />
 						<RichText
 							tagName="p"
-							className={`${baseClass}__title`}
-							value={`${quote}`}
+							className={`${baseClass}__form`}
+							value={`${dataFormId}`}
 							onChange={(newQuote) =>
-								setAttributes({ quote: newQuote })
+								setAttributes({ dataFormId: newQuote })
 							}
-							placeholder="Testimonial Quote..."
+							placeholder="Enter form ID..."
 						/>
 					</div>
 					<div className={`${baseClass}__lead-magnet`}>

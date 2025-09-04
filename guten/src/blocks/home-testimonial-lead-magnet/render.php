@@ -5,7 +5,7 @@
  * @package domca
  */
 
-$domca_home_testimonial_lead_magnet_quote       = $attributes['quote'] ?? '';
+$domca_home_testimonial_lead_magnet_data_form_id       = $attributes['dataFormId'] ?? '';
 $domca_home_testimonial_lead_magnet_title       = $attributes['leadMagnetTitle'] ?? '';
 $domca_home_testimonial_lead_magnet_subtitle    = $attributes['leadMagnetSubtitle'] ?? '';
 $domca_home_testimonial_lead_magnet_description = $attributes['leadMagnetDescription'] ?? '';
@@ -88,9 +88,9 @@ $domca_home_testimonial_lead_magnet_base_class = 'wp-block-domca-home-testimonia
 				/>
 			</svg>
 
-			<?php if ( $domca_home_testimonial_lead_magnet_quote ) : ?>
+			<?php if ( $domca_home_testimonial_lead_magnet_data_form_id ) : ?>
                 <div class="<?php echo esc_attr( $domca_home_testimonial_lead_magnet_base_class . '__form' ); ?>">
-                    <div class="ml-embedded" data-form="xOaVvW"></div>
+                    <div class="ml-embedded" data-form="<?php echo esc_attr($domca_home_testimonial_lead_magnet_data_form_id); ?>"></div>
                 </div>
 
 			<?php endif; ?>

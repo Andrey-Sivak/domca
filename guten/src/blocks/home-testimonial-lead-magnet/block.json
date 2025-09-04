@@ -8,7 +8,7 @@
   "description": "A testimonial quote bubble paired with a lead magnet offer card for email capture.",
   "keywords": ["testimonial", "lead magnet", "quote", "opt-in", "free offer", "email capture"],
   "attributes": {
-    "quote": {
+    "dataFormId": {
       "type": "string",
       "default": ""
     },
