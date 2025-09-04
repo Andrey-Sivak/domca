@@ -15,11 +15,7 @@
     "quote"
   ],
   "attributes": {
-    "quoteTitle": {
-      "type": "string",
-      "default": ""
-    },
-    "quoteText": {
+    "dataFormId": {
       "type": "string",
       "default": ""
     },

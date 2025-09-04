@@ -11,8 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** @var array $attributes */
 
-$dm_optin_quote_title = $attributes['quoteTitle'] ?? '';
-$dm_optin_quote_text  = $attributes['quoteText'] ?? '';
+$dm_optin_data_form_id       = $attributes['dataFormId'] ?? '';
 $dm_optin_points      = ( isset( $attributes['bulletPoints'] ) && is_array( $attributes['bulletPoints'] ) ) ? $attributes['bulletPoints'] : array();
 $dm_optin_button      = $attributes['button'] ?? '';
 
@@ -38,8 +37,6 @@ $dm_optin_quote_decor = '<svg
 <path d="M548.655 72.7097C566.375 88.5299 576.624 111.502 574.962 137.46L562.346 334.397C559.989 371.228 533.866 405.106 496.454 420.071" stroke="#393E41" stroke-width="4" stroke-miterlimit="10"/>
 <path d="M134.154 39.2404C138.501 39.6231 141.803 42.6427 142.183 47.6402C142.497 51.7643 139.576 55.0321 135.46 55.4836C127.039 56.4074 122.682 49.0712 122.825 41.5723C122.941 35.4474 125.913 30.27 130.783 26.3894C132.962 24.6544 135.095 23.0921 137.498 21.7778C138.002 21.5023 138.629 21.7266 138.834 22.2532C139.456 23.849 140.837 25.8217 139.29 26.941C130.732 33.1329 128.855 38.7741 134.154 39.2404Z" stroke="#393E41" stroke-width="4" stroke-miterlimit="10"/>
 <path d="M110.527 43.9484C114.874 44.3311 118.176 47.3507 118.556 52.3482C118.87 56.4726 115.949 59.7401 111.834 60.1916C103.412 61.1154 99.0553 53.7792 99.1978 46.2803C99.3143 40.1554 102.286 34.978 107.156 31.0974C109.335 29.3624 111.468 27.8001 113.871 26.4858C114.375 26.2104 115.002 26.4346 115.207 26.9613C115.829 28.557 117.21 30.5295 115.663 31.649C107.105 37.8409 105.228 43.4819 110.527 43.9484Z" stroke="#393E41" stroke-width="4" stroke-miterlimit="10"/>
-<path d="M465.409 441.462C461.037 441.553 457.414 438.913 456.484 433.993C455.716 429.932 458.266 426.37 462.316 425.476C470.603 423.645 475.753 430.456 476.439 437.917C476.998 444.011 474.609 449.474 470.185 453.856C468.206 455.815 466.254 457.597 464.004 459.163C463.533 459.491 462.883 459.336 462.621 458.836C461.825 457.319 460.232 455.51 461.65 454.231C469.492 447.155 470.74 441.35 465.409 441.462Z" stroke="#393E41" stroke-width="4" stroke-miterlimit="10"/>
-<path d="M488.378 434.2C484.005 434.292 480.383 431.652 479.453 426.731C478.685 422.67 481.235 419.109 485.285 418.214C493.572 416.383 498.722 423.195 499.407 430.656C499.967 436.75 497.578 442.213 493.154 446.594C491.175 448.553 489.222 450.336 486.973 451.901C486.502 452.229 485.852 452.075 485.59 451.574C484.794 450.057 483.201 448.248 484.619 446.969C492.461 439.893 493.709 434.088 488.378 434.2Z" stroke="#393E41" stroke-width="4" stroke-miterlimit="10"/>
                 </svg>';
 
 $dm_optin_list_decor = '<svg
@@ -63,16 +60,11 @@ $dm_optin_list_decor = '<svg
 	<div class="<?php echo esc_attr( $dm_optin_base_class . '__wrap dm-container' ); ?>">
 		<div class="<?php echo esc_attr( $dm_optin_base_class . '__quote' ); ?>">
 			<?php echo wp_kses( $dm_optin_quote_decor, domca_get_svg_allowed_html() ); ?>
-			<?php if ( ! empty( $dm_optin_quote_title ) ) : ?>
-				<h2 class="<?php echo esc_attr( $dm_optin_base_class . '__quote-title' ); ?>">
-					<?php echo wp_kses_post( $dm_optin_quote_title ); ?>
-				</h2>
-			<?php endif; ?>
 
-			<?php if ( ! empty( $dm_optin_quote_text ) ) : ?>
-				<p class="<?php echo esc_attr( $dm_optin_base_class . '__quote-text' ); ?>">
-					<?php echo wp_kses_post( $dm_optin_quote_text ); ?>
-				</p>
+			<?php if ( ! empty( $dm_optin_data_form_id ) ) : ?>
+				<div class="<?php echo esc_attr( $dm_optin_base_class . '__quote-form' ); ?>">
+                    <div class="ml-embedded" data-form="<?php echo esc_attr($dm_optin_data_form_id); ?>"></div>
+				</div>
 			<?php endif; ?>
 		</div>
 

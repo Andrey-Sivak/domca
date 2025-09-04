@@ -7,7 +7,7 @@ import ListDecor from './ListDecor.js';
 
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
-	const { quoteTitle, quoteText, bulletPoints, button } = attributes;
+	const { dataFormId, bulletPoints, button } = attributes;
 
 	const baseClass = 'wp-block-domca-lead-magnet-optin';
 
@@ -23,21 +23,12 @@ const Edit = (props) => {
 						<QuoteDecor baseClass={baseClass} />
 						<RichText
 							tagName="p"
-							className={`${baseClass}__quote-title`}
-							value={quoteTitle}
+							className={`${baseClass}__quote-form`}
+							value={dataFormId}
 							onChange={(newTitle) =>
-								setAttributes({ quoteTitle: newTitle })
+								setAttributes({ dataFormId: newTitle })
 							}
-							placeholder="Input title..."
-						/>
-						<RichText
-							tagName="p"
-							className={`${baseClass}__quote-text`}
-							value={quoteText}
-							onChange={(newText) =>
-								setAttributes({ quoteText: newText })
-							}
-							placeholder="Input text..."
+							placeholder="Enter form ID..."
 						/>
 					</div>
 					<div className={`${baseClass}__bullet-points`}>
