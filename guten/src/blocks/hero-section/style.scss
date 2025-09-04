@@ -562,6 +562,36 @@
       }
     }
   }
+
+  &.dm-waitlist {
+
+    .wp-block-domca-home-hero-section__main-img {
+      right: 0;
+      top: auto;
+      bottom: 20px;
+      left: auto;
+
+      @container dm-main (min-width: #{$bp-lg}) {
+        bottom: 40px;
+      }
+
+      @container dm-main (min-width: #{$bp-container}) {
+        right: 150px;
+      }
+
+      img {
+        width: 300px;
+
+        @container dm-main (min-width: #{$bp-lg}) {
+          width: 350px;
+        }
+
+        @container dm-main (min-width: #{$bp-xl}) {
+          width: 500px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes floatUp {
