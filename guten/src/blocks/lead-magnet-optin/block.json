@@ -15,6 +15,10 @@
     "quote"
   ],
   "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
     "dataFormId": {
       "type": "string",
       "default": ""

@@ -4,10 +4,11 @@ import './editor.scss';
 import ItemsList from './ItemsList.js';
 import QuoteDecor from './QuoteDecor.js';
 import ListDecor from './ListDecor.js';
+import BlockIdInspectorPanel from '../../common-components/BlockIdInspectorPanel.js';
 
 const Edit = (props) => {
 	const { attributes, setAttributes } = props;
-	const { dataFormId, bulletPoints, button } = attributes;
+	const { dataFormId, blockId, bulletPoints, button } = attributes;
 
 	const baseClass = 'wp-block-domca-lead-magnet-optin';
 
@@ -17,6 +18,10 @@ const Edit = (props) => {
 
 	return (
 		<Fragment>
+			<BlockIdInspectorPanel
+				setAttributes={setAttributes}
+				blockId={blockId}
+			/>
 			<div {...blockProps}>
 				<div className={`${baseClass}__wrap dm-container`}>
 					<div className={`${baseClass}__quote`}>

@@ -14,12 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 $dm_optin_data_form_id       = $attributes['dataFormId'] ?? '';
 $dm_optin_points      = ( isset( $attributes['bulletPoints'] ) && is_array( $attributes['bulletPoints'] ) ) ? $attributes['bulletPoints'] : array();
 $dm_optin_button      = $attributes['button'] ?? '';
+$dm_optin_block_id    = isset( $attributes['blockId'] ) ? (string) $attributes['blockId'] : '';
 
 $dm_optin_base_class = 'wp-block-domca-lead-magnet-optin';
 
 $dm_optin_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class' => 'dm-wrap',
+        'id'                => ! empty( $dm_optin_block_id ) ? esc_attr( $dm_optin_block_id ) : null,
 	)
 );
 
