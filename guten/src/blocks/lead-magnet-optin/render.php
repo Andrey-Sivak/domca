@@ -61,7 +61,7 @@ $dm_optin_list_decor = '<svg
 >
 	<div class="<?php echo esc_attr( $dm_optin_base_class . '__wrap dm-container' ); ?>">
 		<div class="<?php echo esc_attr( $dm_optin_base_class . '__quote' ); ?>">
-			<?php echo wp_kses( $dm_optin_quote_decor, domca_get_svg_allowed_html() ); ?>
+<!--			--><?php //echo wp_kses( $dm_optin_quote_decor, domca_get_svg_allowed_html() ); ?>
 
 			<?php if ( ! empty( $dm_optin_data_form_id ) ) : ?>
 				<div class="<?php echo esc_attr( $dm_optin_base_class . '__quote-form' ); ?>">
